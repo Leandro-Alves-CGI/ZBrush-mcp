@@ -1,0 +1,3159 @@
+  * index <https://developers.maxon.net/docs/zbrush/py/2026_0_0/
+    genindex.html>
+  * next <https://developers.maxon.net/docs/zbrush/py/2026_0_0/api/
+    mod_zbr_cmds_system.html> |
+  * previous <https://developers.maxon.net/docs/zbrush/py/2026_0_0/api/
+    mod_zbr_cmds_gui.html> |
+  * ZBrush Python SDK 2026.0.0 documentation <https://
+    developers.maxon.net/docs/zbrush/py/2026_0_0/index.html> »
+  * Modeling Functions
+
+
+  Modeling Functions¶ <#modeling-functions>
+
+Lists functions to interact with the modeling features of ZBrush.
+
+
+    Signatures¶ <#signatures>
+
+Note
+
+All functions in this section are part of the zbrush.commands module.
+The signatures have been shortened to the function name for better
+readability. The descriptions below will list the full function signature.
+
+
+      Curves¶ <#curves>
+
+|add_curve_point| <#zbrush.commands.add_curve_point>(curve_index, x, y, z)
+
+	
+
+Adds a new point to the specified curve.
+
+|add_new_curve| <#zbrush.commands.add_new_curve>()
+
+	
+
+Adds a new curve to the current curves list.
+
+|curves_to_ui| <#zbrush.commands.curves_to_ui>()
+
+	
+
+Copies the current list of curves to the active brush.
+
+|delete_curves| <#zbrush.commands.delete_curves>()
+
+	
+
+Deletes the current curves list.
+
+|new_curves| <#zbrush.commands.new_curves>()
+
+	
+
+Creates a new curves list, deleting any previously created ones in the
+process.
+
+
+      Miscellaneous¶ <#miscellaneous>
+
+|create_displacement_map|
+<#zbrush.commands.create_displacement_map>(width, height[, ...])
+
+	
+
+Creates a displacement map for the currently active tool.
+
+|create_normal_map|
+<#zbrush.commands.create_normal_map>(width, height[, smooth, ...])
+
+	
+
+Creates a normal map for the currently active tool.
+
+|get_polymesh3d_area| <#zbrush.commands.get_polymesh3d_area>()
+
+	
+
+Returns the area of current of the active sub-tool in the active tool.
+
+|get_polymesh3d_volume| <#zbrush.commands.get_polymesh3d_volume>()
+
+	
+
+Returns the volume of current of the active sub-tool in the active tool.
+
+|is_polymesh3d_solid| <#zbrush.commands.is_polymesh3d_solid>()
+
+	
+
+Returns if the active subtool in the active tool is a solid mesh.
+
+|pixol_pick|
+<#zbrush.commands.pixol_pick>(component, h_position, v_position)
+
+	
+
+Returns the specified pixol component for given coordinates.
+
+|query_mesh3d| <#zbrush.commands.query_mesh3d>(property[, index])
+
+	
+
+Gets mesh and UV information for the active tool and its sub-tools.
+
+
+      Strokes¶ <#strokes>
+
+|Stroke| <#zbrush.commands.Stroke>(string)
+
+	
+
+Represents a brush stroke in ZBrush.
+
+|Strokes| <#zbrush.commands.Strokes>(string)
+
+	
+
+Represents a collection of brush strokes in ZBrush.
+
+|canvas_stroke|
+<#zbrush.commands.canvas_stroke>(stroke[, delayed, rotation, ...])
+
+	
+
+Applies a brush stroke within the current canvas area.
+
+|canvas_strokes|
+<#zbrush.commands.canvas_strokes>(strokes[, delayed, rotation, ...])
+
+	
+
+Applies multiple brush strokes within the current canvas area.
+
+|get_stroke_info| <#zbrush.commands.get_stroke_info>(stroke, info[, index])
+
+	
+
+Gets the given 'info' property for the passed stroke object.
+
+|get_last_stroke| <#zbrush.commands.get_last_stroke>()
+
+	
+
+Returns the stroke object for the last stroke that has been made.
+
+|load_stroke| <#zbrush.commands.load_stroke>(path)
+
+	
+
+Loads a brush stroke from a text file.
+
+|load_strokes| <#zbrush.commands.load_strokes>(path)
+
+	
+
+Loads a collection of brush strokes from a text file.
+
+
+      Tools and Subtools¶ <#tools-and-subtools>
+
+|get_active_subtool_index| <#zbrush.commands.get_active_subtool_index>()
+
+	
+
+Returns the index of the active sub-tool.
+
+|get_active_tool_index| <#zbrush.commands.get_active_tool_index>()
+
+	
+
+Returns the index of the active tool.
+
+|get_active_tool_path| <#zbrush.commands.get_active_tool_path>()
+
+	
+
+Returns the path of the active tool.
+
+|get_subtool_count| <#zbrush.commands.get_subtool_count>([index])
+
+	
+
+Returns the number of sub-tools in the specified tool index.
+
+|get_subtool_folder_index|
+<#zbrush.commands.get_subtool_folder_index>([index])
+
+	
+
+Returns the index of the folder the specified sub-tool is contained in.
+
+|get_subtool_folder_name|
+<#zbrush.commands.get_subtool_folder_name>([index])
+
+	
+
+Returns the name of the folder the specified sub-tool is contained in.
+
+|get_subtool_id| <#zbrush.commands.get_subtool_id>([index, subToolIndex])
+
+	
+
+Returns the unique ID for the given sub-tool index and tool index.
+
+|get_subtool_status| <#zbrush.commands.get_subtool_status>([index])
+
+	
+
+Returns the status flag for the enabled options of a sub-tool in the
+active tool.
+
+|get_tool_count| <#zbrush.commands.get_tool_count>()
+
+	
+
+Returns the total number of available tools.
+
+|get_tool_path| <#zbrush.commands.get_tool_path>([index])
+
+	
+
+Returns the label or file path for the specified tool.
+
+|locate_subtool| <#zbrush.commands.locate_subtool>(index)
+
+	
+
+Returns the index of the sub-tool with the given unique ID within the
+active tool.
+
+|locate_subtool_by_name| <#zbrush.commands.locate_subtool_by_name>(name)
+
+	
+
+Returns the index of the sub-tool with the given name within the active
+tool.
+
+|select_subtool| <#zbrush.commands.select_subtool>([index])
+
+	
+
+Activates the sub-tool with the given index within the active tool.
+
+|select_tool| <#zbrush.commands.select_tool>(index)
+
+	
+
+Selects the tool with the given index.
+
+|set_subtool_status| <#zbrush.commands.set_subtool_status>([index, value])
+
+	
+
+Sets the status flags for the enabled options of a sub-tool in the
+active tool.
+
+|set_tool_path| <#zbrush.commands.set_tool_path>(index, path)
+
+	
+
+Sets the name or file path of the specified tool.
+
+
+      Transforms¶ <#transforms>
+
+|get_transform| <#zbrush.commands.get_transform>()
+
+	
+
+Gets the current tool transform.
+
+|get_transpose| <#zbrush.commands.get_transpose>()
+
+	
+
+Gets current action line values of the current transpose tool.
+
+|is_transpose_shown| <#zbrush.commands.is_transpose_shown>()
+
+	
+
+Returns if a transpose tool is active.
+
+|set_transform|
+<#zbrush.commands.set_transform>([x_position, y_position, ...])
+
+	
+
+Sets the current tool transform.
+
+|set_transpose|
+<#zbrush.commands.set_transpose>([x_start, y_start, z_start, ...])
+
+	
+
+Sets current action line values of the current transpose tool.
+
+
+      ZSpheres¶ <#zspheres>
+
+|add_zsphere|
+<#zbrush.commands.add_zsphere>(x, y, z, radius, parent_index[, ...])
+
+	
+
+Adds a new ZSphere to the currently active ZSpheres tool.
+
+|delete_zsphere| <#zbrush.commands.delete_zsphere>(index)
+
+	
+
+Deletes a ZSphere from the currently active ZSpheres tool.
+
+|edit_zsphere| <#zbrush.commands.edit_zsphere>(commands[, store_undo])
+
+	
+
+Makes the currently active ZSphere tool editable for API calls.
+
+|get_zsphere| <#zbrush.commands.get_zsphere>(property, index, sub_index)
+
+	
+
+Gets the specified property for a ZSphere within the currently active
+ZSpheres tool.
+
+|set_zsphere| <#zbrush.commands.set_zsphere>(property, index, value)
+
+	
+
+Gets the specified property for a ZSphere within the currently active
+ZSpheres tool.
+
+
+    Descriptions¶ <#descriptions>
+
+
+      Curves¶ <#id1>
+
+zbrush.commands.add_curve_point(/curve_index:int/, /x:float/, /
+y:float/, /z:float/) → int¶ <#zbrush.commands.add_curve_point>
+
+    Adds a new point to the specified curve.
+
+    Parameters:
+
+          *
+
+            *curve_index* (int) – The zero-based index of the curve to
+            which the point should be added.
+
+          *
+
+            *x* (float) – x position
+
+          *
+
+            *y* (float) – y position
+
+          *
+
+            *z* (float) – z position
+
+    Returns:
+
+        The zero indexed index of the added point, or -1 if the
+        operation failed.
+
+    Return type:
+
+        int
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # This example assumes that there is an editable tool active in the canvas.
+
+        # Select the standard curve brush and reset all curves by starting a new curves list.
+        zbc.press("Brush:CurveStandard")
+        zbc.new_curves()
+
+        # Now start creating three curves one by one, filling them with points each. Each curve is meant to
+        # travel along one of the principal axes (X, Y, Z).
+        for i in range(3):
+            cid: int = zbc.add_new_curve()
+            # Create five points for each curve along their respective axes. These points live in
+            # the coordinate system of the tool, not in canvas space, so 5 units length for each curve
+            # is quite large.
+            for j in range(5):
+                point: list[float]
+                if i == 0: # X-axis
+                    point = [j, 0.0, 0.0]
+                elif i == 1: # Y-axis
+                    point = [0.0, j, 0.0]
+                elif i == 2: # Z-axis
+                    point = [0.0, 0.0, j]
+
+                # Add the point using Python's unpacking operator *. This is the same as calling
+                # zbc.add_curve_point(cid, x=point[0], y=point[1], z=point[2])
+                zbc.add_curve_point(cid, *point)
+
+        # Finally, commit the curves to the canvas.
+        zbc.curves_to_ui()
+
+        Copy to clipboard
+
+zbrush.commands.add_new_curve() → int¶ <#zbrush.commands.add_new_curve>
+
+    Adds a new curve to the current curves list.
+
+    Returns:
+
+        The zero-based index of the newly created curve, or -1 if the
+        operation failed.
+
+    Return type:
+
+        int
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Adds a new curve in the current curves list.
+        cid: int = zbc.add_new_curve()
+        if not cid:
+            raise RuntimeError("Failed to add a new curve.")
+
+        # Adds a new point to the newly created curve.
+        zbc.add_curve_point(cid, x=0, y=0, z=0)
+
+        Copy to clipboard
+
+zbrush.commands.curves_to_ui() → int¶ <#zbrush.commands.curves_to_ui>
+
+    Copies the current list of curves to the active brush.
+
+    Warning
+
+    Calling this function is necessary to update the active brush with
+    the current curves. Without it, changes will not be applied.
+
+    Returns:
+
+        0 on success or -1 otherwise.
+
+    Return type:
+
+        int
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Copies the ZScript curves to the UI.
+        zbc.curves_to_ui()
+
+        Copy to clipboard
+
+zbrush.commands.delete_curves() → None¶ <#zbrush.commands.delete_curves>
+
+    Deletes the current curves list.
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Deletes the current curves list.
+        zbc.delete_curves()
+
+        Copy to clipboard
+
+zbrush.commands.new_curves() → None¶ <#zbrush.commands.new_curves>
+
+    Creates a new curves list, deleting any previously created ones in
+    the process.
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Starts a new curves list.
+        zbc.new_curves()
+
+        Copy to clipboard
+
+
+      Miscellaneous¶ <#id2>
+
+zbrush.commands.create_displacement_map(/width:int/, /height:int/, /
+smooth:bool=True/, /sub_poly:int=0/, /border:int=8/, /
+uv_tile:int=1000000/, /use_hd:bool=True/) → None¶
+<#zbrush.commands.create_displacement_map>
+
+    Creates a displacement map for the currently active tool.
+
+    The tool must have a UV map for the displacement map, and be set to
+    the 0 sub-division level for this command to work properly.
+
+    Parameters:
+
+          *
+
+            *width* (int) – The width of the displacement map image.
+
+          *
+
+            *height* (int) – The height of the displacement map image.
+
+          *
+
+            *smooth* (bool, optional) – If to smooth the displacement
+            map. Defaults to True.
+
+          *
+
+            *sub_poly* (int, optional) – The sub-poly level to use for
+            the displacement map. Defaults to 0.
+
+          *
+
+            *border* (int, optional) – The border size in pixels for the
+            displacement map. Defaults to 8.
+
+          *
+
+            *uv_tile* (int, optional) – The UV tile index to use for the
+            displacement map. If set to 1000000, it ignores UV tiles.
+            Defaults to 1000000.
+
+          *
+
+            *use_hd* (bool, optional) – If to use HD for the
+            displacement map. Defaults to True.
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Create a 1024x1024 displacement map for the active tool at sub-division level 3.
+        zbc.create_displacement_map(1024, 1024, True, 3, 2)
+
+        Copy to clipboard
+
+zbrush.commands.create_normal_map(/width:int/, /height:int/, /
+smooth:bool=True/, /sub_poly:int=0/, /border:int=8/, /
+uv_tile:int=1000000/, /local_coordinates:bool=False/) → None¶
+<#zbrush.commands.create_normal_map>
+
+    Creates a normal map for the currently active tool.
+
+    Parameters:
+
+          *
+
+            *width* (int) – The width of the normal map image.
+
+          *
+
+            *height* (int) – The height of the normal map image.
+
+          *
+
+            *smooth* (bool, optional) – If to smooth the normal map.
+            Defaults to True.
+
+          *
+
+            *sub_poly* (int, optional) – The sub-poly level to use for
+            the normal map. Defaults to 0.
+
+          *
+
+            *border* (int, optional) – The border size in pixels for the
+            normal map. Defaults to 8.
+
+          *
+
+            *uv_tile* (int, optional) – The UV tile index to use for the
+            normal map. If set to 1000000, it ignores UV tiles. Defaults
+            to 1000000.
+
+          *
+
+            *local_coordinates* (bool, optional) – Use tangent
+            coordinates when set to True. If set to False, it uses world
+            coordinates. Defaults to False.
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Creates a normal map for the active tool with a size of 1024x1024.
+        zbc.create_normal_map(1024, 1024, True, 3, 2)
+
+        Copy to clipboard
+
+zbrush.commands.get_polymesh3d_area() → float¶
+<#zbrush.commands.get_polymesh3d_area>
+
+    Returns the area of current of the active sub-tool in the active tool.
+
+    Returns:
+
+        The area of the active sub-tool.
+
+    Return type:
+
+        float
+
+zbrush.commands.get_polymesh3d_volume() → float¶
+<#zbrush.commands.get_polymesh3d_volume>
+
+    Returns the volume of current of the active sub-tool in the active tool.
+
+    Returns:
+
+        The volume of the active sub-tool.
+
+    Return type:
+
+        float
+
+zbrush.commands.is_polymesh3d_solid() → bool¶
+<#zbrush.commands.is_polymesh3d_solid>
+
+    Returns if the active subtool in the active tool is a solid mesh.
+
+    E.g., when you create a ‘Sphere3D’ tool, this gives you a
+    ‘watertight’ mesh and this function would return True. If you now
+    would delete a face of that sphere, it would no longer be watertight
+    and this function would return False.
+
+    Returns:
+
+        True if the active tool is solid mesh, False otherwise.
+
+    Return type:
+
+        bool
+
+zbrush.commands.pixol_pick(/component:int/, /h_position:float/, /
+v_position:float/) → float¶ <#zbrush.commands.pixol_pick>
+
+    Returns the specified pixol component for given coordinates.
+
+    Parameters:
+
+          *
+
+            *component* (int) –
+
+            The component of the pixol to retrieve. With the fields:
+
+            0
+
+            	
+
+            The hex color value for the pixol.
+
+            1
+
+            	
+
+            The Z (depth) value for the pixol (is broken).
+
+            2
+
+            	
+
+            The red color component for the pixol in the interval [0, 255].
+
+            3
+
+            	
+
+            The green color component for the pixol in the interval [0,
+            255].
+
+            4
+
+            	
+
+            The blue color component for the pixol in the interval [0, 255].
+
+            5
+
+            	
+
+            The material index for the pixol in the interval [0, 255].
+
+            6
+
+            	
+
+            The x component of the normal for the pixol in the interval
+            [-1, 1].
+
+            7
+
+            	
+
+            The y component of the normal for the pixol in the interval
+            [-1, 1].
+
+            8
+
+            	
+
+            The z component of the normal for the pixol in the interval
+            [-1, 1].
+
+          *
+
+            *h_position* (float) – The horizontal coordinate in canvas
+            space to sample.
+
+          *
+
+            *v_position* (float) – The vertical coordinate in canvas
+            space to sample.
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Get the center coordinate of the canvas and define the top left coordinate.
+        canvas_width: float = zbc.get("Document:Width")
+        canvas_height: float = zbc.get("Document:Height")
+        center_pos: tuple[float] = (canvas_width / 2, canvas_height / 2)
+        top_left_pos: tuple[float] = (0, 0)
+
+        # Get the hex color code for the top left position. Even when the canvas is seemingly empty, we will
+        # will always pick pixol information. We print the color, formatting it as a hex string. This will
+        # usually print 0x303030 because the top left corner is usually 'empty'.
+        color_int: int = int(zbc.pixol_pick(0, *top_left_pos))
+        print(f"Hex color at top left: {color_int:#0{8}X}")
+
+        # Get the color as RGB values. The converted hex components will be the same as the dedicated
+        # component values we query with pixol_pick().
+        r_c: int = (color_int >> 16) & 0xFF
+        g_c: int = (color_int >> 8) & 0xFF
+        b_c: int = color_int & 0xFF
+        r: float = zbc.pixol_pick(2, *top_left_pos)
+        g: float = zbc.pixol_pick(3, *top_left_pos)
+        b: float = zbc.pixol_pick(4, *top_left_pos)
+        print(f"RGB color at top left: ({r}, {g}, {b}) (converted from hex: {r_c}, {g_c}, {b_c})")
+
+        # Finally, get the pixol normal at the center of the screen.
+        normal: tuple[float] = (zbc.pixol_pick(6, *center_pos),
+                                zbc.pixol_pick(7, *center_pos),
+                                zbc.pixol_pick(8, *center_pos))
+        normal = tuple(map(lambda x: round(x, 3), normal))
+        print(f"Pixol normal at center: {normal}")
+
+        Copy to clipboard
+
+zbrush.commands.query_mesh3d(/property:int/, /index:int|None=None/) →
+list[float]¶ <#zbrush.commands.query_mesh3d>
+
+    Gets mesh and UV information for the active tool and its sub-tools.
+
+    Parameters:
+
+          *
+
+            *property* (int) –
+
+            The mesh property to query.
+
+            0
+
+            	
+
+            The total point count of the mesh.
+
+            1
+
+            	
+
+            The total face count of the mesh.
+
+            2
+
+            	
+
+            The bounding box of the mesh in the shape (-x, -y, -z, +x,
+            +y, +z).
+
+            3
+
+            	
+
+            The uv bounding box for the mesh in the shape (left, top,
+            right, bottom).
+
+            4
+
+            	
+
+            The ID of the first UV tile.
+
+            5
+
+            	
+
+            The ID of the next UV tile.
+
+            6
+
+            	
+
+            The polygon count of the given UV tile.
+
+            7
+
+            	
+
+            The area of the given UV tile.
+
+            8
+
+            	
+
+            The area of the full mesh.
+
+          *
+
+            *index* (int) –
+
+            Specifies an element or mode when querying some properties.
+            Defaults to None.
+
+            Bounding Box
+
+            	
+
+            0: The visible bounding box of the current sub-tool.
+
+            Bounding Box
+
+            	
+
+            1: The full bounding box of the current sub-tool.
+
+            Bounding Box
+
+            	
+
+            2: The visible bounding box of all visible sub-tools.
+
+            Bounding Box
+
+            	
+
+            3: The full bounding box of all sub-tools.
+
+            Next UV Tile
+
+            	
+
+            The id of the uv tile to get the next tile for.
+
+            UV Tile Count
+
+            	
+
+            The id of the uv tile to get the polygon count for.
+
+            UV Tile Area
+
+            	
+
+            The id of the uv tile to get the area for.
+
+    Returns:
+
+        The queried mesh property value(s), the shape depends on the
+        property.
+
+    Return type:
+
+        list[float]
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        ID_POINT_COUNT: int = 0
+        ID_POLY_COUNT: int = 1
+        ID_BOUNDING_BOX: int = 2
+
+        # Almost all queries can fail. We for example only can get polygonal data when a mesh tool is
+        # active and UV data only when the mesh has UVs.
+        try:
+            pointCount: int = int(zbc.query_mesh3d(ID_POINT_COUNT)[0])
+            polyCount: int = int(zbc.query_mesh3d(ID_POLY_COUNT)[0])
+            bbox: tuple[float, float, float, float, float, float] = zbc.query_mesh3d(ID_BOUNDING_BOX, None)
+        except:
+            raise RuntimeError("Could not access polygonal data. Active tool likely is not a mesh tool.")
+
+        # Calculate the size of the mesh and print the results.
+        x_neg, y_neg, z_neg, x_pos, y_pos, z_pos = bbox
+        dim_x: float = abs(x_pos - x_neg)
+        dim_y: float = abs(y_pos - y_neg)
+        dim_z: float = abs(z_pos - z_neg)
+
+        print(f"Active tool has {pointCount} points, {polyCount} polygons, and the dimensions x = "
+              f" {dim_x}, y = {dim_y}, z = {dim_z}.")
+
+        Copy to clipboard
+
+
+      Strokes¶ <#id3>
+
+/class/zbrush.commands.Stroke(/string:str/)¶ <#zbrush.commands.Stroke>
+
+    Represents a brush stroke in ZBrush.
+
+    __init__(/string:str/) → None¶ <#zbrush.commands.Stroke.__init__>
+
+        Initializes a stroke from its string representation.
+
+        Parameters:
+
+            *string* (str) – The string representation to initialize the
+            stroke from.
+
+        Example:
+
+            from zbrush import commands as zbc
+
+            # Instantiate a stroke from its string representation. String representations can be generated with
+            # the Python script recording feature of ZBrush.
+            stroke: zbc.Stroke = zbc.Stroke(
+                "(ZObjStrokeV03n27%p2377BA8p191C7ACPnA63An234Fn-BF76s100672Cs100672Cs100672Cz-7E6B=H231V219H230"
+                "V216H22FV214h22E55v210AAH22Ev20C40h22D40v203C0H22Dv1F980H22DV1EEH22DV1E2h22D40v1D5C0h22DC0v1C9"
+                "80h22E40v1BD40h22EC0v1B040H22Fv1A280H22Fv19380h22EC0v18480h22DC0v17640h22C40v16980h22A80v15F40"
+                "h228C0v15740h227C0v15240h22740v14F40h226C0v14D80h22680v14C80h22640v14B80H226v14A80H226v149C0)")
+
+            # Apply the stroke to the canvas.
+            zbc.canvas_stroke(stroke)
+
+            Copy to clipboard
+
+    __repr__() → str¶ <#zbrush.commands.Stroke.__repr__>
+
+        Returns the string representation of the stroke.
+
+        Returns:
+
+            The string representation of the stroke.
+
+        Return type:
+
+            str
+
+/class/zbrush.commands.Strokes(/string:str/)¶ <#zbrush.commands.Strokes>
+
+    Represents a collection of brush strokes in ZBrush.
+
+    __init__(/string:str/) → None¶ <#zbrush.commands.Strokes.__init__>
+
+        Initializes a collection of strokes from its string representation.
+
+        Parameters:
+
+            *string* (str) – The string representation to initialize the
+            stroke from.
+
+    __repr__() → str¶ <#zbrush.commands.Strokes.__repr__>
+
+        Returns the string representation of the collection of strokes.
+
+        Returns:
+
+            The string representation of the collection of strokes.
+
+        Return type:
+
+            str
+
+zbrush.commands.canvas_stroke(/stroke:Stroke
+<#zbrush.commands.Stroke>/, /delayed:bool|None=None/, /rotation:float|
+None=None/, /h_scale:float|None=None/, /v_scale:float|None=None/, /
+h_offset:float|None=None/, /v_offset:float|None=None/) → bool¶
+<#zbrush.commands.canvas_stroke>
+
+    Applies a brush stroke within the current canvas area.
+
+    Note
+
+    The origin for all stroke transformations is the start of the stroke
+    and they are carried out in canvas space.
+
+    Parameters:
+
+          *
+
+            *stroke* (|Stroke| <#zbrush.commands.Stroke>) – The stroke
+            object to apply.
+
+          *
+
+            *delayed* (bool, optional) – If to delay updates of the
+            canvas until the end of the strokes. Defaults to None.
+
+          *
+
+            *rotation* (float, optional) – A rotation to apply to the
+            stroke data. Defaults to None.
+
+          *
+
+            *h_scale* (float, optional) – A horizontal scale to apply to
+            the stroke data. Defaults to None.
+
+          *
+
+            *v_scale* (float, optional) – A vertical scale to apply to
+            the stroke data. Defaults to None.
+
+          *
+
+            *h_offset* (float, optional) – A horizontal offset to apply
+            to the stroke data. Defaults to None.
+
+          *
+
+            *v_offset* (float, optional) – A vertical offset to apply to
+            the stroke data. Defaults to None.
+
+          *
+
+            *h_rot_center* (float, optional) – A horizontal rotation
+            center to apply to the stroke data. Defaults to None.
+
+          *
+
+            *v_rot_center* (float, optional) – A vertical rotation
+            center to apply to the stroke data. Defaults to None.
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Instantiate a stroke from its string representation.
+        stroke: zbc.Stroke = zbc.Stroke(
+            "(ZObjStrokeV03n27%p2377BA8p191C7ACPnA63An234Fn-BF76s100672Cs100672Cs100672Cz-7E6B=H231V219H230"
+            "V216H22FV214h22E55v210AAH22Ev20C40h22D40v203C0H22Dv1F980H22DV1EEH22DV1E2h22D40v1D5C0h22DC0v1C9"
+            "80h22E40v1BD40h22EC0v1B040H22Fv1A280H22Fv19380h22EC0v18480h22DC0v17640h22C40v16980h22A80v15F40"
+            "h228C0v15740h227C0v15240h22740v14F40h226C0v14D80h22680v14C80h22640v14B80H226v14A80H226v149C0)")
+
+        # The times we are going to apply the stroke and the rotation step in degrees.
+        count: int = 36
+        rotation_step: float = 360 / count
+
+        # Now we 'splash' the stroke on the current tool by repeating it multiple times.
+        for i in range(count):
+            # Rotation is a value in degree.
+            rotation: float = i * rotation_step
+            # Scale is a relative value, i.e. 1 = 100% = no change and 0 = 0% = no stroke. Can go beyond 1.
+            scale: tuple[float, float] = (i/count, i/count)
+            # The offsets are in canvas space, so for example just adding 1 will mean moving the stroke 1
+            # pixel and is therefore almost not visible.
+            offset: tuple[float, float] = (-i * 10, 0)
+            # Apply the stroke with our rotation, scale, and offset.
+            zbc.canvas_stroke(stroke, None, rotation, *scale, *offset)
+
+        Copy to clipboard
+
+zbrush.commands.canvas_strokes(/strokes:Strokes
+<#zbrush.commands.Strokes>/, /delayed:bool|None=None/, /rotation:float|
+None=None/, /h_scale:float|None=None/, /v_scale:float|None=None/, /
+h_offset:float|None=None/, /v_offset:float|None=None/, /
+h_rot_center:float|None=None/, /v_rot_center:float|None=None/) → bool¶
+<#zbrush.commands.canvas_strokes>
+
+    Applies multiple brush strokes within the current canvas area.
+
+    Parameters:
+
+          *
+
+            *strokes* (|Strokes| <#zbrush.commands.Strokes>) – The
+            stroke collection object to apply.
+
+          *
+
+            *delayed* (bool, optional) – If to delay updates of the
+            canvas until the end of the strokes. Defaults to None.
+
+          *
+
+            *rotation* (float, optional) – A rotation to apply to the
+            stroke data. Defaults to None.
+
+          *
+
+            *h_scale* (float, optional) – A horizontal scale to apply to
+            the stroke data. Defaults to None.
+
+          *
+
+            *v_scale* (float, optional) – A vertical scale to apply to
+            the stroke data. Defaults to None.
+
+          *
+
+            *h_offset* (float, optional) – A horizontal offset to apply
+            to the stroke data. Defaults to None.
+
+          *
+
+            *v_offset* (float, optional) – A vertical offset to apply to
+            the stroke data. Defaults to None.
+
+          *
+
+            *h_rot_center* (float, optional) – A horizontal rotation
+            center to apply to the stroke data. Defaults to None.
+
+          *
+
+            *v_rot_center* (float, optional) – A vertical rotation
+            center to apply to the stroke data. Defaults to None.
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        strokes: zbc.Strokes = zbc.load_strokes(r"c:\data\strokes\complex_stroke.txt")
+        zbc.canvas_strokes(strokes)
+
+        Copy to clipboard
+
+zbrush.commands.get_stroke_info(/stroke:Stroke
+<#zbrush.commands.Stroke>/, /info:int/, /index:int=0/) → float¶
+<#zbrush.commands.get_stroke_info>
+
+    Gets the given ‘info’ property for the passed stroke object.
+
+    Parameters:
+
+          *
+
+            *stroke* (|Stroke| <#zbrush.commands.Stroke>) – The stroke
+            object to retrieve information from.
+
+          *
+
+            *info* (int) –
+
+            The property to retrieve.
+
+            0
+
+            	
+
+            The number of points in the stroke.
+
+            1
+
+            	
+
+            The horizontal position of the indexed point in canvas
+            space. Requires an index.
+
+            2
+
+            	
+
+            The vertical position of the indexed point in canvas space.
+            Requires an index.
+
+            3
+
+            	
+
+            The pen pressure of the indexed point. Requires an index.
+
+            4
+
+            	
+
+            The left bounds (i.e., min_x) of the stroke bounding box in
+            canvas space.
+
+            5
+
+            	
+
+            The top bounds (i.e., min_y) of the stroke bounding box in
+            canvas space.
+
+            6
+
+            	
+
+            The right bounds (i.e., max_x) of the stroke bounding box in
+            canvas space.
+
+            7
+
+            	
+
+            The bottom bounds (i.e., max_y) of the stroke bounding box
+            in canvas space.
+
+            8
+
+            	
+
+            The ‘maximum radius’ of the stroke, capturing the largest
+            distance from the start of the stroke.
+
+            9
+
+            	
+
+            The index of the point with is farthest from the start of
+            the stroke.
+
+            10
+
+            	
+
+            The largest horizontal delta between a point and the
+            starting point of the stroke.
+
+            11
+
+            	
+
+            The largest vertical delta between a point and the starting
+            point of the stroke.
+
+            12
+
+            	
+
+            The total length of the stroke.
+
+            13
+
+            	
+
+            The ‘twirl count’, an internal value that to some degree
+            expresses how straight a stroke is.
+
+            14
+
+            	
+
+            The deduced delta z value of the stroke. This is an internal
+            value of no use for third parties.
+
+            15
+
+            	
+
+            The modifier key that has been pressed while the given
+            stroke point was recorded.
+
+          *
+
+            *index* (int, optional) – The zero-based index of the point
+            to retrieve information for. Only relevant for information
+            types that are per-point, e.g., position or pressure.
+            Defaults to 0.
+
+    Returns:
+
+        The value of the requested property.
+
+    Return type:
+
+        float
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Get the last drawn stroke.
+        last: zbc.Stroke = zbc.get_last_stroke()
+
+        # Define some symbols for better readability.
+        ID_POINT_COUNT: int = 0
+        ID_HORZ_POS: int = 1
+        ID_VERT_POS: int = 2
+        ID_PRESSURE: int = 3
+        ID_MIN_X: int = 4
+        ID_MIN_Y: int = 5
+        ID_MAX_X: int = 6
+        ID_MAX_Y: int = 7
+
+        # Get the point count and bounding box of the stroke.
+        count: int = int(zbc.get_stroke_info(last, ID_POINT_COUNT))
+        min_x: float = round(zbc.get_stroke_info(last, ID_MIN_X), 2)
+        min_y: float = round(zbc.get_stroke_info(last, ID_MIN_Y), 2)
+        max_x: float = round(zbc.get_stroke_info(last, ID_MAX_X), 2)
+        max_y: float = round(zbc.get_stroke_info(last, ID_MAX_Y), 2)
+        print(f"Last stroke has {count} points and the bounding box ({min_x}, {min_y}, {max_x}, {max_y})")
+
+        # Strokes can have many points, so we are going only to print information for every 10th point.
+        for i in range(0, count, 10):
+            pos: tuple[float, float] = (
+                round(zbc.get_stroke_info(last, ID_HORZ_POS, i), 2),
+                round(zbc.get_stroke_info(last, ID_VERT_POS, i), 2),
+            )
+            pressure: float = round(zbc.get_stroke_info(last, ID_PRESSURE, i), 2)
+            print(f"    Point {i} at {pos} with the pressure {pressure}.")
+
+        Copy to clipboard
+
+zbrush.commands.get_last_stroke() → Stroke <#zbrush.commands.Stroke>¶
+<#zbrush.commands.get_last_stroke>
+
+    Returns the stroke object for the last stroke that has been made.
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Reapplies the last stroke.
+        stroke: zbc.Stroke = zbc.get_last_stroke()
+        zbc.canvas_stroke(stroke)
+
+        Copy to clipboard
+
+zbrush.commands.load_stroke(/path:str/) → Stroke
+<#zbrush.commands.Stroke>¶ <#zbrush.commands.load_stroke>
+
+    Loads a brush stroke from a text file.
+
+    Parameters:
+
+        *path* (str) – The txt file to load the stroke data from. This
+        should contain a string representation of a stroke as passed to
+        |Stroke.__init__()| <#zbrush.commands.Stroke.__init__>.
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # To make this example tangible, we are going to save a stroke string to disk and then load it. With
+        # the new Python API this is all a bit nonsensical as we could also easily load the file content into
+        # Stroke.__init__ ourself. So, we do not really need #load_stroke.
+        data: str = str(
+            "(ZObjStrokeV03n27%p2377BA8p191C7ACPnA63An234Fn-BF76s100672Cs100672Cs100672Cz-7E6B=H231V219H230"
+            "V216H22FV214h22E55v210AAH22Ev20C40h22D40v203C0H22Dv1F980H22DV1EEH22DV1E2h22D40v1D5C0h22DC0v1C9"
+            "80h22E40v1BD40h22EC0v1B040H22Fv1A280H22Fv19380h22EC0v18480h22DC0v17640h22C40v16980h22A80v15F40"
+            "h228C0v15740h227C0v15240h22740v14F40h226C0v14D80h22680v14C80h22640v14B80H226v14A80H226v149C0)")
+
+        # Save the stroke data.
+        file_path: str = r"line.txt"
+        with open(file_path, "w") as file:
+            file.write(data)
+
+        # Now we can load the stroke data from the file and apply it.
+        loaded_stroke: zbc.Stroke = zbc.load_stroke(file_path)
+        zbc.canvas_stroke(loaded_stroke)
+
+        Copy to clipboard
+
+zbrush.commands.load_strokes(/path:str/) → Strokes
+<#zbrush.commands.Strokes>¶ <#zbrush.commands.load_strokes>
+
+    Loads a collection of brush strokes from a text file.
+
+    Parameters:
+
+        *path* (str) – The txt file to load the stroke data from. This
+        should contain a string representation of a stroke collection as
+        passed to |Strokes.__init__()| <#zbrush.commands.Strokes.__init__>.
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        loaded_stroke: zbc.Stroke = zbc.load_stroke(r"c:\data\strokes\my_stroke_collection.txt")
+        zbc.canvas_stroke(loaded_stroke)
+
+        Copy to clipboard
+
+
+      Tools and Subtools¶ <#id4>
+
+zbrush.commands.get_active_subtool_index() → int¶
+<#zbrush.commands.get_active_subtool_index>
+
+    Returns the index of the active sub-tool.
+
+    The returned value reflects the position of a sub-tool in the list
+    in ‘Tool:Subtool’.
+
+    Returns:
+
+        The zero-based index of the active sub-tool. -1 indicates an error.
+
+    Return type:
+
+        int
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        index: int = zbc.get_active_subtool_index()
+        print(f"Active sub-tool index: {index}")
+
+        Copy to clipboard
+
+zbrush.commands.get_active_tool_index() → int¶
+<#zbrush.commands.get_active_tool_index>
+
+    Returns the index of the active tool.
+
+    Returns:
+
+        The zero-based index of the active tool. -1 indicates an error.
+
+    Return type:
+
+        int
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        index: int = zbc.get_active_tool_index()
+        print(f"Active tool index: {index}")
+
+        Copy to clipboard
+
+zbrush.commands.get_active_tool_path() → str¶
+<#zbrush.commands.get_active_tool_path>
+
+    Returns the path of the active tool.
+
+    For builtin tools this will be the name of the tool, e.g.,
+    “Sphere3D”. For tools loaded from disk, it will be the full file
+    path to the tool.
+
+    Returns:
+
+        The path of the active tool.
+
+    Return type:
+
+        str
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        path: str = zbc.get_active_tool_path()
+        print(f"Active tool path: {path}")
+
+        Copy to clipboard
+
+zbrush.commands.get_subtool_count(/index:int=-1/) → int¶
+<#zbrush.commands.get_subtool_count>
+
+    Returns the number of sub-tools in the specified tool index.
+
+    Parameters:
+
+        *index* (int, optional) – The zero-based index of the tool to
+        get the sub-tool count for. Will return the sub-tool count for
+        the active tool when -1 is passed. Defaults to -1.
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        print(f"The '{zbc.get_active_tool_path()}' tool has {zbc.get_subtool_count()} sub-tools.")
+
+        Copy to clipboard
+
+zbrush.commands.get_subtool_folder_index(/index:int=-1/) → int¶
+<#zbrush.commands.get_subtool_folder_index>
+
+    Returns the index of the folder the specified sub-tool is contained in.
+
+    Parameters:
+
+        *index* (int, optional) – The zero-based index of the sub-tool
+        to get the folder index for. Will return the folder index for
+        the active sub-tool when -1 is passed. Defaults to -1.
+
+    Returns:
+
+        The zero-based index of the sub-tool folder the specified sub-
+        tool is contained in.
+
+    Return type:
+
+        int
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        print(f"The active sub-tool is in a folder with the index {zbc.get_subtool_folder_index()}, named "
+              f"'{zbc.get_subtool_folder_name()}'.")
+
+        Copy to clipboard
+
+zbrush.commands.get_subtool_folder_name(/index:int=-1/) → str¶
+<#zbrush.commands.get_subtool_folder_name>
+
+    Returns the name of the folder the specified sub-tool is contained in.
+
+    Parameters:
+
+        *index* (int, optional) – The zero-based index of the sub-tool
+        to get the folder name for. Will return the folder name for the
+        active sub-tool when -1 is passed. Defaults to -1.
+
+    Returns:
+
+        The name of the folder the specified sub-tool is contained in.
+
+    Return type:
+
+        str
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        print(f"The active sub-tool is in a folder with the index {zbc.get_subtool_folder_index()}, named "
+              f"'{zbc.get_subtool_folder_name()}'.")
+
+        Copy to clipboard
+
+zbrush.commands.get_subtool_id(/index:int=-1/, /subToolIndex:int=-1/) →
+int¶ <#zbrush.commands.get_subtool_id>
+
+    Returns the unique ID for the given sub-tool index and tool index.
+
+    Parameters:
+
+          *
+
+            *index* (int, optional) – The zero-based index of the tool
+            within which to get a sub-tool ID. Will return a sub-tool ID
+            within the active tool when -1 is passed. Defaults to -1.
+
+          *
+
+            *subToolIndex* (int, optional) – The zero-based index of the
+            sub-tool to get the ID for. Will return the ID for the
+            active sub-tool when -1 is passed. Defaults to -1.
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        print(f"The unique ID for the active sub-tool in the active tool is {zbc.get_subtool_id()}.")
+
+        Copy to clipboard
+
+zbrush.commands.get_subtool_status(/index:int=-1/) → int¶
+<#zbrush.commands.get_subtool_status>
+
+    Returns the status flag for the enabled options of a sub-tool in the
+    active tool.
+
+    The options referred to are the icons visible on top of a sub-tool
+    list item in the ‘Tool:Subtool’ sub-tools list view.
+
+    Note
+
+        This feature uses the concept of bit masks <https://
+        en.wikipedia.org/wiki/Mask_(computing)>, often referred to as
+        ‘flags’. Flags are a common technique to efficiently store
+        multiple boolean options in a single integer value. Flags can be
+        built and modified using bitwise operations. 
+
+    See Details
+
+    # Our bit mask constants, we define them here in binary to make more obvious what happens:
+    # The flipped bit travels forwards and flags never use the same bit twice. Another way of
+    # looking at this, would be to say that each flag represents a unique power of two. In
+    # practice, such values are often defined as decimal or hex values and not in binary.
+
+    MASK_NONE    : int = 0b0000 # i.e., 0 in decimal
+    MASK_VISIBLE : int = 0b0001 # i.e., 1 in decimal
+    MASK_LOCKED  : int = 0b0010 # i.e., 2 in decimal
+    MASK_SELECTED: int = 0b0100 # i.e., 4 in decimal
+
+    # Now we can express multiple things in one value by setting these masks.
+    myValue: int = MASK_VISIBLE | MASK_LOCKED # i.e., 0b0011 in binary.
+
+    # Which we then can test for like this (or a bit more verbose bool(value & MASK) == True).
+    if myValue & MASK_VISIBLE:
+        print("myValue is visible")
+    if myValue & MASK_LOCKED:
+        print("myValue is locked")
+    if not myValue & MASK_SELECTED:
+        print("myValue is not selected")
+
+    # Flags can be set with bitwise OR and removed with bitwise AND NOT.
+    myValue = myValue | MASK_SELECTED # Set the selected flag
+    myValue = myValue & ~MASK_LOCKED  # Remove the locked flag
+
+    Copy to clipboard
+
+    Parameters:
+
+        *index* (int, optional) – The zero-based index of the sub-tool
+        to get the status for. Will return the status for the active
+        sub-tool when -1 is passed. Defaults to -1.
+
+    Returns:
+
+        The status flag for the options for the specified sub-tool. With
+        the following masks:
+
+            0x0001
+
+            	
+
+            If the eye of the sub-tool is enabled.
+
+            0x0002
+
+            	
+
+            If the eye of the folder of the sub-tool is enabled.
+
+            0x0010
+
+            	
+
+            If the volume add mode of the sub-tool is enabled.
+
+            0x0020
+
+            	
+
+            If the volume subtract mode of the sub-tool is enabled.
+
+            0x0040
+
+            	
+
+            If the volume clip mode of the sub-tool is enabled.
+
+            0x0080
+
+            	
+
+            If the sub-tool is marked as a volume start.
+
+            0x0400
+
+            	
+
+            If the folder of the sub-tool is closed.
+
+            0x0800
+
+            	
+
+            If the folder of the sub-tool is opened.
+
+    Return type:
+
+        int
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Get the status of the active sub-tool and test the flags which are set on it.
+        status: int = zbc.get_subtool_status()
+        print(f"Active sub-tool 'is-visible-subtool' state: {bool(status & 0x0001)}")
+        print(f"Active sub-tool 'is-visible-folder' state: {bool(status & 0x0002)}")
+        print(f"Active sub-tool 'volume-add' state: {bool(status & 0x0010)}")
+        print(f"Active sub-tool 'volume-sub' state: {bool(status & 0x0020)}")
+        print(f"Active sub-tool 'volume-clip' state: {bool(status & 0x0040)}")
+        print(f"Active sub-tool 'volume-start' state: {bool(status & 0x0080)}")
+        print(f"Active sub-tool 'is-closed-folder' state: {bool(status & 0x0400)}")
+        print(f"Active sub-tool 'is-open-folder' state: {bool(status & 0x0800)}")
+
+        Copy to clipboard
+
+zbrush.commands.get_tool_count() → int¶ <#zbrush.commands.get_tool_count>
+
+    Returns the total number of available tools.
+
+    Note
+
+    The tool count directly corresponds to the available tool indices.
+
+    Returns:
+
+        The total number of available tools.
+
+    Return type:
+
+        int
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Iterate over all tool indices and print their paths; i.e., usually name as seen in the UI, unless
+        # the tool has been loaded from a file.
+        for i in range(zbc.get_tool_count()):
+            print(f"{i}: {zbc.get_tool_path(i)}")
+
+        Copy to clipboard
+
+zbrush.commands.get_tool_path(/index:int=-1/) → str¶
+<#zbrush.commands.get_tool_path>
+
+    Returns the label or file path for the specified tool.
+
+    Parameters:
+
+        *index* (int, optional) – The zero-based index of the tool to
+        retrieve the path for. Returns the tool path for the active tool
+        when -1 is being passed. Defaults to -1.
+
+    Returns:
+
+        The label or file path for the specified tool:
+
+              *
+
+                Builtin tools such as the ‘Sphere3D’ tool will return
+                their label.
+
+              *
+
+                Runtime user created tools such as a PolyMesh3D
+                ‘Sphere3D’ tool will also return their label.
+
+              *
+
+                Tools loaded from disk with will return their absolute
+                file path.
+
+    Return type:
+
+        str
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Iterate over all tool indices and print their paths; i.e., usually name as seen in the UI, unless
+        # the tool has been loaded from a file.
+        for i in range(zbc.get_tool_count()):
+            print(f"{i}: {zbc.get_tool_path(i)}")
+
+        Copy to clipboard
+
+zbrush.commands.locate_subtool(/index:int/) → int¶
+<#zbrush.commands.locate_subtool>
+
+    Returns the index of the sub-tool with the given unique ID within
+    the active tool.
+
+    Parameters:
+
+        *index* (int) – The unique ID of the sub-tool to locate.
+
+    Returns:
+
+        The index of the located sub-tool, or -1 if not found.
+
+    Return type:
+
+        int
+
+    Example:
+
+    from zbrush import commands as zbc
+
+    sid: int = zbc.get_subtool_id()
+    sindex: int = zbc.get_active_subtool_index()
+    print(f"Active sub-tool ID: {sid}")
+    print(f"Active sub-tool index: {sindex}")
+    print(f"{zbc.locate_subtool(sid) = }")
+
+    Copy to clipboard
+
+zbrush.commands.locate_subtool_by_name(/name:str/) → int¶
+<#zbrush.commands.locate_subtool_by_name>
+
+    Returns the index of the sub-tool with the given name within the
+    active tool.
+
+    Parameters:
+
+        *name* (str) – The name of the sub-tool to locate.
+
+    Returns:
+
+        The index of the located sub-tool, or -1 if not found.
+
+    Return type:
+
+        int
+
+    Example:
+
+    from zbrush import commands as zbc
+
+    sid: int = zbc.locate_subtool_by_name("PM3D_Gear3D1")
+    print(f"Active sub-tool ID: {sid}")
+
+    Copy to clipboard
+
+zbrush.commands.select_subtool(/index:int=-1/) → int¶
+<#zbrush.commands.select_subtool>
+
+    Activates the sub-tool with the given index within the active tool.
+
+    Parameters:
+
+        *index* (int, optional) – The zero-based index of the sub-tool
+        to select.
+
+    Returns:
+
+        0 on success, -1 when an error occurred.
+
+    Return type:
+
+        int
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Select the first sub-tool of the active tool. A tool will always have at least one
+        # sub-tool.
+        zbc.select_subtool(0)
+
+        # Select the last sub-tool in the active tool.
+        cnt: int = zbc.get_subtool_count()
+        zbc.select_subtool(cnt - 1)
+
+        Copy to clipboard
+
+zbrush.commands.select_tool(/index:int/) → int¶
+<#zbrush.commands.select_tool>
+
+    Selects the tool with the given index.
+
+    Parameters:
+
+        *index* (int) – The zero-based index of the tool to select.
+
+    Returns:
+
+        0 on success, -1 when an error occurred.
+
+    Return type:
+
+        int
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Select the last tool in the list of tools.
+        cnt: int = zbc.get_tool_count()
+        zbc.select_tool(cnt - 1)
+
+        # Calling #select_tool does exactly the same as this #set call, we simply set here the interface
+        # element which selects the active tool.
+        zbc.set("Tool:Item Info", cnt - 1)
+
+        # In general, selecting tools is often done via #press as we often want to select a tool by name
+        # and not by index. We can also select a tool by name via the dedicated tool API but it is more
+        # code and also (slightly) slower.
+
+        # Complicated (but more formal) approach to selecting a tool by name.
+        for i in range(zbc.get_tool_count()):
+            name: str = zbc.get_tool_path(i)
+            if name == "Sphere3D":
+                zbc.select_tool(i)
+                break
+        else:
+            print("Tool not found!")
+
+        # The easier way. Each tool has a unique item path in the form "Tool:{NAME}".
+        item_path: str = f"Tool:Sphere3D"
+        if zbc.exists(item_path):
+            zbc.press(item_path)
+        else:
+            print("Tool not found!")
+
+        Copy to clipboard
+
+zbrush.commands.set_subtool_status(/index:int=-1/, /value:int=0/) →
+None¶ <#zbrush.commands.set_subtool_status>
+
+    Sets the status flags for the enabled options of a sub-tool in the
+    active tool.
+
+    The options referred to are the icons visible on top of a sub-tool
+    list item in the ‘Tool:Subtool’ sub-tools list view.
+
+    Note
+
+        This feature uses the concept of bit masks <https://
+        en.wikipedia.org/wiki/Mask_(computing)>, often referred to as
+        ‘flags’. Flags are a common technique to efficiently store
+        multiple boolean options in a single integer value. Flags can be
+        built and modified using bitwise operations. 
+
+    See Details
+
+    # Our bit mask constants, we define them here in binary to make more obvious what happens:
+    # The flipped bit travels forwards and flags never use the same bit twice. Another way of
+    # looking at this, would be to say that each flag represents a unique power of two. In
+    # practice, such values are often defined as decimal or hex values and not in binary.
+
+    MASK_NONE    : int = 0b0000 # i.e., 0 in decimal
+    MASK_VISIBLE : int = 0b0001 # i.e., 1 in decimal
+    MASK_LOCKED  : int = 0b0010 # i.e., 2 in decimal
+    MASK_SELECTED: int = 0b0100 # i.e., 4 in decimal
+
+    # Now we can express multiple things in one value by setting these masks.
+    myValue: int = MASK_VISIBLE | MASK_LOCKED # i.e., 0b0011 in binary.
+
+    # Which we then can test for like this (or a bit more verbose bool(value & MASK) == True).
+    if myValue & MASK_VISIBLE:
+        print("myValue is visible")
+    if myValue & MASK_LOCKED:
+        print("myValue is locked")
+    if not myValue & MASK_SELECTED:
+        print("myValue is not selected")
+
+    # Flags can be set with bitwise OR and removed with bitwise AND NOT.
+    myValue = myValue | MASK_SELECTED # Set the selected flag
+    myValue = myValue & ~MASK_LOCKED  # Remove the locked flag
+
+    Copy to clipboard
+
+    Parameters:
+
+          *
+
+            *index* (int, optional) – The zero-based index of the sub-
+            tool to get the status for. Will set the status for the
+            active sub-tool when -1 is passed. Defaults to -1.
+
+          *
+
+            *value* (int, optional) –
+
+            The flag field to set, realizing a toggle logic. I.e., set
+            an unset flag will set it, and setting and already set flag
+            will remove it. With the the following masks:
+
+            0x0001
+
+            	
+
+            If the eye of the sub-tool is enabled.
+
+            0x0002
+
+            	
+
+            If the eye of the folder of the sub-tool is enabled.
+
+            0x0010
+
+            	
+
+            If the volume add mode of the sub-tool is enabled.
+
+            0x0020
+
+            	
+
+            If the volume subtract mode of the sub-tool is enabled.
+
+            0x0040
+
+            	
+
+            If the volume clip mode of the sub-tool is enabled.
+
+            0x0080
+
+            	
+
+            If the sub-tool is marked as a volume start.
+
+            0x0400
+
+            	
+
+            If the folder of the sub-tool is closed.
+
+            0x0800
+
+            	
+
+            If the folder of the sub-tool is opened.
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Select the last tool in the list of tools.
+        cnt: int = zbc.get_subtool_count()
+        zbc.select_tool(cnt - 1)
+
+        # Iterate over all sub-tools and make sure both the sub-tool and its folder visibility is enabled
+        # and that all sub-tools are not marked as a volume start.
+        for i in range(zbc.get_subtool_count()):
+            status: int = zbc.get_subtool_status(i)
+            status |= 0x0001   # Ensure the eye icon is enabled.
+            status |= 0x0002   # Ensure the folder icon is enabled.
+            status &= ~0x0400  # Ensure the volume start is disabled.
+            zbc.set_subtool_status(i, status)
+
+        Copy to clipboard
+
+zbrush.commands.set_tool_path(/index:int/, /path:str/) → int¶
+<#zbrush.commands.set_tool_path>
+
+    Sets the name or file path of the specified tool.
+
+    Parameters:
+
+          *
+
+            *index* (int) – The zero-based index of the tool to set the
+            path for.
+
+          *
+
+            *path* (str) – The new file path or name of the tool. Path
+            extensions (such as .ztl) will be omitted.
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Set the name of the active tool to "Bar"
+        tid: int = zbc.get_active_tool_index()
+        zbc.set_tool_path(tid, "Bar")
+
+        # Set the path of the active tool to "d:\temp\foo.ztl". The tool will be displayed as "foo".
+        zbc.set_tool_path(tid, r"d:\temp\foo.ztl")
+        print(zbc.press("Tool:Save"))
+
+        # After setting a tool name we should update the UI.
+        zbc.update(redraw_ui=True)
+
+        Copy to clipboard
+
+
+      Transforms¶ <#id6>
+
+zbrush.commands.get_transform() → list[float]¶
+<#zbrush.commands.get_transform>
+
+    Gets the current tool transform.
+
+    ZBrush has a unique notion of geometry transform which acts more
+    like a camera transform. All geometry (tools) are placed in the
+    canvas space of a document with a fixed camera. And when the user
+    pans, rotates, or zooms the view, it is actually the geometry which
+    is transformed in the canvas in relation to the fixed camera. So,
+    while what the geometry (tool) is formally transformed, the user
+    will experience it as a camera transform.
+
+    To get or set the transform of a sub-tool in relation to its tool,
+    i.e., an ‘actual’ geometry transform, one must use the item paths
+    “Tool:Geometry:X/Y/Z Postion” as shown in the example
+    mod_subtool_array.py. One can also get and set the transpose brush
+    coordinate systems with functions such as |
+    zbrush.commands.get_transpose| <#zbrush.commands.get_transpose>.
+
+    Returns:
+
+        A nine element list expressing the current tool transform.
+
+        0
+
+        	
+
+        The x position of the tool in canvas space.
+
+        1
+
+        	
+
+        The y position of the tool in canvas space.
+
+        2
+
+        	
+
+        The z position of the tool in canvas space.
+
+        3
+
+        	
+
+        The x scale of the tool in canvas space.
+
+        4
+
+        	
+
+        The y scale of the tool in canvas space.
+
+        5
+
+        	
+
+        The z scale of the tool in canvas space.
+
+        6
+
+        	
+
+        The x rotation of the tool in degrees.
+
+        7
+
+        	
+
+        The y rotation of the tool in degrees.
+
+        8
+
+        	
+
+        The z rotation of the tool in degrees.
+
+    Return type:
+
+        list[float]
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        data: list[float] = zbc.get_transform()
+        # The position of the tool in canvas space; its origin is the upper left corner.
+        print(f"Position: ({data[0]:.2f}, {data[1]:.2f}, {data[2]:.2f})")
+        # The scale of the tool in canvas space; to be able to see both (0, 0, 0) and (canvas_width,
+        # canvas_height, 0) at the same time in the viewport, the scale must be (1, 1, 1). But common
+        # tool scales are more around (100, 100, 100).
+        print(f"Scale: ({data[3]:.2f}, {data[4]:.2f}, {data[5]:.2f})")
+        # The rotation of the tool. These are values in degree and not radians.
+        print(f"Rotation: ({data[6]:.2f}°, {data[7]:.2f}°, {data[8]:.2f}°)")
+
+        Copy to clipboard
+
+zbrush.commands.get_transpose() → list[float]¶
+<#zbrush.commands.get_transpose>
+
+    Gets current action line values of the current transpose tool.
+
+    An action line is the UI which is enabled when the user selects one
+    of the transpose tools and then disables the ‘Transform:Gizmo 3D’
+    option.
+
+    Returns:
+
+        A sixteen element list expressing the current transpose action line.
+
+        0
+
+        	
+
+        The x component of the origin of the action line.
+
+        1
+
+        	
+
+        The y component of the origin of the action line.
+
+        2
+
+        	
+
+        The z component of the origin of the action line.
+
+        3
+
+        	
+
+        The x component of the normal of the action line.
+
+        4
+
+        	
+
+        The y component of the normal of the action line.
+
+        5
+
+        	
+
+        The z component of the normal of the action line.
+
+        6
+
+        	
+
+        The length of the action line.
+
+        7
+
+        	
+
+        The x component of the red axis.
+
+        8
+
+        	
+
+        The y component of the red axis.
+
+        9
+
+        	
+
+        The z component of the red axis.
+
+        10
+
+        	
+
+        The x component of the green axis.
+
+        11
+
+        	
+
+        The y component of the green axis.
+
+        12
+
+        	
+
+        The z component of the green axis.
+
+        13
+
+        	
+
+        The x component of the blue axis.
+
+        14
+
+        	
+
+        The y component of the blue axis.
+
+        15
+
+        	
+
+        The z component of the blue axis.
+
+    Return type:
+
+        list[float]
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Print the values of the active tranpose line.
+        line: list[float] = zbc.get_transpose()
+        print("Origin:", line[0:3])
+        print("Direction:", line[3:6])
+        print("Length:", line[6])
+        print("Red Axis:", line[7:10])
+        print("Green Axis:", line[10:13])
+        print("Blue Axis:", line[13:16])
+
+        Copy to clipboard
+
+zbrush.commands.is_transpose_shown() → bool¶
+<#zbrush.commands.is_transpose_shown>
+
+    Returns if a transpose tool is active.
+
+    Returns:
+
+        True if a transpose tool is active, False otherwise. Which
+        drawing gizmo is activated in the transpose tool, the tranpose
+        line or the 3D gizmo, has no impact on the result of this method.
+
+    Return type:
+
+        bool
+
+zbrush.commands.set_transform(/x_position:float|None=None/, /
+y_position:float|None=None/, /z_position:float|None=None/, /
+x_scale:float|None=None/, /y_scale:float|None=None/, /z_scale:float|
+None=None/, /x_rotate:float|None=None/, /y_rotate:float|None=None/, /
+z_rotate:float|None=None/) → None¶ <#zbrush.commands.set_transform>
+
+    Sets the current tool transform.
+
+    ZBrush has a unique notion of geometry transform which acts more
+    like a camera transform. All geometry (tools) are placed in the
+    canvas space of a document with a fixed camera. And when the user
+    pans, rotates, or zooms the view, it is actually the geometry which
+    is transformed in the canvas in relation to the fixed camera. So,
+    while what the geometry (tool) is formally transformed, the user
+    will experience it as a camera transform.
+
+    To get or set the transform of a sub-tool in relation to its tool,
+    i.e., an ‘actual’ geometry transform, one must use the item paths
+    “Tool:Geometry:X/Y/Z Postion” as shown in the example
+    mod_subtool_array.py. One can also get and set the transpose brush
+    coordinate systems with functions such as |
+    zbrush.commands.get_transpose| <#zbrush.commands.get_transpose>.
+
+    Parameters:
+
+          *
+
+            *x_position* (float, optional) – The new x position of the
+            tool in canvas space.
+
+          *
+
+            *y_position* (float, optional) – The new y position of the
+            tool in canvas space.
+
+          *
+
+            *z_position* (float, optional) – The new z position of the
+            tool in canvas space.
+
+          *
+
+            *x_scale* (float, optional) – The new x scale of the tool in
+            canvas space.
+
+          *
+
+            *y_scale* (float, optional) – The new y scale of the tool in
+            canvas space.
+
+          *
+
+            *z_scale* (float, optional) – The new z scale of the tool in
+            canvas space.
+
+          *
+
+            *x_rotate* (float, optional) – The new x rotation of the
+            tool in degrees.
+
+          *
+
+            *y_rotate* (float, optional) – The new y rotation of the
+            tool in degrees.
+
+          *
+
+            *z_rotate* (float, optional) – The new z rotation of the
+            tool in degrees.
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # To get a sense of the tool transform, we can set all values to their base values. Which will
+        # leave us with a tiny tool in the upper left corner of the canvas. Which we would not be able
+        # to see unless we activate the transpose brush which indirectly indicates the position of the
+        # tool.
+        position: tuple[float] = (0, 0, 0)
+        scale: tuple[float] = (1, 1, 1)
+        rotation: tuple[float] = (0, 0, 0)
+        zbc.set_transform(*position, *scale, *rotation)
+        zbc.press("Brush:Transpose")
+
+        # The position of a tool is set in canvas units in a y-up canvas coordinate system. Canvas system
+        # means that the width and height of the document canvas defines the bounds of the coordinate system
+        # and the world frame is aligned with the canvas plane. The z-position of a tool therefore acts
+        # mostly like a z-clipping plane and can usually be left at its default of 0. Natural scale (i.e.,
+        # 'zoom') values as present in user created tools usually lie around (100, 100, 100). The exact
+        # values depend on how big or small the user dragged the tool when it was created. Rotation values
+        # are expressed in degrees and are in relation to the canvas plane.
+
+        # Center the tool in the middle of the canvas, give it a uniform size of (100, 100, 100) and rotate
+        # it so that we look along its y-axis (a top-down view).
+        canvas_width: float = zbc.get("Document:Width")
+        canvas_height: float = zbc.get("Document:Height")
+        position: tuple[float] = (canvas_width / 2, canvas_height / 2, 0)
+        scale: tuple[float] = (100, 100, 100)
+        rotation: tuple[float] = (0, 90, 90)
+        zbc.set_transform(*position, *scale, *rotation)
+
+        Copy to clipboard
+
+zbrush.commands.set_transpose(/x_start:float|None=None/, /y_start:float|
+None=None/, /z_start:float|None=None/, /x_end:float|None=None/, /
+y_end:float|None=None/, /z_end:float|None=None/, /length:float|
+None=None/, /x_red:float|None=None/, /y_red:float|None=None/, /
+z_red:float|None=None/, /x_green:float|None=None/, /y_green:float|
+None=None/, /z_green:float|None=None/, /x_blue:float|None=None/, /
+y_blue:float|None=None/, /z_blue:float|None=None/) → None¶
+<#zbrush.commands.set_transpose>
+
+    Sets current action line values of the current transpose tool.
+
+    An action line is the UI which is enabled when the user selects one
+    of the transpose tools and then disables the ‘Transform:Gizmo 3D’
+    option.
+
+    Parameters:
+
+          *
+
+            *x_start* (float, optional) – The x component of the origin
+            of the action line.
+
+          *
+
+            *y_start* (float, optional) – The y component of the origin
+            of the action line.
+
+          *
+
+            *z_start* (float, optional) – The z component of the origin
+            of the action line.
+
+          *
+
+            *x_end* (float, optional) – The x component of the normal of
+            the action line.
+
+          *
+
+            *y_end* (float, optional) – The y component of the normal of
+            the action line.
+
+          *
+
+            *z_end* (float, optional) – The z component of the normal of
+            the action line.
+
+          *
+
+            *length* (float, optional) – The length of the action line.
+
+          *
+
+            *x_red* (float, optional) – The x component of the red axis.
+
+          *
+
+            *y_red* (float, optional) – The y component of the red axis.
+
+          *
+
+            *z_red* (float, optional) – The z component of the red axis.
+
+          *
+
+            *x_green* (float, optional) – The x component of the green axis.
+
+          *
+
+            *y_green* (float, optional) – The y component of the green axis.
+
+          *
+
+            *z_green* (float, optional) – The z component of the green axis.
+
+          *
+
+            *x_blue* (float, optional) – The x component of the blue axis.
+
+          *
+
+            *y_blue* (float, optional) – The y component of the blue axis.
+
+          *
+
+            *z_blue* (float, optional) – The z component of the blue axis.
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # The n_start/n_end arguments of this function do not express a line segment but rather an origin
+        # and a normal. So, these two commands will do absolutely the same, although one could think the
+        # second call creates a transpose line ten times longer than the former call.
+        zbc.set_transpose(x_start=0, y_start=0, z_start=0, x_end=1, y_end=0, z_end=0)
+        zbc.set_transpose(x_start=0, y_start=0, z_start=0, x_end=10, y_end=0, z_end=0)
+
+        # Instead we must treat #start as the origin and #end as a direction normal. We create a line with
+        # the origin (0, 0, 0), the direction (1, 1, 0), and a length of five units.
+        zbc.set_transpose(0, 0, 0, 1, 1, 0, length=5)
+
+        Copy to clipboard
+
+
+      ZSpheres¶ <#id7>
+
+zbrush.commands.add_zsphere(/x:float/, /y:float/, /z:float/, /
+radius:float/, /parent_index:int/, /color:int=-1/, /mask:int=0/, /
+time_stamp:int=0/, /flags:int=0/) → int¶ <#zbrush.commands.add_zsphere>
+
+    Adds a new ZSphere to the currently active ZSpheres tool.
+
+    Warning
+
+    Editing ZSphere operations always must happen in the context of a |
+    edit_zsphere| <#zbrush.commands.edit_zsphere> call.
+
+    Parameters:
+
+          *
+
+            *x* (float) – The x position of the new ZSphere.
+
+          *
+
+            *y* (float) – The y position of the new ZSphere.
+
+          *
+
+            *z* (float) – The z position of the new ZSphere.
+
+          *
+
+            *radius* (float) – The radius of the new ZSphere.
+
+          *
+
+            *parent_index* (int) – The zero based index index of the
+            parent ZSphere.
+
+          *
+
+            *color* (int, optional) – The color of the new ZSphere,
+            computed with the formula (blue + (green * 256) + (red *
+            65536)). Defaults to -1 (no color).
+
+          *
+
+            *mask* (int, optional) – The mask value of the new ZSphere
+            from 0 to 255. 0 means unmasked, 255 means fully masked.
+            Defaults to 0.
+
+          *
+
+            *time_stamp* (int, optional) – The time stamp of the new
+            ZSphere. Defaults to 0.
+
+          *
+
+            *flags* (int, optional) – Optional flags for the new
+            ZSphere. 0 means default flags, 1 means invisible link to
+            parent. Defaults to 0.
+
+    Returns:
+
+        The zero indexed index of the newly created ZSphere, or -1 if
+        the operation failed.
+
+    Return type:
+
+        int
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        def add_nodes() -> None:
+            '''Adds three new ZSpheres to the currently active ZSpheres tool.
+            '''
+            # Get the index of the last currently existing ZSphere and then start parenting
+            # three new ZSpheres to it.
+            offset: int = int(zbc.get_zsphere(property=0, index=0, sub_index=0)) - 1
+            for i in range(3):
+                zbc.add_zsphere(x=0.0, y=i*.5, z=0.0, radius=0.25, parent_index=offset + i)
+
+        zbc.edit_zsphere(add_nodes)
+
+        Copy to clipboard
+
+zbrush.commands.delete_zsphere(/index:int/) → int¶
+<#zbrush.commands.delete_zsphere>
+
+    Deletes a ZSphere from the currently active ZSpheres tool.
+
+    Warning
+
+    Editing ZSphere operations always must happen in the context of a |
+    edit_zsphere| <#zbrush.commands.edit_zsphere> call.
+
+    Warning
+
+    Deleting a ZSphere will not automatically delete its children but at
+    the same time prevent you from manually deleting the children. So,
+    you should always delete the children first.
+
+    Parameters:
+
+        *index* (int) – The zero-based index of the ZSphere to delete.
+        The root ZSphere (index 0) cannot be deleted.
+
+    Returns:
+
+        0 on success or -1 otherwise.
+
+    Return type:
+
+        int
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Define some symbols for better readability.
+        ID_X_POS: int = 1
+        ID_Y_POS: int = 2
+        ID_Z_POS: int = 3
+        ID_RADIUS: int = 4
+        ID_COLOR: int = 5
+
+        def delete_all_nodes() -> None:
+            # Get the total number of ZSpheres from the root ZSphere.
+            count: int = int(zbc.get_zsphere(property=0, index=0, sub_index=0))
+
+            # Reset the root sphere to default values because it cannot be deleted.
+            zbc.set_zsphere(ID_X_POS, 0, 0.0)
+            zbc.set_zsphere(ID_Y_POS, 0, 0.0)
+            zbc.set_zsphere(ID_Z_POS, 0, 0.0)
+            zbc.set_zsphere(ID_RADIUS, 0, 1.0)
+            zbc.set_zsphere(ID_COLOR, 0, 16777215.0)
+
+            # Delete all remaining spheres. It is really important to do this in reverse order,
+            # as ZBrush will not let you delete ZSpheres whose parent you have already deleted.
+            # But they will still exist, i.e., you will only end up deleting a subset of the
+            # spheres. The reverse order approach assumes that children have higher indices than
+            # their parents. Which usually holds true but there is no hard guarantee, as we can
+            # structure ZSphere trees in the API however we want. The safer approach would
+            # be to delete the ZSpheres in LRN (post-order) depth first traversal, i.e., delete
+            # the tree "from the inside out".
+            for i in reversed(range(1, count)):
+                zbc.delete_zsphere(i)
+
+        zbc.edit_zsphere(delete_all_nodes)
+
+        Copy to clipboard
+
+zbrush.commands.edit_zsphere(/commands:Callable/, /
+store_undo:bool=False/) → None¶ <#zbrush.commands.edit_zsphere>
+
+    Makes the currently active ZSphere tool editable for API calls.
+
+    Parameters:
+
+          *
+
+            *commands* (Callable) – The callable which carries out
+            modifications to the active ZSphere tool.
+
+          *
+
+            *store_undo* (bool, optional) – If to create an undo point
+            for the operations. Defaults to False.
+
+    Example:
+
+        def do_edit() -> None:
+            # Deletes the third ZSphere in the currently active ZSpheres tool.
+            zbc.delete_zsphere(2)
+
+        # The #delete_zsphere call in #do_edit is only valid within the context of #edit_zsphere.
+        zbc.edit_zsphere(do_edit)
+
+        Copy to clipboard
+
+zbrush.commands.get_zsphere(/property:int/, /index:int/, /
+sub_index:int/) → float¶ <#zbrush.commands.get_zsphere>
+
+    Gets the specified property for a ZSphere within the currently
+    active ZSpheres tool.
+
+    Parameters:
+
+          *
+
+            *property* (int) –
+
+            The property to get.
+
+            0
+
+            	
+
+            The total count of ZSpheres in the tool.
+
+            1
+
+            	
+
+            The x position of the ZSphere.
+
+            2
+
+            	
+
+            The y position of the ZSphere.
+
+            3
+
+            	
+
+            The z position of the ZSphere.
+
+            4
+
+            	
+
+            The radius of the ZSphere.
+
+            5
+
+            	
+
+            The color of the ZSphere in ZBrush hex format.
+
+            6
+
+            	
+
+            The mask of the ZSphere in the interval [0, 255]. 0 means
+            unmasked, 255 means fully masked.
+
+            7
+
+            	
+
+            The parent index of the ZSphere. The root ZSphere will have
+            a parent index of -1. All other ZSpheres will have a parent
+            index greater than or equal to 0.
+
+            8
+
+            	
+
+            The last click index. -1 means no last click.
+
+            9
+
+            	
+
+            The timestamp of the last edit.
+
+            10
+
+            	
+
+            The number of children this ZSphere has.
+
+            11
+
+            	
+
+            The sub-index of a Zsphere.
+
+            12
+
+            	
+
+            The timestamp count.
+
+            13
+
+            	
+
+            The timestamp index.
+
+            14
+
+            	
+
+            The flags of the ZSphere.
+
+            15
+
+            	
+
+            The twist angle of the ZSphere.
+
+            16
+
+            	
+
+            The membrane value of the ZSphere.
+
+            17
+
+            	
+
+            The X resolution of the ZSphere.
+
+            18
+
+            	
+
+            The Y resolution of the ZSphere.
+
+            19
+
+            	
+
+            The Z resolution of the ZSphere.
+
+            20
+
+            	
+
+            The XYZ resolution of the ZSphere.
+
+            21
+
+            	
+
+            The user value of the ZSphere.
+
+          *
+
+            *index* (int) – The index of the ZSphere to query. Must be a
+            value greater or equal than zero.
+
+          *
+
+            *sub_index* (int) – The sub-index of the ZSphere to query.
+            Can usually be set to zero.
+
+    Returns:
+
+        The value of the specified property for the ZSphere.
+
+    Return type:
+
+        float
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Define some symbols for better readability.
+        ID_TOTAL_COUNT: int = 0
+        ID_X_POS: int = 1
+        ID_Y_POS: int = 2
+        ID_Z_POS: int = 3
+        ID_CHILD_COUNT: int = 10
+        ID_SUB_INDEX: int = 11
+
+        # Get the total number of ZSpheres from the root sphere.
+        count: int = int(zbc.get_zsphere(property=ID_TOTAL_COUNT, index=0, sub_index=0))
+        # Now iterate over all ZSpheres and print data for each of them.
+        for i in range(count):
+            print(f"{i} - parent: {zbc.get_zsphere(ID_PARENT, i, 0)}\n"
+                  f"      x: {zbc.get_zsphere(ID_X_POS, i, 0)}\n"
+                  f"      y: {zbc.get_zsphere(ID_Y_POS, i, 0)}\n"
+                  f"      z: {zbc.get_zsphere(ID_Z_POS, i, 0)}\n"
+                  f"      child_count: {zbc.get_zsphere(ID_CHILD_COUNT, i, 0)}\n"
+                  f"      sub-index: {zbc.get_zsphere(ID_SUB_INDEX, i, 0)}")
+
+        Copy to clipboard
+
+zbrush.commands.set_zsphere(/property:int/, /index:int/, /value:float/)
+→ int¶ <#zbrush.commands.set_zsphere>
+
+    Gets the specified property for a ZSphere within the currently
+    active ZSpheres tool.
+
+    Warning
+
+    Editing ZSphere operations always must happen in the context of a |
+    edit_zsphere| <#zbrush.commands.edit_zsphere> call.
+
+    Parameters:
+
+          *
+
+            *property* (int) –
+
+            The property to set.
+
+            1
+
+            	
+
+            The x position of the ZSphere.
+
+            2
+
+            	
+
+            The y position of the ZSphere.
+
+            3
+
+            	
+
+            The z position of the ZSphere.
+
+            4
+
+            	
+
+            The radius of the ZSphere.
+
+            5
+
+            	
+
+            The color of the ZSphere in ZBrush hex format.
+
+            6
+
+            	
+
+            The mask of the ZSphere in the interval [0, 255]. 0 means
+            unmasked, 255 means fully masked.
+
+            7
+
+            	
+
+            The parent index of the ZSphere. The root ZSphere will have
+            a parent index of -1. All other ZSpheres will have a parent
+            index greater than or equal to 0.
+
+            9
+
+            	
+
+            The timestamp of the last edit.
+
+            14
+
+            	
+
+            The flags of the ZSphere.
+
+            15
+
+            	
+
+            The twist angle of the ZSphere.
+
+            16
+
+            	
+
+            The membrane value of the ZSphere.
+
+            17
+
+            	
+
+            The X resolution of the ZSphere.
+
+            18
+
+            	
+
+            The Y resolution of the ZSphere.
+
+            19
+
+            	
+
+            The Z resolution of the ZSphere.
+
+            20
+
+            	
+
+            The XYZ resolution of the ZSphere.
+
+            21
+
+            	
+
+            The user value of the ZSphere.
+
+            The following properties can NOT be set:
+
+            0
+
+            	
+
+            The total number of ZSpheres in the current tool.
+
+            8
+
+            	
+
+            The last click index. -1 means no last click.
+
+            10
+
+            	
+
+            The number of children this ZSphere has.
+
+            11
+
+            	
+
+            The sub-index of a Zsphere.
+
+            12
+
+            	
+
+            The timestamp count.
+
+            13
+
+            	
+
+            The timestamp index.
+
+          *
+
+            *index* (int) – The index of the ZSphere to set. Must be a
+            value greater or equal than zero.
+
+          *
+
+            *value* (float) – The new value of the property to set. All
+            values are expressed as floats.
+
+    Returns:
+
+        The result of the operation. 0 indicates success, while -1
+        indicates failure.
+
+    Return type:
+
+        int
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        def set_nodes() -> None:
+            '''Sets the x-coordinates of all ZSpheres to one quarter of their index.
+            '''
+            # Get the total number of ZSpheres from the root and then start iterating.
+            count: int = int(zbc.get_zsphere(property=0, index=0, sub_index=0))
+            for i in range(count):
+                zbc.set_zsphere(property=1, index=i, value=0.25 * i)
+
+        zbc.edit_zsphere(set_nodes)
+
+        Copy to clipboard
+
+  * Modeling Functions <#>
+      o Signatures <#signatures>
+          + Curves <#curves>
+          + Miscellaneous <#miscellaneous>
+          + Strokes <#strokes>
+          + Tools and Subtools <#tools-and-subtools>
+          + Transforms <#transforms>
+          + ZSpheres <#zspheres>
+      o Descriptions <#descriptions>
+          + Curves <#id1>
+              # |add_curve_point()| <#zbrush.commands.add_curve_point>
+              # |add_new_curve()| <#zbrush.commands.add_new_curve>
+              # |curves_to_ui()| <#zbrush.commands.curves_to_ui>
+              # |delete_curves()| <#zbrush.commands.delete_curves>
+              # |new_curves()| <#zbrush.commands.new_curves>
+          + Miscellaneous <#id2>
+              # |create_displacement_map()|
+                <#zbrush.commands.create_displacement_map>
+              # |create_normal_map()| <#zbrush.commands.create_normal_map>
+              # |get_polymesh3d_area()|
+                <#zbrush.commands.get_polymesh3d_area>
+              # |get_polymesh3d_volume()|
+                <#zbrush.commands.get_polymesh3d_volume>
+              # |is_polymesh3d_solid()|
+                <#zbrush.commands.is_polymesh3d_solid>
+              # |pixol_pick()| <#zbrush.commands.pixol_pick>
+              # |query_mesh3d()| <#zbrush.commands.query_mesh3d>
+          + Strokes <#id3>
+              # |Stroke| <#zbrush.commands.Stroke>
+                  * |Stroke.__init__()| <#zbrush.commands.Stroke.__init__>
+                  * |Stroke.__repr__()| <#zbrush.commands.Stroke.__repr__>
+              # |Strokes| <#zbrush.commands.Strokes>
+                  * |Strokes.__init__()| <#zbrush.commands.Strokes.__init__>
+                  * |Strokes.__repr__()| <#zbrush.commands.Strokes.__repr__>
+              # |canvas_stroke()| <#zbrush.commands.canvas_stroke>
+              # |canvas_strokes()| <#zbrush.commands.canvas_strokes>
+              # |get_stroke_info()| <#zbrush.commands.get_stroke_info>
+              # |get_last_stroke()| <#zbrush.commands.get_last_stroke>
+              # |load_stroke()| <#zbrush.commands.load_stroke>
+              # |load_strokes()| <#zbrush.commands.load_strokes>
+          + Tools and Subtools <#id4>
+              # |get_active_subtool_index()|
+                <#zbrush.commands.get_active_subtool_index>
+              # |get_active_tool_index()|
+                <#zbrush.commands.get_active_tool_index>
+              # |get_active_tool_path()|
+                <#zbrush.commands.get_active_tool_path>
+              # |get_subtool_count()| <#zbrush.commands.get_subtool_count>
+              # |get_subtool_folder_index()|
+                <#zbrush.commands.get_subtool_folder_index>
+              # |get_subtool_folder_name()|
+                <#zbrush.commands.get_subtool_folder_name>
+              # |get_subtool_id()| <#zbrush.commands.get_subtool_id>
+              # |get_subtool_status()| <#zbrush.commands.get_subtool_status>
+              # |get_tool_count()| <#zbrush.commands.get_tool_count>
+              # |get_tool_path()| <#zbrush.commands.get_tool_path>
+              # |locate_subtool()| <#zbrush.commands.locate_subtool>
+              # |locate_subtool_by_name()|
+                <#zbrush.commands.locate_subtool_by_name>
+              # |select_subtool()| <#zbrush.commands.select_subtool>
+              # |select_tool()| <#zbrush.commands.select_tool>
+              # |set_subtool_status()| <#zbrush.commands.set_subtool_status>
+              # |set_tool_path()| <#zbrush.commands.set_tool_path>
+          + Transforms <#id6>
+              # |get_transform()| <#zbrush.commands.get_transform>
+              # |get_transpose()| <#zbrush.commands.get_transpose>
+              # |is_transpose_shown()| <#zbrush.commands.is_transpose_shown>
+              # |set_transform()| <#zbrush.commands.set_transform>
+              # |set_transpose()| <#zbrush.commands.set_transpose>
+          + ZSpheres <#id7>
+              # |add_zsphere()| <#zbrush.commands.add_zsphere>
+              # |delete_zsphere()| <#zbrush.commands.delete_zsphere>
+              # |edit_zsphere()| <#zbrush.commands.edit_zsphere>
+              # |get_zsphere()| <#zbrush.commands.get_zsphere>
+              # |set_zsphere()| <#zbrush.commands.set_zsphere>
+
+© 2025 Maxon Computer GmbH <https://www.maxon.net/>
+- End User License Agreement <https://www.maxon.net/en/legal/eula>

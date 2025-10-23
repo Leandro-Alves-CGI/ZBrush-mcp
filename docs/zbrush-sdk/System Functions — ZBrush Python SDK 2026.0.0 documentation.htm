@@ -1,0 +1,1645 @@
+  * index <https://developers.maxon.net/docs/zbrush/py/2026_0_0/
+    genindex.html>
+  * next <https://developers.maxon.net/docs/zbrush/py/2026_0_0/manuals/
+    index.html> |
+  * previous <https://developers.maxon.net/docs/zbrush/py/2026_0_0/api/
+    mod_zbr_cmds_modeling.html> |
+  * ZBrush Python SDK 2026.0.0 documentation <https://
+    developers.maxon.net/docs/zbrush/py/2026_0_0/index.html> »
+  * System Functions
+
+
+  System Functions¶ <#system-functions>
+
+Lists functions to create and interact with geometry.
+
+
+    Signatures¶ <#signatures>
+
+
+      Files¶ <#files>
+
+|zbrush.commands.get_last_typed_filename|
+<#zbrush.commands.get_last_typed_filename>()
+
+	
+
+Returns the file path for the last file name that was entered by a user
+in a load or save operation.
+
+|zbrush.commands.get_last_used_filename|
+<#zbrush.commands.get_last_used_filename>()
+
+	
+
+Returns the file path for the last file name that was entered by a user
+in a load or save operation.
+
+|zbrush.commands.get_next_filename| <#zbrush.commands.get_next_filename>()
+
+	
+
+Returns the preset file path or file name used for the next load or save
+operation.
+
+|zbrush.commands.increment_filename|
+<#zbrush.commands.increment_filename>(base[, ...])
+
+	
+
+Increments a numeric portion in the given file name or path.
+
+|zbrush.commands.make_filename|
+<#zbrush.commands.make_filename>(base, index[, ...])
+
+	
+
+Combines a file name or path with an index, while ensuring a minimum
+number of digits.
+
+|zbrush.commands.resolve_path| <#zbrush.commands.resolve_path>(path)
+
+	
+
+Makes the given relative path absolute in relation to the directory of
+the executing Python module.
+
+|zbrush.commands.set_next_filename|
+<#zbrush.commands.set_next_filename>([path, ...])
+
+	
+
+Presets the file path or name used for the next load or save operation.
+
+
+      Miscellaneous¶ <#miscellaneous>
+
+|zbrush.commands.config| <#zbrush.commands.config>(version)
+
+	
+
+Sets ZBrush to the configuration associated with the given version.
+
+|zbrush.commands.interpolate|
+<#zbrush.commands.interpolate>(time, v1, v2[, ...])
+
+	
+
+Returns the linear, quadratic, or cubic interpolation at the given
+offset time.
+
+|zbrush.commands.randomize| <#zbrush.commands.randomize>(seed)
+
+	
+
+Reseeds the random number generator of ZBrush.
+
+|zbrush.commands.rgb| <#zbrush.commands.rgb>(r, g, b)
+
+	
+
+Returns an RGB color in the int-format used by many functions in the
+ZBrush API.
+
+|zbrush.commands.system_info| <#zbrush.commands.system_info>()
+
+	
+
+Returns a string containing the system information.
+
+|zbrush.commands.zbrush_info| <#zbrush.commands.zbrush_info>(info)
+
+	
+
+Returns selected information about the running Zbrush instance.
+
+|zbrush.zscript_compatibility.rand|
+<#zbrush.zscript_compatibility.rand>(value)
+
+	
+
+Returns a random float between 0 and the specified value.
+
+|zbrush.zscript_compatibility.rand_int|
+<#zbrush.zscript_compatibility.rand_int>(value)
+
+	
+
+Returns a random integer between 0 and the specified value.
+
+
+      Python¶ <#python>
+
+|zbrush.utils.run_path| <#zbrush.utils.run_path>(script_path[, ...])
+
+	
+
+Executes the Python script at the passed script_path.
+
+|zbrush.utils.run_script| <#zbrush.utils.run_script>(script[, ...])
+
+	
+
+Executes the passed Python script code.
+
+|zbrush.utils.clear_output| <#zbrush.utils.clear_output>()
+
+	
+
+Clears the Python output log.
+
+
+      Timeline¶ <#timeline>
+
+|zbrush.commands.delete_keyframe|
+<#zbrush.commands.delete_keyframe>(frame_index)
+
+	
+
+Deletes the keyframe at the given frame index in the timeline of ZBrush.
+
+|zbrush.commands.get_active_track_index|
+<#zbrush.commands.get_active_track_index>()
+
+	
+
+Returns the index of the active track as selected in the 'Movie >
+Timeline Tracks' palette.
+
+|zbrush.commands.get_keyframe_time|
+<#zbrush.commands.get_keyframe_time>(frame_index)
+
+	
+
+Gets the normalized document time for the keyframe at the given index in
+the active track.
+
+|zbrush.commands.get_keyframes_count|
+<#zbrush.commands.get_keyframes_count>()
+
+	
+
+Returns the total number of keyframes in the active track.
+
+|zbrush.commands.get_timeline_time| <#zbrush.commands.get_timeline_time>()
+
+	
+
+Returns the current time.
+
+|zbrush.commands.new_keyframe| <#zbrush.commands.new_keyframe>(time)
+
+	
+
+Creates a new keyframe in the active track at the given document time.
+
+|zbrush.commands.set_active_track_index|
+<#zbrush.commands.set_active_track_index>(...)
+
+	
+
+Sets active track as selected in the 'Movie > Timeline Tracks' palette
+by the given index.
+
+|zbrush.commands.set_keyframe_time|
+<#zbrush.commands.set_keyframe_time>(...)
+
+	
+
+Sets the relative document time of the keyframe at the given index.
+
+|zbrush.commands.set_timeline_time|
+<#zbrush.commands.set_timeline_time>(time)
+
+	
+
+Sets the current time.
+
+|zbrush.commands.set_timeline_to_keyframe_time|
+<#zbrush.commands.set_timeline_to_keyframe_time>(...)
+
+	
+
+Sets the current time to the time of the keyframe at the given index.
+
+
+    Descriptions¶ <#descriptions>
+
+
+      Files¶ <#id1>
+
+zbrush.commands.get_last_typed_filename() → str¶
+<#zbrush.commands.get_last_typed_filename>
+
+    Returns the file path for the last file name that was entered by a
+    user in a load or save operation.
+
+    As ‘entering’ counts both manually typing out a file and selecting
+    it for example in a load dialog with a mouse click.
+
+    Note
+
+    Other than the function name implies, this function returns a full
+    file path, and not just a file name.
+
+    Warning
+
+    It is a known issue that the Python console of ZBrush does not
+    render backward slashes in strings correctly. The strings are
+    correct, it is just the console that renders them incorrectly at the
+    moment. This is not an escaping issue, and double escaping strings
+    or using raw strings does not resolve the issue. This also impacts
+    the ability to correctly render special characters such as n and t.
+
+    Returns:
+
+        The latest typed filename, can be the empty string when no
+        filename has been yet typed.
+
+    Return type:
+
+        str
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # This example assumes that we have saved this script as at `D:\stuff\examples\test.py` and then
+        # loaded it with the 'Load' button in the Python palette of ZBrush.
+        print(f"{zbc.get_last_typed_filename() = }")
+        # > D:\stuff\examples\test.py (printed as 'D:stuffexamplestest.py')
+
+        Copy to clipboard
+
+zbrush.commands.get_last_used_filename() → str¶
+<#zbrush.commands.get_last_used_filename>
+
+    Returns the file path for the last file name that was entered by a
+    user in a load or save operation.
+
+    So, other than |get_last_typed_filename()|
+    <#zbrush.commands.get_last_typed_filename>, this function does not
+    require direct user input, just re-saving a file is enough to store
+    its path.
+
+    Note
+
+    Other than the function name implies, this function returns a full
+    file path, and not just a file name.
+
+    Warning
+
+    It is a known issue that the Python console of ZBrush does not
+    render backward slashes in strings correctly. The strings are
+    correct, it is just the console that renders them incorrectly at the
+    moment. This is not an escaping issue, and double escaping strings
+    or using raw strings does not resolve the issue. This also impacts
+    the ability to correctly render special characters such as n and t.
+
+    Returns:
+
+        The latest used filename, can be the empty string when no
+        filename has been yet used.
+
+    Return type:
+
+        str
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # The example assume that we have saved this script as file and then loaded it with the
+        # load button in the Python section.
+        print(f"{zbc.get_last_used_filename() = }")
+        # > D:\stuff\examples\test.py (printed as 'D:stuffexamplestest.py')
+
+        Copy to clipboard
+
+zbrush.commands.get_next_filename() → str¶
+<#zbrush.commands.get_next_filename>
+
+    Returns the preset file path or file name used for the next load or
+    save operation.
+
+    Warning
+
+    It is a known issue that the Python console of ZBrush does not
+    render backward slashes in strings correctly. The strings are
+    correct, it is just the console that renders them incorrectly at the
+    moment. This is not an escaping issue, and double escaping strings
+    or using raw strings does not resolve the issue. This also impacts
+    the ability to correctly render special characters such as n and t.
+
+    Returns:
+
+        The file path or file name for the next operation. Can be the
+        empty string when no file name preset. The outcome (path or
+        name) depends on what has been set with |set_next_filename()|
+        <#zbrush.commands.set_next_filename> before.
+
+    Return type:
+
+        str
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        zbc.set_next_filename(r"D:\temp\test.zbr")
+        print(f"{zbc.get_next_filename() = }") # > D:\temp\test.zbr (printed as 'D:temptest.zbr')
+
+        Copy to clipboard
+
+zbrush.commands.increment_filename(/base:str/, /digits:int=3/, /
+add_copy:bool=False/) → str¶ <#zbrush.commands.increment_filename>
+
+    Increments a numeric portion in the given file name or path.
+
+    Warning
+
+    It is a known issue that the Python console of ZBrush does not
+    render backward slashes in strings correctly. The strings are
+    correct, it is just the console that renders them incorrectly at the
+    moment. This is not an escaping issue, and double escaping strings
+    or using raw strings does not resolve the issue. This also impacts
+    the ability to correctly render special characters such as n and t.
+
+    Warning
+
+      *
+
+        This function exists purely for ZScript legacy purposes.
+
+      *
+
+        The digits feature is buggy and can fail to detect/expand an
+        index not fitting the digit length.
+
+      *
+
+        Use Python’s regular expressions and string interpolation
+        instead when you can as you have there more control.
+
+    Parameters:
+
+          *
+
+            *base* (str) – The file name or file path to increment.
+
+          *
+
+            *digits* (int, optional) – The number of digits to ensure in
+            the interval [0, 4]. Defaults to 3.
+
+          *
+
+            *add_copy* (bool, optional) – Non-functional.
+
+    Returns:
+
+        The file name with its numeric portion being incremented.
+
+    Return type:
+
+        str
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Increment both a file name and path. Because get extended to the default three digit scheme.
+        zbc.increment_filename("image_1.psd") # > "image_002.psd"
+        zbc.increment_filename(r"D:\temp\file_1.zbr") # > "D:\temp\file_002.zbr" (printed as "D:tempfile_002.zbr")
+
+        Copy to clipboard
+
+zbrush.commands.make_filename(/base:str/, /index:int/, /digits:int=0/) →
+str¶ <#zbrush.commands.make_filename>
+
+    Combines a file name or path with an index, while ensuring a minimum
+    number of digits.
+
+    Warning
+
+    It is a known issue that the Python console of ZBrush does not
+    render backward slashes in strings correctly. The strings are
+    correct, it is just the console that renders them incorrectly at the
+    moment. This is not an escaping issue, and double escaping strings
+    or using raw strings does not resolve the issue. This also impacts
+    the ability to correctly render special characters such as n and t.
+
+    Parameters:
+
+          *
+
+            *base* (str) – The file name or file path to extend.
+
+          *
+
+            *index* (int) – The index to append.
+
+          *
+
+            *digits* (int, optional) – The number of digits to ensure
+            for the index part. Defaults to 0.
+
+    Returns:
+
+        The generated file name.
+
+    Return type:
+
+        str
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        import os
+
+        file_path: str = r"D:\file.zbr"
+        index: int = 2
+
+        # Create a new file name for the index 2 and at least three digits and then do the same
+        # for a file path.
+        zbc.make_filename("image.psd", index, 3) # > "image_002.psd"
+        zbc.make_filename(file_path, index, 3) # > "D:\file_002.zbr" (printed as "D:file_002.zbr")
+
+        # A more pythonic approach would be to use `os` and string interpolation instead. It is one
+        # line more but we have much more control over the result.
+        head, ext = os.path.splitext(file_path) # Chop of the extension
+        new_path: str = f"{head}_{index:03d}{ext}" # > "D:\file_002.zbr" (printed as "D:file_002.zbr")
+
+        Copy to clipboard
+
+zbrush.commands.resolve_path(/path:str/) → str¶
+<#zbrush.commands.resolve_path>
+
+    Makes the given relative path absolute in relation to the directory
+    of the executing Python module.
+
+    Warning
+
+    It is a known issue that the Python console of ZBrush does not
+    render backward slashes in strings correctly. The strings are
+    correct, it is just the console that renders them incorrectly at the
+    moment. This is not an escaping issue, and double escaping strings
+    or using raw strings does not resolve the issue. This also impacts
+    the ability to correctly render special characters such as n and t.
+
+    Parameters:
+
+        *path* (str) – Local File Name
+
+    Returns:
+
+        The absolute path to the file.
+
+    Return type:
+
+        str
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        import os
+        import sys
+
+        # Let's assume we have this directory structure:
+        #
+        #   D:
+        #   └── scripts
+        #       ├── my_script.py
+        #       └── my_data.txt
+        #
+        # And the module we are currently running is #my_script.py. Then we can infer the absolute
+        # path to 'my_data.txt' as follows:
+        abs_data_path: str = zbc.resolve_path("my_data.txt") # > "D:\scripts\my_data.txt"
+
+        # As many for these legacy Zscript functions, it is a bit questionable to use a function
+        # for something this simple when using Python. We can achieve the same just by using #os
+        # and #__file__
+        abs_data_path_os: str = os.path.join(os.path.dirname(__file__), "my_data.txt")
+
+        # It is also really important to understand that the working directory of this Python script
+        # is NOT the directory of the script itself as one might be used to from a CPython instance,
+        # but the directory of the running Zbrush instance.
+        print(f"{os.getcwd() = }")   # Will print the installation location of ZBrush.
+
+        # This will NOT try to open a file "my_data.txt" next to the file of this module but a file
+        # of that name in the ZBrush installation directory (because relative paths are releative to
+        # the working directory).
+        with open("my_data.txt", "r") as f:
+            data = f.read()
+            print(f"{data = }")
+
+        # Changing the current working directory is not advisable, as you do not just do this for
+        # your script, but for all scripts the user will ever run. And some scripts might implicitly
+        # rely on the current working directory being the ZBrush installation directory. So, we
+        # should use absolute paths instead.
+        data_file: str = os.path.join(os.path.dirname(__file__), "my_data.txt")
+        with open(data_file, "r") as f:
+            data = f.read()
+            print(f"{data = }")
+
+        Copy to clipboard
+
+zbrush.commands.set_next_filename(/path:str=''/, /template_path:str=''/)
+→ None¶ <#zbrush.commands.set_next_filename>
+
+    Presets the file path or name used for the next load or save operation.
+
+    When a file name is set, only the name will be set in load or save
+    operations. When a full file path is given, that dialog will use
+    that full path.
+
+    Warning
+
+    It is a known issue that the Python console of ZBrush does not
+    render backward slashes in strings correctly. The strings are
+    correct, it is just the console that renders them incorrectly at the
+    moment. This is not an escaping issue, and double escaping strings
+    or using raw strings does not resolve the issue. This also impacts
+    the ability to correctly render special characters such as n and t.
+
+    Parameters:
+
+          *
+
+            *path* (str, optional) – File name including the extension
+            (such as .psd ). If omitted the stored file name will be
+            cleared.
+
+          *
+
+            *template_path* (str, optional) – None-functional at the moment.
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Set the full path "d:\temp\foo.zbr" for the next load or save operation.
+        zbc.set_next_filename(r"d:\temp\foo.zbr")
+        # Only set the next file name.
+        zbc.set_next_filename("foo.zbr")
+
+        Copy to clipboard
+
+
+      Miscellaneous¶ <#id2>
+
+zbrush.commands.config(/version:float/) → None¶ <#zbrush.commands.config>
+
+    Sets ZBrush to the configuration associated with the given version.
+
+    This function can be useful to ensure a starting point for a script.
+    Because the /series of button clicks/ style scripts which are
+    popular in the ZBrush API can rely on a specific application state
+    to properly work. For more defensive code which ensures itself that
+    certain items exist and are set to the required value, calling this
+    function is not necessary.
+
+    It is up to you to decide what to do: Either call this function and
+    with that possibly overwrite user settings at the advantage of less
+    verbose and defensive code. Or write more verbose, defensive, and
+    with that longer code at the advantage of not having to overwrite
+    the configuration of the user.
+
+    Parameters:
+
+        *version* (float) – The version of ZBrush this instance should
+        mimic in its settings. This only works in a downwards fashion
+        for obvious reasons. E.g., a 2026 version of ZBrush can mimic a
+        2025 version, but a 2025 version cannot mimic a 2026 version.
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Set ZBrush to its 2026 release configuration.
+        zbc.config(2026)
+
+        Copy to clipboard
+
+zbrush.commands.interpolate(/time:float/, /v1:float|list[float]/, /
+v2:float|list[float]/, /v3:float|list[float]|None=None/, /v4:float|
+list[float]|None=None/, /as_angle:bool=False/) → float|list[float]¶
+<#zbrush.commands.interpolate>
+
+    Returns the linear, quadratic, or cubic interpolation at the given
+    offset time.
+
+    Depending on the number of passed arguments, the function will
+    interpolate linearly, quadratically, or cubically. It can also
+    interpolate piecewise over multiple segments. It uses the standard
+    quadratic Bézier polynomial and the standard cubic Hermite
+    polynomial for the non-linear interpolation modes.
+
+    Parameters:
+
+          *
+
+            *time* (float) – The interpolation offset (which is
+            conventionally labeled as t) in the interval [0, 1].
+
+          *
+
+            *v1* (float) – The first control point in linear and
+            quadratic mode, the left tangent in cubic mode.
+
+          *
+
+            *v2* (float) – The second control point in linear and
+            quadratic mode, the first control point in cubic mode.
+
+          *
+
+            *v3* (float, optional) – The bias in cubic mode, the first
+            control point in quadratic mode. Defaults to None.
+
+          *
+
+            *v4* (float, optional) – The right tangent in cubic mode.
+            Defaults to None.
+
+          *
+
+            *as_angle* (bool, optional) – If to interpret the input
+            values as values in degrees (sic!, not radians). This does
+            not entail spherical interpolation but rather a custom
+            clamping algorithm for the four input values and then falls
+            back to the same interpolation polynomials. Is usually not
+            that useful unless one has to replicate exactly this ZBrush
+            ‘angle interpolation’ behaviour. Defaults to False.
+
+    Returns:
+
+        The interpolated value(s).
+
+    Return type:
+
+        float | list[float]
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        offsets: list[float] = [0.0, 0.2, 0.4, 0.4, 0.8, 1.0] # A a list of interpolation offsets.
+        a: float = 0.0 # Start of the interpolation interval.
+        b: float = 1.0 # End of the interpolation interval.
+
+        # Simple linear interpolation, we call interpolate(t, a, b).
+        result: list[float] = [zbc.interpolate(t, a, b) for t in offsets]
+        print(f"Linear: {result}")
+        # The output, the values are like this due to floating point precision, 0.2, 0.4, ... are
+        # not precisely representable as floating point values and these are the closest values that
+        # are representable. Or in other words, mathematically this would be [0, 0.2, 0.4, 0.4, 0.8, 1.0].
+        # > [0.0, 0.20000000298023224, 0.4000000059604645, 0.4000000059604645, 0.800000011920929, 1.0]
+
+        # Quadratic interpolation. Here we call interpolate(t, a, bias, b). The values are skewed
+        # towards #a because of the bias of 0.25.
+        bias: float = 0.25 # The bias of the quadratic interpolation.
+        result: list[float] = [zbc.interpolate(t, a, bias, b) for t in offsets]
+        print(f"Quadratic: {result}")
+        # > [0.0, 0.11999998986721039, 0.2800000011920929, 0.2800000011920929, 0.7200000286102295, 1.0]
+
+        # And finally, cubic interpolation, here the input format is interpolate(ta, a, b, tb). The
+        # format is a bit unusual but it is indeed the format. Since we give #a a bias of 0.25 and #b
+        # a bias of 0.0 (because tb == b), we see values stretched out around #a and then approaching
+        # a linear interpolation with #b.
+        ta: float = -0.25 # The left tangent of #a, usually a value smaller or equal than #a.
+        tb: float = 1.0 # The right tangent of #b, usually a value larger or equal than #b.
+        result: list[float] = [zbc.interpolate(t, ta, a, b, tb) for t in offsets]
+        print(f"Cubic: {result}")
+        # > [0.0, 0.1680000126361847, 0.39400002360343933, 0.39400002360343933, 0.8520000576972961, 1.0]
+
+        # And last but not least, we can also do the same with lists of values. #t will NOT be interpreted
+        # over the length of all segments but rather piecewise. Due to Python's strong iteration features
+        # we could also easily do this with list comprehensions ourselves.
+
+        # Linearly interpolate the three segments [0, .25], [.25, .50], and [.50, 1.0] at once.
+        result: list[float] = [zbc.interpolate(t,
+                                               [0.0,  0.25, 0.5],  # a
+                                               [0.25, 0.50, 1.0])  # b
+                               for t in (0.0, 0.5, 1.0)]
+        print(f"Linear list:")
+        for item in result:
+            print(f"    {item}")
+        # [
+        #   [0.0, 0.25, 0.5],        # (a, b) at t = 0.0, we get #a of each segment.
+        #   [0.125, 0.375, 0.75],    # (a, b) at t = 0.5, we get the average of each segment.
+        #   [0.25, 0.5, 1.0]         # (a, b) at t = 1.0, we get #b of each segment.
+        # ]
+
+        Copy to clipboard
+
+zbrush.commands.randomize(/seed:int/) → None¶ <#zbrush.commands.randomize>
+
+    Reseeds the random number generator of ZBrush.
+
+    Parameters:
+
+        *seed* (int) – The new seed value in the interval [0, 32767].
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        zbc.randomize(42) # Sets the new seed value 42.
+
+        Copy to clipboard
+
+zbrush.commands.rgb(/r:int/, /g:int/, /b:int/) → int¶ <#zbrush.commands.rgb>
+
+    Returns an RGB color in the int-format used by many functions in the
+    ZBrush API.
+
+    The formula to calculate a int value from an RGB triplet is R *
+    65536 + G * 256 + B.
+
+    Parameters:
+
+          *
+
+            *r* (int) – The red component to encode in the interval [0,
+            255].
+
+          *
+
+            *g* (int) – The green component to encode in the interval
+            [0, 255].
+
+          *
+
+            *b* (int) – The blue component to encode in the interval [0,
+            255].
+
+    Returns:
+
+        The encoded RGB color value.
+
+    Return type:
+
+        int
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        dark_blue: int = zbc.rgb(20, 40, 80) # A dark blue color.
+        zbc.show_note("Hello World!", bg_color=dark_blue) # Use the color to display a note.
+
+        Copy to clipboard
+
+zbrush.commands.system_info() → str¶ <#zbrush.commands.system_info>
+
+    Returns a string containing the system information.
+
+    Note
+
+    The content of the string depends on the OS and CPU architecture. It
+    might contain both CPU and RAM information, for CPUs with an overly
+    long system description, this string might be truncated and contain
+    no RAM information.
+
+    Returns:
+
+        The system information string.
+
+    Return type:
+
+        str
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Prints a system infomation string, e.g. (a tuncated string):
+        #   "Intel(R) Core(TM) i7-10700K CPU @ 3.80GHz MaxThreads=16 ActiveTh@"
+        print(zbc.system_info())
+
+        Copy to clipboard
+
+zbrush.commands.zbrush_info(/info:int/) → float¶
+<#zbrush.commands.zbrush_info>
+
+    Returns selected information about the running Zbrush instance.
+
+    Parameters:
+
+        *info* (int) –
+
+        The type of information to retrieve:
+
+        0
+
+        	
+
+        ZBrush version number.
+
+        1
+
+        	
+
+        Float value describing the type of ZBrush version: Demo (0),
+        Beta (1), or Full Version (2).
+
+        2
+
+        	
+
+        The runtime duration of this instance in seconds.
+
+        3
+
+        	
+
+        The current physical memory usage.
+
+        4
+
+        	
+
+        The current virtual memory usage.
+
+        5
+
+        	
+
+        The currently free memory.
+
+        6
+
+        	
+
+        The operating system: PC (0), Mac (1), or MacOSX (2).
+
+        7
+
+        	
+
+        The unique session ID.
+
+        8
+
+        	
+
+        The total amount of RAM in bytes (does not work properly).
+
+        9
+
+        	
+
+        The current year.
+
+        10
+
+        	
+
+        The current month.
+
+        11
+
+        	
+
+        The current day.
+
+        12
+
+        	
+
+        The current hour.
+
+        13
+
+        	
+
+        The current minutes.
+
+        14
+
+        	
+
+        The current seconds.
+
+        15
+
+        	
+
+        The current day of the week.
+
+        16
+
+        	
+
+        The bit depth of the CPU.
+
+    Returns:
+
+        The requested information value.
+
+    Return type:
+
+        float
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Prints all the data #zbrush_info() holds, e.g.:
+        #
+        #   0: zbc.zbrush_info(i) = 2026.0
+        #   1: zbc.zbrush_info(i) = 2.0
+        #   2: zbc.zbrush_info(i) = 3370.84716796875
+        #   3: zbc.zbrush_info(i) = 660.066162109375
+        #   4: zbc.zbrush_info(i) = 0.0
+        #   5: zbc.zbrush_info(i) = 35171.02734375
+        #   6: zbc.zbrush_info(i) = 0.0
+        #   7: zbc.zbrush_info(i) = 118528.0
+        #   8: zbc.zbrush_info(i) = 37016.1328125
+        #   9: zbc.zbrush_info(i) = 2025.0
+        #   10: zbc.zbrush_info(i) = 8.0
+        #   11: zbc.zbrush_info(i) = 20.0
+        #   12: zbc.zbrush_info(i) = 14.0
+        #   13: zbc.zbrush_info(i) = 26.0
+        #   14: zbc.zbrush_info(i) = 28.0
+        #   15: zbc.zbrush_info(i) = 3.0
+        #   16: zbc.zbrush_info(i) = 64.0
+        #
+        for i in range(17):
+            print(f"{i}: {zbc.zbrush_info(i) = }")
+
+        Copy to clipboard
+
+zbrush.zscript_compatibility.rand(/value:float/) → float¶
+<#zbrush.zscript_compatibility.rand>
+
+    Returns a random float between 0 and the specified value.
+
+    Note
+
+    Exposes the legacy ZScript function for faithfully porting legacy
+    ZScripts. Use Python’s native random.uniform in new scripts.
+
+    Parameters:
+
+        *value* (/float/) – The upper bound for the random float.
+
+    Returns:
+
+        A random float between 0 and the specified value.
+
+    Return type:
+
+        float
+
+    Example:
+
+        from zbrush import zscript_compatibility as zbcomp
+
+        # Prints 10 random floats for the ranges [0.0, 1.0], [0.0, 100.0], and [0.0, 10000.0].
+        for i in range(10):
+            print(f"{i}: {zbcomp.rand(1.0) = }")        # Will generate values in the interval [0.0, 1.0]
+            print(f"{i}: {zbcomp.rand(100.0) = }")      # Will generate values in the interval [0.0, 100.0]
+            print(f"{i}: {zbcomp.rand(10000.0) = }")    # Will generate values in the interval [0.0, 10000.0]
+
+        Copy to clipboard
+
+zbrush.zscript_compatibility.rand_int(/value:float/) → int¶
+<#zbrush.zscript_compatibility.rand_int>
+
+    Returns a random integer between 0 and the specified value.
+
+    Note
+
+    Exposes the legacy ZScript function for faithfully porting legacy
+    ZScripts. Use Python’s native random.randint in new scripts.
+
+    Parameters:
+
+        *value* (/float/) – The upper bound for the random integer.
+
+    Returns:
+
+        A random integer between 0 and the specified value.
+
+    Return type:
+
+        int
+
+    Example:
+
+        from zbrush import zscript_compatibility as zbcomp
+
+        # Prints 10 random integers for the ranges [0, 1], [0, 100], and [0, 10000].
+        for i in range(10):
+            print(f"{i}: {zbcomp.rand_int(1.0) = }")        # Will generate values in the interval [0, 1]
+            print(f"{i}: {zbcomp.rand_int(100.0) = }")      # Will generate values in the interval [0, 100]
+            print(f"{i}: {zbcomp.rand_int(10000.0) = }")    # Will generate values in the interval [0, 10000]
+
+        Copy to clipboard
+
+
+      Python¶ <#id3>
+
+zbrush.utils.run_path(/script_path:str/, /shared_environment:bool=True/)
+→ bool¶ <#zbrush.utils.run_path>
+
+    Executes the Python script at the passed script_path.
+
+    Warning
+
+      *
+
+        Running arbitrary code is very unsafe. Avoid executing code from
+        untrusted sources.
+
+      *
+
+        Do not try to use subprocess.run with sys.executable, because
+        just as multiprocessing, it will create a new Python interpreter
+        process which means a new ZBrush instance in case of the ZBrush
+        Python interpreter. This is not supported and will lead to crashes.
+
+    Parameters:
+
+          *
+
+            *script_path* (str) – File path to the script to execute.
+
+          *
+
+            *shared_environment* (bool, optional) – Whether the script
+            is executed in its own scope or the global scope.
+
+    Returns:
+
+        True if the script was successfully executed, False otherwise.
+
+    Return type:
+
+        bool
+
+    Example:
+
+        from zbrush import utils as zbu
+
+        script_path: str = "d:/myScript.py" # A script we want to run.
+
+        # # Runs the script located at #path.
+        zbu.run_path(script_path)
+
+        # Alternative approaches which can be better depending on the context, can be to use builtin Python
+        # tools such as `runpy`, `exec`, or `importlib` as we have here full control over what is going on.
+
+        # Execute the script content ourself, here is the advantage that we have more control over the
+        # globals and locals.
+        content: str = open(script_path, encoding="utf-8").read()
+        exec(content, {"__name__": "__main__", "__file__": script_path, "MY_VARIABLE": 42})
+
+        Copy to clipboard
+
+zbrush.utils.run_script(/script:str/, /shared_environment:bool=True/) →
+bool¶ <#zbrush.utils.run_script>
+
+    Executes the passed Python script code.
+
+    Warning
+
+    Running arbitrary code is very unsafe. Avoid executing code from
+    untrusted sources.
+
+    Parameters:
+
+          *
+
+            *script* (str) – Script to execute.
+
+          *
+
+            *shared_environment* (bool, optional) – Whether the script
+            is executed in its own scope or the global scope.
+
+    Returns:
+
+        True if the code was successfully executed, False otherwise.
+
+    Return type:
+
+        bool
+
+    Example:
+
+        from zbrush import utils as zbu
+
+        # The code to run.
+        code: str = '''
+        from zbrush import commands as zbc
+
+        print(f"Hello world from the {zbc.__name__} API!")
+        '''
+
+        # Runs the given code.
+        zbu.run_script(code)
+
+        # We can also use here #exec to run the code.
+        exec(code)
+
+        Copy to clipboard
+
+zbrush.utils.clear_output() → None¶ <#zbrush.utils.clear_output>
+
+    Clears the Python output log.
+
+    Note
+
+    This clears the output log but does not reset the scroll position of
+    the log. So, when the log had been scrolled down substantially, you
+    will have to scroll back up to see new output.
+
+    Example:
+
+        from zbrush import commands as zbc
+        from zbrush import utils as zbu
+
+        # Show the 'Tutorial View', i.e., the part of the UI which holds the console, then turn on the
+        # 'Python Output' mode, and finally clear the output. There is currently no way (which at least
+        # I see) with which we could check if the 'Tutorial View' is already open. Running `click` on
+        # an already opened 'Tutorial View' will close it again.
+        zbc.click("Tutorial View")
+        zbc.set("ZScript:Script Window Mode:Python Output", True)
+        zbu.clear_output()
+        zbc.update(redraw_ui=True)
+
+        Copy to clipboard
+
+
+      Timeline¶ <#id4>
+
+zbrush.commands.delete_keyframe(/frame_index:int/) → int¶
+<#zbrush.commands.delete_keyframe>
+
+    Deletes the keyframe at the given frame index in the timeline of ZBrush.
+
+    Parameters:
+
+        *frame_index* (int) – The zero-based index of the keyframe to
+        delete. This is not the index into all frames in the timeline
+        but rather an index into the list of created keyframes. E.g., a
+        document could have have 90 frames in total and keyframes at
+        frame 0, 15, and 30. To get the second keyframe, we would pass 1
+        (a keyframe index) and not 15 (a frame index).
+
+    Returns:
+
+        The remaining number of keyframes on success or -1 otherwise.
+
+    Return type:
+
+        int
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # This example assumes that there are no existing keyframes in the document.
+
+        # Add three keyframes at the normalized document times 0, .5, and 1.
+        zbc.add_keyframe(0)
+        zbc.add_keyframe(0.5)
+        zbc.add_keyframe(1.0)
+
+        # Deletes the second keyframe, i.e., 50% of the timeline.
+        zbc.delete_keyframe(1)
+
+        Copy to clipboard
+
+zbrush.commands.get_active_track_index() → int¶
+<#zbrush.commands.get_active_track_index>
+
+    Returns the index of the active track as selected in the ‘Movie >
+    Timeline Tracks’ palette.
+
+    Returns:
+
+        The zero-based index of the active track. -1 indicates an error.
+
+    Return type:
+
+        int
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Get the index of the currently enabled track. This information is usually only useful when
+        # we temporarily switch to another track and want to switch back later.
+        tid: int = zbc.get_active_track_index()
+
+        # When we just want to know if a certain track is enabled, we must use #get and its item path.
+        material_track_is_enabled: bool = bool(zbc.get("Movie:Timeline Tracks:Material"))
+
+        print(f"Active track index: {tid}, material track enabled: {material_track_is_enabled}")
+
+        Copy to clipboard
+
+zbrush.commands.get_keyframe_time(/frame_index:int/) → float¶
+<#zbrush.commands.get_keyframe_time>
+
+    Gets the normalized document time for the keyframe at the given
+    index in the active track.
+
+    Note
+
+    ZBrush uses a normalized document time format in its API. See
+    sys_timeline_colors.py in the Code Examples <https://
+    developers.maxon.net/docs/zbrush/py/2026_0_0/manuals/examples.html>
+    for details.
+
+    Parameters:
+
+        *frame_index* (int) – The zero-based index of the keyframe for
+        which to get the normalized document time.
+
+    Returns:
+
+        The relative document time for the keyframe at the given index
+        in the interval [0, 1] or -1 if there is no keyframe at the
+        given index in the active track.
+
+    Return type:
+
+        float
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Get the total length of the document in seconds.
+        max_time: float = zbc.get("Movie:TimeLine:Duration")
+
+        # Get the time value for the second keyframe in the current track. It will return the value
+        # nrm_time in the interval [0, 1] and we then convert this to a value in seconds.
+
+        i: int = 1 # The second keyframe, the first one would be 0.
+        nrm_time: float = zbc.get_keyframe_time(i)
+        if nrm_time < 0:
+            raise ValueError(f"No keyframe found at the given index: {i}")
+
+        sec_time: float = nrm_time * max_time
+        print(f"The keyframe at index {i} is at {round(sec_time, 2)} seconds ({round(nrm_time, 2)}%).")
+
+        Copy to clipboard
+
+zbrush.commands.get_keyframes_count() → int¶
+<#zbrush.commands.get_keyframes_count>
+
+    Returns the total number of keyframes in the active track.
+
+    Returns:
+
+        The total number of keyframes in the active track.
+
+    Return type:
+
+        int
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Enable the Color track and count the keyframes in it.
+        zbc.set("Movie:TimeLine Tracks:Color", True)
+        count: int = zbc.get_keyframes_count()
+        print(f"The Color track has {count} keyframes.")
+
+        Copy to clipboard
+
+zbrush.commands.get_timeline_time() → float¶
+<#zbrush.commands.get_timeline_time>
+
+    Returns the current time.
+
+    The ‘current’ time is the position of the playhead in the timeline.
+
+    Note
+
+    ZBrush uses a normalized document time format in its API. See
+    sys_timeline_colors.py in the Code Examples <https://
+    developers.maxon.net/docs/zbrush/py/2026_0_0/manuals/examples.html>
+    for details.
+
+    Returns:
+
+        The current time as a normalized document time value.
+
+    Return type:
+
+        float
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Get the total length of the document in seconds.
+        max_time: float = zbc.get("Movie:TimeLine:Duration")
+
+        # Get the current time, i.e., the position of the playhead in the timeline. This returns a
+        # normalized document time value in the interval [0, 1] which we then convert to a value in
+        # seconds.
+        t_doc: float = zbc.get_timeline_time()
+        t_sec: float = t_doc * max_time
+
+        print(f"The document playhead is at {round(t_sec, 2)} seconds ({round(t_doc, 2)}%).")
+
+        Copy to clipboard
+
+zbrush.commands.new_keyframe(/time:float|None/) → int¶
+<#zbrush.commands.new_keyframe>
+
+    Creates a new keyframe in the active track at the given document time.
+
+    Note
+
+    ZBrush uses a normalized document time format in its API. See
+    sys_timeline_colors.py in the Code Examples <https://
+    developers.maxon.net/docs/zbrush/py/2026_0_0/manuals/examples.html>
+    for details.
+
+    Parameters:
+
+        *time* (float) – The normalized document time at which to create
+        the keyframe or None to create a keyframe at the current time.
+
+    Returns:
+
+        The zero-based index of the created keyframe or -1 when an error
+        occured.
+
+    Return type:
+
+        int
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Get the total length of the document in seconds.
+        max_time: float = zbc.get("Movie:TimeLine:Duration")
+
+        # Create a keyframe at five seconds.
+        if max_time < 5:
+            raise RuntimeError("Cannot create keyframe at 5 seconds for a document shorter than 5 seconds.")
+
+        t_sec: float = 5.0
+        t_doc: float = t_sec / max_time
+        kid: int = zbc.new_keyframe(t_doc)
+        if kid == -1:
+            raise RuntimeError("Failed to create keyframe.")
+
+        print(f"Created keyframe with index {kid} at {round(t_sec, 2)} seconds.")
+
+        # We can of course also make use of the relative time format Zbrush uses and create keyframes at
+        # 25%, 50%, and 75% of the document length, but that is probably only rarely useful.
+        ids: list[int] = [
+            zbc.new_keyframe(0.25),
+            zbc.new_keyframe(0.50),
+            zbc.new_keyframe(0.75),
+        ]
+        if -1 in ids:
+            raise RuntimeError("Failed to create keyframes.")
+
+        print(f"Created keyframes with indices {ids} at 25%, 50%, and 75% of the document length.")
+
+        # And just to state the obvious here: Creating new keyframes can invalidate existing keyframe
+        # indices. #kid could now be an invalid index, unless max_time * 0.25 was a value greater than
+        # five seconds (and the new keyframes in #ids therefore would all lie after #kid).
+
+        Copy to clipboard
+
+zbrush.commands.set_active_track_index(/track_index:int/) → int¶
+<#zbrush.commands.set_active_track_index>
+
+    Sets active track as selected in the ‘Movie > Timeline Tracks’
+    palette by the given index.
+
+    Parameters:
+
+        *track_index* (int) – The index of the track to activate. 0 is
+        the main track.
+
+    Returns:
+
+        0 on success, -1 when an error occurred.
+
+    Return type:
+
+        int
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # get/set_active_track_index is usually only useful in scenarios where we want to reinstate
+        # a previous active track after switching to a different track (without knowing what that
+        # previous track was). For everything else we should use #set.
+
+        # Store the active track index and enable the color track to carry out work on it.
+        tid: int = zbc.get_active_track_index()
+        if not zbc.set("Movie:Timeline Tracks:Color", True):
+            raise RuntimeError("Failed to enable color track.")
+
+        # ...
+
+        # And now revert back to the old track, whatever it was.
+        if not zbc.set_active_track_index(tid):
+            raise RuntimeError("Failed to restore previous active track.")
+
+        Copy to clipboard
+
+zbrush.commands.set_keyframe_time(/frame_index:int/, /time:float/) →
+int¶ <#zbrush.commands.set_keyframe_time>
+
+    Sets the relative document time of the keyframe at the given index.
+
+    Parameters:
+
+          *
+
+            *frame_index* (int) – The zero-based index of the keyframe
+            for which to set the normalized document time.
+
+          *
+
+            *time* (float) – The normalized document time in the range
+            [0, 1] to set.
+
+    Returns:
+
+        The index of the keyframe that was modified or -1 if the
+        operation failed.
+
+    Return type:
+
+        int
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Get the total length of the document in seconds and the total amount of keyframes in the
+        # current track.
+        max_time: float = zbc.get("Movie:TimeLine:Duration")
+        count: int = zbc.get_keyframes_count()
+        if max_time < count:
+            raise RuntimeError("Cannot redistribute keyframes with a stride of one second for "
+                               "document shorter than the keyframe count.")
+
+        # Now rewrite all keyframes so that their index becomes their time value in seconds. E.g., when
+        # the track has five keyframes, we would move the keyframes to 0s, 1s, 2s, 3s, and 4s.
+        for i in range(count):
+            t_doc: float = float(i) / max_time # Compute the normalized document time for #i seconds.
+            zbc.set_keyframe_time(i, t_doc)
+
+        print(f"Redistributed {count} keyframes.")
+
+        Copy to clipboard
+
+zbrush.commands.set_timeline_time(/time:float/) → int¶
+<#zbrush.commands.set_timeline_time>
+
+    Sets the current time.
+
+    The ‘current’ time is the position of the playhead in the timeline.
+
+    Note
+
+    ZBrush uses a normalized document time format in its API. See
+    sys_timeline_colors.py in the Code Examples <https://
+    developers.maxon.net/docs/zbrush/py/2026_0_0/manuals/examples.html>
+    for details.
+
+    Parameters:
+
+        *time* (float) – The normalized current document time in the
+        interval [0.0, 1.0].
+
+    Returns:
+
+        0 on success, -1 on failure.
+
+    Return type:
+
+        int
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Get the total length of the document in seconds.
+        max_time: float = zbc.get("Movie:TimeLine:Duration")
+        if max_time < 5:
+            raise RuntimeError("Cannot set current time to 5 seconds for a document shorter than 5 seconds.")
+
+        # Set the current time to five seconds.
+        t_doc: float = 5.0 / max_time
+        if not zbc.set_timeline_time(t_doc):
+            raise RuntimeError("Failed to set current time.")
+
+        Copy to clipboard
+
+zbrush.commands.set_timeline_to_keyframe_time(/frame_index:int/) →
+float¶ <#zbrush.commands.set_timeline_to_keyframe_time>
+
+    Sets the current time to the time of the keyframe at the given index.
+
+    Note
+
+    ZBrush uses a normalized document time format in its API. See
+    sys_timeline_colors.py in the Code Examples <https://
+    developers.maxon.net/docs/zbrush/py/2026_0_0/manuals/examples.html>
+    for details.
+
+    Parameters:
+
+        *frame_index* (int) – The zero-based index of the keyframe to
+        set the current time to.
+
+    Returns:
+
+        The normalized document time of the specified keyframe to which
+        the current time has been set. Or -1 when an error occured.
+
+    Return type:
+
+        float
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Get the total length of the document in seconds and the total count of keyframes in the current track.
+        max_time: float = zbc.get("Movie:TimeLine:Duration")
+        count: int = zbc.get_keyframes_count()
+        if count < 1:
+            raise RuntimeError("Cannot set current time to keyframe of an empty track.")
+
+        # Set the current time to the last keyframe in the current track and print the absolute time in seconds.
+        i: int = count - 1
+        t_doc: float = zbc.set_timeline_to_keyframe_time(i)
+        t_sec: float = t_doc * max_time
+
+        print(f"Set current time to keyframe {i} at {round(t_sec, 2)} seconds.")
+
+        Copy to clipboard
+
+  * System Functions <#>
+      o Signatures <#signatures>
+          + Files <#files>
+          + Miscellaneous <#miscellaneous>
+          + Python <#python>
+          + Timeline <#timeline>
+      o Descriptions <#descriptions>
+          + Files <#id1>
+              # |get_last_typed_filename()|
+                <#zbrush.commands.get_last_typed_filename>
+              # |get_last_used_filename()|
+                <#zbrush.commands.get_last_used_filename>
+              # |get_next_filename()| <#zbrush.commands.get_next_filename>
+              # |increment_filename()| <#zbrush.commands.increment_filename>
+              # |make_filename()| <#zbrush.commands.make_filename>
+              # |resolve_path()| <#zbrush.commands.resolve_path>
+              # |set_next_filename()| <#zbrush.commands.set_next_filename>
+          + Miscellaneous <#id2>
+              # |config()| <#zbrush.commands.config>
+              # |interpolate()| <#zbrush.commands.interpolate>
+              # |randomize()| <#zbrush.commands.randomize>
+              # |rgb()| <#zbrush.commands.rgb>
+              # |system_info()| <#zbrush.commands.system_info>
+              # |zbrush_info()| <#zbrush.commands.zbrush_info>
+              # |rand()| <#zbrush.zscript_compatibility.rand>
+              # |rand_int()| <#zbrush.zscript_compatibility.rand_int>
+          + Python <#id3>
+              # |run_path()| <#zbrush.utils.run_path>
+              # |run_script()| <#zbrush.utils.run_script>
+              # |clear_output()| <#zbrush.utils.clear_output>
+          + Timeline <#id4>
+              # |delete_keyframe()| <#zbrush.commands.delete_keyframe>
+              # |get_active_track_index()|
+                <#zbrush.commands.get_active_track_index>
+              # |get_keyframe_time()| <#zbrush.commands.get_keyframe_time>
+              # |get_keyframes_count()|
+                <#zbrush.commands.get_keyframes_count>
+              # |get_timeline_time()| <#zbrush.commands.get_timeline_time>
+              # |new_keyframe()| <#zbrush.commands.new_keyframe>
+              # |set_active_track_index()|
+                <#zbrush.commands.set_active_track_index>
+              # |set_keyframe_time()| <#zbrush.commands.set_keyframe_time>
+              # |set_timeline_time()| <#zbrush.commands.set_timeline_time>
+              # |set_timeline_to_keyframe_time()|
+                <#zbrush.commands.set_timeline_to_keyframe_time>
+
+© 2025 Maxon Computer GmbH <https://www.maxon.net/>
+- End User License Agreement <https://www.maxon.net/en/legal/eula>

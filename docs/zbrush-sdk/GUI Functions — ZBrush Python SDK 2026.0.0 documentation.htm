@@ -1,0 +1,2984 @@
+  * index <https://developers.maxon.net/docs/zbrush/py/2026_0_0/
+    genindex.html>
+  * next <https://developers.maxon.net/docs/zbrush/py/2026_0_0/api/
+    mod_zbr_cmds_modeling.html> |
+  * previous <https://developers.maxon.net/docs/zbrush/py/2026_0_0/
+    partials/sym_keyboard.html> |
+  * ZBrush Python SDK 2026.0.0 documentation <https://
+    developers.maxon.net/docs/zbrush/py/2026_0_0/index.html> »
+  * GUI Functions
+
+
+  GUI Functions¶ <#gui-functions>
+
+Lists functions to create and interact with the GUI of ZBrush.
+
+
+    Signatures¶ <#signatures>
+
+Note
+
+All functions in this section are part of the zbrush.commands module.
+The signatures have been shortened to the function name for better
+readability. The descriptions below will list the full function signature.
+
+Warning
+
+The GUI functions are not yet completely documented. The quality of
+documentation may vary.
+
+
+      Create¶ <#create>
+
+|add_button| <#zbrush.commands.add_button>(item_path[, info, fn, ...])
+
+	
+
+Adds a clickable button to a palette or subpalette.
+
+|add_note_button| <#zbrush.commands.add_note_button>(name[, icon_path, ...])
+
+	
+
+Adds a clickable button to the next note which is shown.
+
+|add_note_switch| <#zbrush.commands.add_note_switch>(name[, icon_path, ...])
+
+	
+
+Adds a button that can be toggled on or off to the next note which is shown.
+
+|add_palette|
+<#zbrush.commands.add_palette>(item_path, docking_bar[, shortcut])
+
+	
+
+Adds a new palette to the menu.
+
+|add_slider|
+<#zbrush.commands.add_slider>(item_path, cur_value, resolution, ...)
+
+	
+
+Adds a draggable slider to a palette or subpalette.
+
+|add_subpalette|
+<#zbrush.commands.add_subpalette>(item_path, title_mode[, ...])
+
+	
+
+Adds a subpalette to a palette or another subpalette.
+
+|add_switch|
+<#zbrush.commands.add_switch>(item_path, initial_state[, info, ...])
+
+	
+
+Adds a switch to a palette or subpalette.
+
+|close| <#id0>(item_path[, show_zoom_rects, ...])
+
+	
+
+Closes a subpalette.
+
+|delete_interface_item| <#zbrush.commands.delete_interface_item>(item_path)
+
+	
+
+Deletes an interface item that has been added by a script.
+
+|show_note| <#zbrush.commands.show_note>(text[, item_path, ...])
+
+	
+
+Displays a note to the user.
+
+
+      Dialogs¶ <#dialogs>
+
+|ask_filename| <#zbrush.commands.ask_filename>(extensions[, ...])
+
+	
+
+Opens a file loading or saving dialog and returns the selected file name.
+
+|ask_string| <#zbrush.commands.ask_string>([initial_string, title])
+
+	
+
+Asks user to input a string.
+
+|message_ok| <#zbrush.commands.message_ok>([message, title])
+
+	
+
+Displays a user message with a single OK button
+
+|message_ok_cancel| <#zbrush.commands.message_ok_cancel>([message, title])
+
+	
+
+Displays a user message with CANCEL and OK buttons
+
+|message_yes_no| <#zbrush.commands.message_yes_no>([message, title])
+
+	
+
+Displays a user message with YES and NO buttons
+
+|message_yes_no_cancel|
+<#zbrush.commands.message_yes_no_cancel>([message, title])
+
+	
+
+Displays a user message with YES, NO and CANCEL buttons
+
+
+      Getters¶ <#getters>
+
+|exists| <#zbrush.commands.exists>(item_path)
+
+	
+
+Verifies that the specified interface item exists.
+
+|get| <#zbrush.commands.get>(item_path)
+
+	
+
+Returns the current numeric value of an interface item.
+
+|get_canvas_pan| <#zbrush.commands.get_canvas_pan>()
+
+	
+
+Returns the H pan value of the active document view
+
+|get_canvas_zoom| <#zbrush.commands.get_canvas_zoom>()
+
+	
+
+Returns the zoom value of the active document view
+
+|get_flags| <#zbrush.commands.get_flags>(item_path)
+
+	
+
+Returns the status flags of the specified interface item
+
+|get_from_note| <#zbrush.commands.get_from_note>(*args, **kwargs)
+
+	
+
+Returns the value of am NoteIButton which was shown in the last
+displayed Note.
+
+|get_height| <#zbrush.commands.get_height>(item_path)
+
+	
+
+Returns the pixel-height of an interface item.
+
+|get_hotkey| <#zbrush.commands.get_hotkey>(item_path)
+
+	
+
+Returns the hotkey of the specified interface item, returns only
+persistent shortcuts
+
+|get_id| <#zbrush.commands.get_id>(item_path)
+
+	
+
+Returns the window ID code of the specified interface item
+
+|get_info| <#zbrush.commands.get_info>(item_path)
+
+	
+
+Returns the info (popup info) of the specified interface item
+
+|get_left_mouse_button_state|
+<#zbrush.commands.get_left_mouse_button_state>()
+
+	
+
+Returns the current state of the left mouse button
+
+|get_max| <#zbrush.commands.get_max>(item_path)
+
+	
+
+Returns the maximum possible value of a ZBrush or ZScript interface item
+
+|get_min| <#zbrush.commands.get_min>(item_path)
+
+	
+
+Returns the minimum possible value of a ZBrush or ZScript interface item
+
+|get_mod| <#zbrush.commands.get_mod>(item_path)
+
+	
+
+Returns the current modifiers binary state of a ZBrush or ZScript
+interface item
+
+|get_mouse_pos| <#zbrush.commands.get_mouse_pos>([global_coordinates])
+
+	
+
+Returns the current position of the mouse in Canvas or Global coordinates.
+
+|get_pos| <#zbrush.commands.get_pos>(*args, **kwargs)
+
+	
+
+|get_secondary| <#zbrush.commands.get_secondary>(item_path)
+
+	
+
+Returns the the scondary value of a 2D interface item
+
+|get_status| <#zbrush.commands.get_status>(item_path)
+
+	
+
+Returns the Enabled/Disabled status of a ZBrush or ZScript interface item
+
+|get_title| <#zbrush.commands.get_title>(item_path[, full_path])
+
+	
+
+Returns the title of the specified interface item
+
+|get_width| <#zbrush.commands.get_width>(item_path)
+
+	
+
+Returns the pixel-width of an interface item.
+
+|is_disabled| <#zbrush.commands.is_disabled>(item_path)
+
+	
+
+Returns 1 if the specified ZBrush or ZScript interface item is currently
+disabled, returns 0 otherwise
+
+|is_enabled| <#zbrush.commands.is_enabled>(item_path)
+
+	
+
+Returns 1 if the specified ZBrush or ZScript interface item is currently
+enabled, returns 0 otherwise
+
+|is_locked| <#zbrush.commands.is_locked>(item_path)
+
+	
+
+Returns 1 if the specified ZBrush or ZScript interface item is currently
+locked, returns 0 otherwise
+
+|is_unlocked| <#zbrush.commands.is_unlocked>(item_path)
+
+	
+
+Returns 1 if the specified ZBrush or ZScript interface item is currently
+unlocked, returns 0 otherwise
+
+
+      Setters¶ <#setters>
+
+|modify| <#zbrush.commands.modify>(item_path[, width, height, icon_path])
+
+	
+
+Modify a ZBrush interface item
+
+|set| <#zbrush.commands.set>(item_path[, h_value, v_value])
+
+	
+
+Sets a new value to a ZBrush or ZScript interface item
+
+|set_canvas_pan| <#zbrush.commands.set_canvas_pan>(h, v)
+
+	
+
+Pans (Scrolls) the active document view
+
+|set_canvas_zoom| <#zbrush.commands.set_canvas_zoom>(zoom_factor)
+
+	
+
+Sets the zoom factor of the active document view
+
+|set_color| <#zbrush.commands.set_color>(r, g, b)
+
+	
+
+Sets the active color to a new value
+
+|set_hotkey| <#zbrush.commands.set_hotkey>(item_path, hotkey)
+
+	
+
+Sets the hotkey of the specified interface item
+
+|set_max| <#zbrush.commands.set_max>(item_path, value)
+
+	
+
+Sets the maximum value for an ISlider interface item (can only be used
+for script-generated interface items)
+
+|set_min| <#zbrush.commands.set_min>(item_path, value)
+
+	
+
+Sets the minimum value for an ISlider interface item (can only be used
+for script-generated interface items)
+
+|set_mod| <#zbrush.commands.set_mod>(item_path, value)
+
+	
+
+Sets the modifiers binary value of a ZBrush or a ZScript interface item
+
+|set_notebar_text| <#zbrush.commands.set_notebar_text>(text[, progress])
+
+	
+
+Displays a message and optionally a progress bar in the notebar.
+
+|toggle| <#zbrush.commands.toggle>(item_path)
+
+	
+
+Toggles the state of an interface item.
+
+
+      Interaction¶ <#interaction>
+
+|canvas_click|
+<#zbrush.commands.canvas_click>(X1, Y1[, X2, Y2, X3, Y3, X4, ...])
+
+	
+
+Emulates a click within the current canvas area,
+
+|click| <#zbrush.commands.click>(item_path[, X1, Y1, X2, Y2, X3, Y3, ...])
+
+	
+
+Clicks specified ZBrush interface item.
+
+|close| <#id0>(item_path[, show_zoom_rects, ...])
+
+	
+
+Closes a subpalette.
+
+|disable| <#zbrush.commands.disable>(item_path)
+
+	
+
+Disables an interface item that has been added by a script.
+
+|enable| <#zbrush.commands.enable>(item_path)
+
+	
+
+Enables an interface item that has been added by a script.
+
+|freeze| <#zbrush.commands.freeze>(fn[, fade_time])
+
+	
+
+Disables interface updates to avoid slowdowns while heavy operations are
+performed.
+
+|hide| <#zbrush.commands.hide>(item_path[, show_zoom_rects, parent_window])
+
+	
+
+Hides an interface item.
+
+|lock| <#zbrush.commands.lock>(item_path)
+
+	
+
+Locks an interface item
+
+|maximize| <#zbrush.commands.maximize>(item_path[, maximize_all])
+
+	
+
+Locates an interface item and (if possible) maximize its size.
+
+|minimize| <#zbrush.commands.minimize>(item_path[, minimize_all])
+
+	
+
+Locates an interface item and (if possible) minimize its size.
+
+|press| <#zbrush.commands.press>(item_path)
+
+	
+
+Presses a ZBrush or ZScript interface item
+
+|press_key|
+<#zbrush.commands.press_key>(shortcut[, fn, h_position, v_position])
+
+	
+
+Simulates a key press
+
+|reset| <#zbrush.commands.reset>([item, version])
+
+	
+
+Interface Reset
+
+|show| <#zbrush.commands.show>(item_path[, show_zoom_rects, parent_window])
+
+	
+
+Scrolls to or shows the given palette.
+
+|show_actions| <#zbrush.commands.show_actions>(value)
+
+	
+
+Temorarily sets the status of ShowActions
+
+|stroke| <#zbrush.commands.stroke>(item_path, stroke)
+
+	
+
+Emulates a brush stroke within an interface item
+
+|un_press| <#zbrush.commands.un_press>(item_path)
+
+	
+
+Unpresses a ZBrush or ZScript interface item
+
+|unlock| <#zbrush.commands.unlock>(item_path)
+
+	
+
+Unlocks an interface item
+
+|update| <#zbrush.commands.update>([repeat_count, redraw_ui])
+
+	
+
+Updates the ZBrush interface.
+
+
+    Descriptions¶ <#descriptions>
+
+
+      Create¶ <#id1>
+
+zbrush.commands.add_button(/item_path:str/, /info:str=''/, /
+fn:Callable=None/, /initially_disabled:bool=False/, /width:float=0.0/, /
+hotkey:str=''/, /icon_path:str=''/, /height:float=0.0/) → bool¶
+<#zbrush.commands.add_button>
+
+    Adds a clickable button to a palette or subpalette.
+
+    Parameters:
+
+          *
+
+            *item_path* (str) – The item path for the button, whose last
+            element will become the button’s text.
+
+          *
+
+            *info* (str, optional) – The bubble help of the button.
+            Defaults to the empty string.
+
+          *
+
+            *fn* (Callable, optional) – The callback which is invoked
+            when the button is pressed. Must follow the signature
+            f(sender: str) -> None.
+
+          *
+
+            *initially_disabled* (bool, optional) – If the button should
+            be initially not clickable. Defaults to False.
+
+          *
+
+            *width* (float, optional) – The width of the button in
+            pixels. Setting the width to 0 will make it auto-width,
+            positive values will set a specific width for the button.
+            Defaults to 0.
+
+          *
+
+            *hotkey* (str, optional) – An optional hotkey for the
+            button. If specified, the button can be activated by
+            pressing the hotkey.
+
+          *
+
+            *icon_path* (str, optional) – The path to an optional icon
+            for the button. The icon should be a BMP or PSD file.
+
+          *
+
+            *height* (float, optional) – The height of the button in
+            pixels. Setting the height to 0 will make it auto-height,
+            positive values will set a specific height for the button.
+            Defaults to 0.
+
+    Returns:
+
+        True if the button was successfully added, False otherwise.
+
+    Return type:
+
+        bool
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # A callback functions for multiple buttons which checks the item path of the raised item.
+        def on_button_pressed(sender: str) -> None:
+            if str(sender).endswith("Bar"):
+                print("A button named 'Bar' was pressed.")
+            else:
+                print(f"Button pressed: {sender = }")
+
+        # Add a 'Foo' subpalette to the 'ZScript' palette if it doesn't exist.
+        if not zbc.exists("ZScript:Foo"):
+            zbc.add_subpalette("ZScript:Foo")
+
+        # Adds a button labeled 'Bar' to the 'ZScript:Foo' subpalette with the tooltip "Hello World!"
+        # which invokes the callback #on_button_pressed when clicked.
+        zbc.add_button("ZScript:Foo:Bar", "Hello World!", on_button_pressed)
+
+        Copy to clipboard
+
+zbrush.commands.add_note_button(/name:str/, /icon_path:str=''/, /
+initially_pressed:bool=False/, /initially_disabled:bool=False/, /
+h_rel_position:float=0.0/, /v_rel_position:float=0.0/, /
+width:float=0.0/, /height:float=0.0/, /bg_color:int=-1/, /
+text_color:int=-1/, /bg_opacity:float=1.0/, /text_opacity:float=1.0/, /
+img_opacity:float=1.0/) → bool¶ <#zbrush.commands.add_note_button>
+
+    Adds a clickable button to the next note which is shown.
+
+    Parameters:
+
+          *
+
+            *name* (str) – The button text.
+
+          *
+
+            *icon_path* (str, optional) – The path to an icon for the
+            button. Must be a BMP or PSD file. Defaults to an empty
+            string (no icon).
+
+          *
+
+            *initially_pressed* (bool, optional) – Specifies if the
+            button is initially pressed. Default to False.
+
+          *
+
+            *initially_disabled* (bool, optional) – Specifies if the
+            button is initially not clickable. Default to False.
+
+          *
+
+            *h_rel_position* (float, optional) – The horizontal relative
+            position of the button. 0 means automatic positioning,
+            positive values offset from the left, and negative values
+            offset from the right. Defaults to 0.0.
+
+          *
+
+            *v_rel_position* (float, optional) – The vertical relative
+            position of the button. 0 means automatic positioning,
+            positive values offset from the top, and negative values
+            offset from the bottom. Defaults to 0.0.
+
+          *
+
+            *width* (float, optional) – The width of the button in
+            pixels. Setting the width to 0 will make it auto-width,
+            positive values will set a specific width for the button.
+            Defaults to 0.0.
+
+          *
+
+            *height* (float, optional) – The height of the button in
+            pixels. Setting the height to 0 will make it auto-height,
+            positive values will set a specific height for the button.
+            Defaults to 0.0.
+
+          *
+
+            *bg_color* (int, optional) – The background color of the
+            button, computed with the formula (blue + (green * 256) +
+            (red * 65536)). Defaults to -1 (no color).
+
+          *
+
+            *text_color* (int, optional) – The text color of the button,
+            computed with the formula (blue + (green * 256) + (red *
+            65536)). Defaults to -1 (no color).
+
+          *
+
+            *bg_opacity* (float, optional) – The background opacity of
+            the button. Defaults to 1.0.
+
+          *
+
+            *text_opacity* (float, optional) – The text opacity of the
+            button. Defaults to 1.0.
+
+          *
+
+            *img_opacity* (float, optional) – The image opacity of the
+            button. Defaults to 1.0.
+
+    Returns:
+
+        True if the button was successfully added, False otherwise.
+
+    Return type:
+
+        bool
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Defines an " OK " note button.
+        zbc.add_note_button(" OK ")
+
+        Copy to clipboard
+
+zbrush.commands.add_note_switch(/name:str/, /icon_path:str=''/, /
+initially_pressed:bool=False/, /initially_disabled:bool=False/, /
+h_rel_position:float=0.0/, /v_rel_position:float=0.0/, /
+width:float=0.0/, /height:float=0.0/, /bg_color:int=-1/, /
+text_color:int=-1/, /bg_opacity:float=1.0/, /text_opacity:float=1.0/, /
+img_opacity:float=1.0/) → bool¶ <#zbrush.commands.add_note_switch>
+
+    Adds a button that can be toggled on or off to the next note which
+    is shown.
+
+    Parameters:
+
+          *
+
+            *name* (str) – The switch button text.
+
+          *
+
+            *icon_path* (str, optional) – The path to an icon for the
+            switch button. Must be a BMP or PSD file. Defaults to an
+            empty string (no icon).
+
+          *
+
+            *initially_pressed* (bool, optional) – Specifies if the
+            switch button is initially pressed. Defaults to False.
+
+          *
+
+            *initially_disabled* (bool, optional) – Specifies if the
+            switch button is initially not clickable. Defaults to False.
+
+          *
+
+            *h_rel_position* (float, optional) – The horizontal relative
+            position of the button. 0 means automatic positioning,
+            positive values offset from the left, and negative values
+            offset from the right. Defaults to 0.0.
+
+          *
+
+            *v_rel_position* (float, optional) – The vertical relative
+            position of the button. 0 means automatic positioning,
+            positive values offset from the top, and negative values
+            offset from the bottom. Defaults to 0.0.
+
+          *
+
+            *width* (float, optional) – The width of the button in
+            pixels. Setting the width to 0 will make it auto-width,
+            positive values will set a specific width for the button.
+            Defaults to 0.0.
+
+          *
+
+            *height* (float, optional) – The height of the button in
+            pixels. Setting the height to 0 will make it auto-height,
+            positive values will set a specific height for the button.
+            Defaults to 0.0.
+
+          *
+
+            *bg_color* (int, optional) – The background color of the
+            button, computed with the formula (blue + (green * 256) +
+            (red * 65536)). Defaults to -1 (no color).
+
+          *
+
+            *text_color* (int, optional) – The text color of the button,
+            computed with the formula (blue + (green * 256) + (red *
+            65536)). Defaults to -1 (no color).
+
+          *
+
+            *bg_opacity* (float, optional) – The background opacity of
+            the button. Defaults to 1.0.
+
+          *
+
+            *text_opacity* (float, optional) – The text opacity of the
+            button. Defaults to 1.0.
+
+          *
+
+            *img_opacity* (float, optional) – The image opacity of the
+            button. Defaults to 1.0.
+
+    Returns:
+
+        True if the switch button was successfully added, False otherwise.
+
+    Return type:
+
+        bool
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Defines a " Double Sided " note switch-button.
+        zbc.add_note_switch(" Double Sided ")
+
+        Copy to clipboard
+
+zbrush.commands.add_palette(/item_path:str/, /docking_bar:int/, /
+shortcut:str=''/) → bool¶ <#zbrush.commands.add_palette>
+
+    Adds a new palette to the menu.
+
+    Note
+
+    A palette is a top-level menu in ZBrush, and it can contain
+    subpalettes, buttons, sliders, and switches. To add an area in an
+    existing palette, use |add_subpalette| instead.
+
+    Parameters:
+
+          *
+
+            *item_path* (str) – The item path for the palette, whose
+            last element will become the palette’s name.
+
+          *
+
+            *docking_bar* (int, optional) – Specifies the docking
+            behavior. 0 means the palette will be docked in the left
+            menu bar, 1 means it will be docked in the right menu bar.
+            Defaults to 0.
+
+          *
+
+            *shortcut* (str, optional) – An optional shortcut for the
+            palette. If specified, the palette can be opened by pressing
+            the shortcut key. Defaults to an empty string (no shortcut).
+
+    Returns:
+
+        True if the palette was successfully added, False otherwise.
+
+    Return type:
+
+        bool
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        def do_stuff(*args, **kwargs) -> None:
+            print("do_stuff", args, kwargs)
+
+        # Adds a new palette named "Palette" to the ZBrush interface which will auto doc to the right.
+        zbc.add_palette("Palette", docking_bar=1)
+
+        # Adds a subpalette named "Subpalette" to the "Palette" palette which has no title bar and is
+        # always open.
+        zbc.add_subpalette("Palette:Subpalette", title_mode=2)
+
+        # Adds two buttons to the "Subpalette" subpalette.
+        zbc.add_button(f"Palette:Subpalette:Button A", "", do_stuff)
+        zbc.add_button(f"Palette:Subpalette:Button B", "", do_stuff)
+
+        # Adds a subpalette named "Subpalette (Togglable)" to the "Palette" palette which has a title bar
+        # and a minimize button, and is togglable.
+        zbc.add_subpalette("Palette:Subpalette (Togglable)")
+
+        # Adds a slider and a switch to the "Subpalette (Togglable)" subpalette.
+        zbc.add_slider(f"Palette:Subpalette (Togglable):Slider", 2, 1, 0, 10, "some help", do_stuff)
+        zbc.add_switch(f"Palette:Subpalette (Togglable):Switch", True, "some help", do_stuff)
+
+        Copy to clipboard
+
+zbrush.commands.add_slider(/item_path:str/, /cur_value:float/, /
+resolution:int/, /min_value:float/, /max_value:float/, /info:str=''/, /
+fn:Callable=None/, /initially_disabled:bool=False/, /width:float=0.0/, /
+height:float=0.0/) → bool¶ <#zbrush.commands.add_slider>
+
+    Adds a draggable slider to a palette or subpalette.
+
+    A slider is a gadget that allows the user to select a value from a
+    range by dragging a handle along a track.
+
+    Parameters:
+
+          *
+
+            *item_path* (str) – The item path for the slider, whose last
+            element will become the slider’s name.
+
+          *
+
+            *cur_value* (float) – The initial value of the slider.
+
+          *
+
+            *resolution* (int) – The step size of the slider. When the
+            slider has a range of [0, 10] for example, and you set the
+            resolution to 2, the slider will snap to the values 0, 2, 4,
+            6, 8, 10. Setting the resolution to 0 means the slider will
+            not snap to ticks.
+
+          *
+
+            *min_value* (float) – The minimum value of the slider.
+
+          *
+
+            *max_value* (float) – The maximum value of the slider.
+
+          *
+
+            *info* (str, optional) – The bubble help of the slider.
+            Defaults to an empty string.
+
+          *
+
+            *fn* (Callable, optional) – The callback of the slider which
+            is invoked when the slider’s value changes. Must conform to
+            the signature f(sender: str, value: float) -> None, where
+            sender is the slider’s item path and value is the current
+            value of the slider. The callback of a slider is only called
+            at the end of a drag operation and not during it.
+
+          *
+
+            *initially_disabled* (bool, optional) – Specifies if the
+            slider is initially disabled. Defaults to False.
+
+          *
+
+            *width* (float, optional) – The width of the slider in
+            pixels. Setting the width to 0 will make it auto-width,
+            positive values will set a specific width for the button.
+            Defaults to 0.0.
+
+          *
+
+            *height* (float, optional) – The height of the slider in
+            pixels. Setting the height to 0 will make it auto-height,
+            positive values will set a specific height for the button.
+            Defaults to 0.0.
+
+    Returns:
+
+        True if the slider was successfully added, False otherwise.
+
+    Return type:
+
+        bool
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        def on_slider_change(sender: str, value: float) -> None:
+            print(f"{sender}'s value changed to: {value}")
+
+        # Add a 'Foo' subpalette to the 'ZScript' palette if it doesn't exist.
+        if not zbc.exists("ZScript:Foo"):
+            zbc.add_subpalette("ZScript:Foo")
+
+        # Adds a slider named 'MySlider' to 'ZScript:Foo' with a range from 0 to 100, the initial value of
+        # 12, a step size of 1, and the callback function `on_slider_change`.
+        zbc.add_slider("ZScript:Foo:MySlider", 12, 1, 0, 100, "", on_slider_change)
+
+        Copy to clipboard
+
+zbrush.commands.add_subpalette(/item_path:str/, /title_mode:int/, /
+icon_path:str=''/, /left_inset:float=0.0/, /right_inset:float=0.0/, /
+top_inset:float=0.0/, /bottom_inset:float=0.0/) → bool¶
+<#zbrush.commands.add_subpalette>
+
+    Adds a subpalette to a palette or another subpalette.
+
+    Note
+
+    Insets will require manually sized elements or will result in auto-
+    sized elements being cut off.
+
+    Parameters:
+
+          *
+
+            *item_path* (str) – The item path for the subpalette, whose
+            last element will become the subpalette’s name.
+
+          *
+
+            *title_mode* (int, optional) – The title bar style of the
+            subpalette. 0 will show the title and minimize button, 1
+            will show the title without the minimize button, and 2 will
+            hide the title bar completely. Defaults to 0.
+
+          *
+
+            *icon_path* (str, optional) – The path to an optional gray-
+            scale (8-bits) icon for the subpalette. The icon should be a
+            BMP or PSD file and have the standard size of 20 pixels
+            squared. Defaults to the empty string (no icon).
+
+          *
+
+            *left_inset* (float, optional) – The left margin of elements
+            in the subpalette to its border. 0 means no inset, positive
+            values will add an inset from the left, and negative values
+            will add an inset from the right. Defaults to 0.0.
+
+          *
+
+            *right_inset* (float, optional) – The right margin of
+            elements in the subpalette to its border. 0 means no inset,
+            positive values will add an inset from the right, and
+            negative values will add an inset from the left. Defaults to
+            0.0.
+
+          *
+
+            *top_inset* (float, optional) – The top margin of elements
+            in the subpalette to its border. 0 means no inset, positive
+            values will add an inset from the top, and negative values
+            will add an inset from the bottom. Defaults to 0.0.
+
+          *
+
+            *bottom_inset* (float, optional) – The bottom margin of
+            elements in the subpalette to its border. 0 means no inset,
+            positive values will add an inset from the bottom, and
+            negative values will add an inset from the top. Defaults to 0.0.
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        def do_stuff(*args, **kwargs) -> None:
+            print("do_stuff", args, kwargs)
+
+        # Adds a new palette named "Palette" to the ZBrush interface which will auto doc to the right.
+        zbc.add_palette("Palette", docking_bar=1)
+
+        # Adds a subpalette named "Subpalette" to the "Palette" palette which has no title bar and is
+        # always open.
+        zbc.add_subpalette("Palette:Subpalette", title_mode=2)
+
+        # Adds two buttons to the "Subpalette" subpalette.
+        zbc.add_button(f"Palette:Subpalette:Button A", "", do_stuff)
+        zbc.add_button(f"Palette:Subpalette:Button B", "", do_stuff)
+
+        # Adds a subpalette named "Subpalette (Togglable)" to the "Palette" palette which has a title bar
+        # and a minimize button, and is togglable.
+        zbc.add_subpalette("Palette:Subpalette (Togglable)")
+
+        # Adds a slider and a switch to the "Subpalette (Togglable)" subpalette.
+        zbc.add_slider(f"Palette:Subpalette (Togglable):Slider", 2, 1, 0, 10, "some help", do_stuff)
+        zbc.add_switch(f"Palette:Subpalette (Togglable):Switch", True, "some help", do_stuff)
+
+        Copy to clipboard
+
+zbrush.commands.add_switch(/item_path:str/, /initial_state:bool/, /
+info:str=''/, /fn:Callable=None/, /initially_disabled:bool=False/, /
+width:float=0.0/, /height:float=0.0/, /icon_path:str=''/) → bool¶
+<#zbrush.commands.add_switch>
+
+    Adds a switch to a palette or subpalette.
+
+    A switch is a gadget that allows the user to toggle a state on or off.
+
+    Parameters:
+
+          *
+
+            *item_path* (str) – The item path for the switch, whose last
+            element will become the switch’s name.
+
+          *
+
+            *initial_state* (bool) – The initial state of the switch.
+            True means the switch is on, False means it is off. Defaults
+            to False.
+
+          *
+
+            *info* (str, optional) – The bubble help of the switch.
+            Defaults to an empty string.
+
+          *
+
+            *fn* (Callable, optional) – The callback function which is
+            invoked when the switch’s state changes. Must conform to the
+            signature fn(sender: str, value: bool) -> None, where sender
+            is the switch’s item path and value is the current state of
+            the switch.
+
+          *
+
+            *initially_disabled* (bool, optional) – Specifies if the
+            switch is initially disabled. Defaults to False.
+
+          *
+
+            *width* (float, optional) – The width of the switch in
+            pixels. Setting the width to 0 will make it auto-width,
+            positive values will set a specific width for the button.
+            Defaults to 0.0.
+
+          *
+
+            *height* (float, optional) – The height of the switch in
+            pixels. Setting the height to 0 will make it auto-height,
+            positive values will set a specific height for the button.
+            Defaults to 0.0.
+
+          *
+
+            *icon_path* (str, optional) – The path to an optional icon
+            for the switch. The icon should be a BMP or PSD file.
+            Defaults to an empty string (no icon).
+
+    Returns:
+
+        True if the switch was successfully added, False otherwise.
+
+    Return type:
+
+        bool
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        def on_value_changed(sender: str, value: float) -> None:
+            print(f"{sender}'s value changed to: {value}")
+
+        # Creates a switch labled 'ClickMe' in the 'Foo' palette which invokes `on_value_changed` when toggled.
+        zbc.add_switch("Foo:ClickMe", 1, "", switch_value_changed_fn)
+
+        Copy to clipboard
+
+zbrush.commands.close(/item_path:str/, /show_zoom_rects:bool=False/, /
+parent_window:bool=False/) → None¶ <#zbrush.commands.close>
+
+    Closes a subpalette.
+
+    Parameters:
+
+          *
+
+            *item_path* (str) – The interface path of the item to close.
+
+          *
+
+            *show_zoom_rects* (bool, optional) – If to show the zoom
+            rectangle. Defaults to False.
+
+          *
+
+            *parent_window* (bool, optional) – If to target the parent
+            of the specified item instead. Defaults to False.
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Close ZScript:Python Scripting palette.
+        zbc.close("ZScript:Python Scripting")
+
+        # Close ZScript:Python Scripting palette by passing the button 'Load' as the item path.
+        zbc.close("ZScript:Python Scripting:Load", False, True)
+
+        Copy to clipboard
+
+zbrush.commands.delete_interface_item(/item_path:str/) → bool¶
+<#zbrush.commands.delete_interface_item>
+
+    Deletes an interface item that has been added by a script.
+
+    Can only be used for script-generated interface items and can only
+    be applied to gadgets. Does not work for palettes or sub-palettes.
+    Use |close| to close palettes.
+
+    Parameters:
+
+        *item_path* (str) – The path of item to delete.
+
+    Returns:
+
+        True if the item was deleted successfully, False otherwise.
+
+    Return type:
+
+        bool
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Deletes the item "Button" in the "Zscript:Foo" sub-palette.
+        zbc.delete_interface_item("Zscript:Foo:Button")
+
+        Copy to clipboard
+
+zbrush.commands.show_note(/text:str/, /item_path:str=''/, /
+display_duration:float=0.0/, /bg_color:int=-1/, /
+distance_to_ui_item:int=48/, /preferred_width:int=400/, /
+fill_color:int=-1/, /frame_h_size:float=1.0/, /
+frame_v_size:float=1.0/, /frame_left_side:float=0.0/, /
+frame_top_side:float=0.0/, /icon_path:str=''/) → int¶
+<#zbrush.commands.show_note>
+
+    Displays a note to the user.
+
+    Parameters:
+
+          *
+
+            *text* (str) – Text line
+
+          *
+
+            *item_path* (str, optional) – Optional path1 of an interface
+            item to be pointed out. (default=none)
+
+          *
+
+            *display_duration* (float, optional) – Display Duration (in
+            seconds). (zero= wait for user action, -1=combine with next
+            note command). (default=wait action)
+
+          *
+
+            *bg_color* (int, optional) – Popup background color.
+            ( 0x000000<->0xffffff, default=0x606060, 0=NoBackground )
+
+          *
+
+            *distance_to_ui_item* (int, optional) – Prefered distance of
+            the note from the specified interface item (default=48)
+
+          *
+
+            *preferred_width* (int, optional) – Prefered Note width (in
+            pixels, default=400)
+
+          *
+
+            *fill_color* (int, optional) – optional marked windows fill
+            color. ( 0x000000<->0xffffff or blue + (green*256) +
+            (red*65536) ) (Omitted value=No fill) )
+
+          *
+
+            *frame_h_size* (float, optional) – Frame horizontal size
+            ( 1= (default) Max width )
+
+          *
+
+            *frame_v_size* (float, optional) – Frame vertical size
+            ( 1=(default) Max height )
+
+          *
+
+            *frame_left_side* (float, optional) – Frame left side
+            ( 0=left (default) , .5=center, 1=right ). Omit value for
+            horizontal autocentering.
+
+          *
+
+            *frame_top_side* (float, optional) – Frame top side ( 0=top
+            (default) , .5=center, 1=bottom ) Omit value for vertical
+            auto-centering.
+
+          *
+
+            *icon_path* (str, optional) – Optional icon file name.
+
+    Example:
+
+        Displays a message to the user with ‘Hello There’ as the text:
+
+        show_note("Hello There")
+
+        Copy to clipboard
+
+
+      Dialogs¶ <#id2>
+
+zbrush.commands.ask_filename(/extensions:str/, /
+default_file_name:str=''/, /title:str=''/) → str¶
+<#zbrush.commands.ask_filename>
+
+    Opens a file loading or saving dialog and returns the selected file
+    name.
+
+    The function does not carry out the actual loading or saving of the
+    file, it only provides a dialog for the user to select a file name.
+    The actual file operations must be handled separately.
+
+    Parameters:
+
+          *
+
+            *extensions* (str) – A string containing the file extensions
+            and their descriptions. Up to three extensions can be
+            specified, following the format “Label A (*.ext1)|*.ext1|
+            Label B (*.ext2)|*.ext2|Label A C (*.ext3)|*.ext3”.
+
+          *
+
+            *default_file_name* (str, optional) – Default fileName for
+            SaveDialog, will open OpenDialog if empty.
+
+          *
+
+            *title* (str, optional) – Optional dialog title.
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Opens a dialog to load a `dxf` or `obj` file.
+        zbc.ask_filename("DXF (*.dxf)|*.dxf|OBJ (*.obj)|*.obj||", "","Please select a file to load...")
+        # Opens a dialog to save a file with the `*.zvr` extension and a default name of `tempFile`.
+        zbc.ask_filename("*.zvr", "tempFile")
+
+        Copy to clipboard
+
+zbrush.commands.ask_string(/initial_string:str=''/, /title:str=''/) →
+str¶ <#zbrush.commands.ask_string>
+
+    Asks user to input a string.
+
+    Parameters:
+
+          *
+
+            *initial_string* (str, optional) – The initial string to
+            display in the input dialog. Defaults to an empty string.
+
+          *
+
+            *title* (str, optional) – The title of the input dialog.
+            Defaults to an empty string.
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Displays a text input dialog and returns the string typed by user.
+        zbc.ask_string("Type text in here")
+
+        Copy to clipboard
+
+zbrush.commands.message_ok(/message:str=''/, /title:str=''/) → None¶
+<#zbrush.commands.message_ok>
+
+    Displays a user message with a single OK button
+
+    Parameters:
+
+          *
+
+            *message* (str, optional) – The Message that will be shown
+
+          *
+
+            *title* (str, optional) – The Title of the message
+
+    Example:
+
+        Displays a message to the user with ‘Hello There’ as the text,
+        and waits for the user to click the ‘OK’ button:
+
+        message_ok("Hello There")
+
+        Copy to clipboard
+
+zbrush.commands.message_ok_cancel(/message:str=''/, /title:str=''/) →
+bool¶ <#zbrush.commands.message_ok_cancel>
+
+    Displays a user message with CANCEL and OK buttons
+
+    Parameters:
+
+          *
+
+            *message* (str, optional) – The Message that will be shown
+
+          *
+
+            *title* (str, optional) – The Title of the message
+
+    Example:
+
+        Displays a message to the user with ‘Delete this image?’ as the
+        text, and waits for the user to click the ‘OK’ or ‘Cancel’ button:
+
+        message_ok_cancel("Delete this image?")
+
+        Copy to clipboard
+
+zbrush.commands.message_yes_no(/message:str=''/, /title:str=''/) → bool¶
+<#zbrush.commands.message_yes_no>
+
+    Displays a user message with YES and NO buttons
+
+    Parameters:
+
+          *
+
+            *message* (str, optional) – The Message that will be shown
+
+          *
+
+            *title* (str, optional) – The Title of the message
+
+    Example:
+
+        Displays a message to the user with ‘Are you sure?’ as the text,
+        and waits for the user to click the ‘YES’ or ‘NO’ button:
+
+        message_yes_no("Are you sure?")
+
+        Copy to clipboard
+
+zbrush.commands.message_yes_no_cancel(/message:str=''/, /title:str=''/)
+→ int¶ <#zbrush.commands.message_yes_no_cancel>
+
+    Displays a user message with YES, NO and CANCEL buttons
+
+    Parameters:
+
+          *
+
+            *message* (str, optional) – The Message that will be shown
+
+          *
+
+            *title* (str, optional) – The Title of the message
+
+    Example:
+
+        Displays a message to the user with ‘Are you sure?’ as the text,
+        and waits for the user to click the ‘YES’, ‘NO’ or ‘CANCEL’ button:
+
+        message_yes_no_cancel("Are you sure?")
+
+        Copy to clipboard
+
+
+      Getters¶ <#id3>
+
+zbrush.commands.exists(/item_path:str/) → bool¶ <#zbrush.commands.exists>
+
+    Verifies that the specified interface item exists.
+
+    Parameters:
+
+        *item_path* (str) – The path of the item to check.
+
+    Returns:
+
+        True if the item exists, False otherwise.
+
+    Return type:
+
+        bool
+
+    Example:
+
+        # Disables the item 'Button' in the 'ZScript:Foo' sub-palette only when it exists.
+        if zbc.exists("ZScript:Foo:Button"):
+            zbc.disable("ZScript:Foo:Button")
+
+        Copy to clipboard
+
+zbrush.commands.get(/item_path:str/) → float¶ <#zbrush.commands.get>
+
+    Returns the current numeric value of an interface item.
+
+    Parameters:
+
+        *item_path* (str) – The path of the item to get the value for.
+
+    Returns:
+
+        The current value of the item. All values (integers, booleans)
+        are expressed as floats. Items such as buttons or subpalettes
+        which do not have any value will return 0.0.
+
+    Return type:
+
+        float
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # A slider, #a will hold the current value of the slider.
+        a: float = zbc.get("Draw:Width")
+
+        # A toggle button, #b will hold the current value of the button where 0.0 means
+        # off and 1.0 means on.
+        b: float = zbc.get("Tool:UV Map:Create (Unwrap):Auto Seams")
+
+        # Getting the value of a button and a subpalette. Neither of these has a value which
+        # could be retrieved, but these calls will not raise an error, and instead just return
+        # 0.0.
+        c: float = zbc.get("Tool:Displacement Map:Create DispMap")
+        d: float = zbc.get("Tool:Displacement Map")
+
+        Copy to clipboard
+
+zbrush.commands.get_canvas_pan() → tuple[float,float]¶
+<#zbrush.commands.get_canvas_pan>
+
+    Returns the H pan value of the active document view
+
+    Example:
+
+        Returns the pan value of the active document view:
+
+        get_canvas_pan()
+
+        Copy to clipboard
+
+zbrush.commands.get_canvas_zoom() → float¶
+<#zbrush.commands.get_canvas_zoom>
+
+    Returns the zoom value of the active document view
+
+    Example:
+
+        Returns the zoom value of the active document view:
+
+        get_canvas_zoom()
+
+        Copy to clipboard
+
+zbrush.commands.get_flags(/item_path:str/) → int¶
+<#zbrush.commands.get_flags>
+
+    Returns the status flags of the specified interface item
+
+    Parameters:
+
+        *item_path* (str) – Interface item path
+
+    Example:
+
+        Returns the info of specified windowID interface item:
+
+        get_flags("windowID")
+
+        Copy to clipboard
+
+zbrush.commands.get_from_note(/*args/, /**kwargs/)¶
+<#zbrush.commands.get_from_note>
+
+    Returns the value of am NoteIButton which was shown in the last
+    displayed Note.
+
+    Parameters:
+
+        *index* (int or str) – Note-button index (1=1st) or its name
+
+    Example:
+
+        Returns the value of the 1st note button or switch:
+
+        get_from_note(1)
+
+        Copy to clipboard
+
+        Returns the value of the note button or switch named “Double”
+
+        get_from_note("Double")
+
+        Copy to clipboard
+
+     2.
+
+        get_from_note(name: str) -> bool
+
+    Returns the value of am NoteIButton which was shown in the last
+    displayed Note.
+
+    Parameters:
+
+        *index* (int or str) – Note-button index (1=1st) or its name
+
+    Example:
+
+        Returns the value of the 1st note button or switch:
+
+        get_from_note(1)
+
+        Copy to clipboard
+
+        Returns the value of the note button or switch named “Double”
+
+        get_from_note("Double")
+
+        Copy to clipboard
+
+zbrush.commands.get_height(/item_path:str/) → int¶
+<#zbrush.commands.get_height>
+
+    Returns the pixel-height of an interface item.
+
+    Parameters:
+
+        *item_path* (str) – Interface item path
+
+    Example:
+
+        Returns the height of the ‘Tool:SimpleBrush’ interface item:
+
+        get_height("Tool:SimpleBrush")
+
+        Copy to clipboard
+
+zbrush.commands.get_hotkey(/item_path:str/) → str¶
+<#zbrush.commands.get_hotkey>
+
+    Returns the hotkey of the specified interface item, returns only
+    persistent shortcuts
+
+    Parameters:
+
+        *item_path* (str) – Interface item path
+
+    Returns:
+
+        Shortcut of specified windowID interface item.
+
+    Return type:
+
+        str
+
+    Example:
+
+        Returns the hotkey of specified windowID interface item:
+
+        get_hotkey("windowID")
+
+        Copy to clipboard
+
+zbrush.commands.get_id(/item_path:str/) → int¶ <#zbrush.commands.get_id>
+
+    Returns the window ID code of the specified interface item
+
+    Parameters:
+
+        *item_path* (str) – Interface item path
+
+    Example:
+
+        Returns the id code of Tool:LoadTool interface item:
+
+        get_id("Tool:LoadTool")
+
+        Copy to clipboard
+
+zbrush.commands.get_info(/item_path:str/) → str¶ <#zbrush.commands.get_info>
+
+    Returns the info (popup info) of the specified interface item
+
+    Parameters:
+
+        *item_path* (str) – Interface item path
+
+    Example:
+
+        Returns the info of specified windowID interface item:
+
+        get_info(windowID)
+
+        Copy to clipboard
+
+zbrush.commands.get_left_mouse_button_state() → bool¶
+<#zbrush.commands.get_left_mouse_button_state>
+
+    Returns the current state of the left mouse button
+
+    Example:
+
+        Returns 1 if mouse button is pressed, returns zero if unpressed:
+
+        get_left_mouse_button_state()
+
+        Copy to clipboard
+
+zbrush.commands.get_max(/item_path:str/) → float¶ <#zbrush.commands.get_max>
+
+    Returns the maximum possible value of a ZBrush or ZScript interface item
+
+    Parameters:
+
+        *item_path* (str) – Interface item path
+
+    Example:
+
+        Returns the maximum value of the Width slider in the Draw menu:
+
+        get_max("Draw:Width")
+
+        Copy to clipboard
+
+zbrush.commands.get_min(/item_path:str/) → float¶ <#zbrush.commands.get_min>
+
+    Returns the minimum possible value of a ZBrush or ZScript interface item
+
+    Parameters:
+
+        *item_path* (str) – Interface item path
+
+    Example:
+
+        Returns the minimum value of the Width slider in the Draw menu:
+
+        get_min("Draw:Width")
+
+        Copy to clipboard
+
+zbrush.commands.get_mod(/item_path:str/) → int¶ <#zbrush.commands.get_mod>
+
+    Returns the current modifiers binary state of a ZBrush or ZScript
+    interface item
+
+    Parameters:
+
+        *item_path* (str) – Interface item path
+
+    Example:
+
+        Returns the current modifiers of the Rotate slider in the Tool
+        menu. Each modifier is identified by its binary value such as
+        1st=1, 2nd=2, 3rd=4, 4th=8:
+
+        get_mod("Tool:Modifiers:deformation:Rotate")
+
+        Copy to clipboard
+
+zbrush.commands.get_mouse_pos(/global_coordinates:bool=False/) →
+tuple[float,float]¶ <#zbrush.commands.get_mouse_pos>
+
+    Returns the current position of the mouse in Canvas or Global
+    coordinates.
+
+    Parameters:
+
+        *global_coordinates* (bool, optional) – Global coordinates? set
+        value to non-zero for global coordinates, default=Canvas
+        coordinates.
+
+zbrush.commands.get_pos(/*args/, /**kwargs/)¶ <#zbrush.commands.get_pos>
+
+     1.
+
+        get_pos(item_path: str, global_coordinates: bool = False) -> float
+
+    Returns the H position of the interface item in Canvas or Global
+    coordinates.
+
+    Parameters:
+
+          *
+
+            *item_path* (str) – Interface item path
+
+          *
+
+            *global_coordinates* (bool, optional) – Global coordinates?
+            set value to non-zero for global coordinates, default=Canvas
+            coordinates.
+
+    Example:
+
+        Returns the H position of the ‘Draw:Width’ interface item in
+        Global coordinates:
+
+        get_pos("Draw:Width", 1)
+
+        Copy to clipboard
+
+     2.
+
+        get_pos(item_path: str, global_coordinates: bool) -> float
+
+    Returns the H position of the interface item in Canvas or Global
+    coordinates.
+
+    Parameters:
+
+          *
+
+            *item_path* (str) – Interface item path
+
+          *
+
+            *global_coordinates* (bool, optional) – Global coordinates?
+            set value to non-zero for global coordinates, default=Canvas
+            coordinates.
+
+    Example:
+
+        Returns the H position of the ‘Draw:Width’ interface item in
+        Global coordinates:
+
+        get_pos("Draw:Width", 1)
+
+        Copy to clipboard
+
+zbrush.commands.get_secondary(/item_path:str/) → float¶
+<#zbrush.commands.get_secondary>
+
+    Returns the the scondary value of a 2D interface item
+
+    Parameters:
+
+        *item_path* (str) – Interface item path
+
+    Example:
+
+        Returns the secondary value of the Light:LightPlacement control:
+
+        get_secondary("Light:LightPlacement")
+
+        Copy to clipboard
+
+zbrush.commands.get_status(/item_path:str/) → bool¶
+<#zbrush.commands.get_status>
+
+    Returns the Enabled/Disabled status of a ZBrush or ZScript interface
+    item
+
+    Parameters:
+
+        *item_path* (str) – Interface item path
+
+    Example:
+
+        Returns the current status of the Move button in the Transform menu:
+
+        get_status("Transform:Move")
+
+        Copy to clipboard
+
+zbrush.commands.get_title(/item_path:str/, /full_path:bool=False/) →
+str¶ <#zbrush.commands.get_title>
+
+    Returns the title of the specified interface item
+
+    Parameters:
+
+          *
+
+            *item_path* (str) – Interface item path
+
+          *
+
+            *full_path* (bool, optional) – Return full path? (0=no
+            nonZero=yes)
+
+    Example:
+
+        Returns the title of specified windowID interface item:
+
+        get_title(windowID)
+
+        Copy to clipboard
+
+zbrush.commands.get_width(/item_path:str/) → float¶
+<#zbrush.commands.get_width>
+
+    Returns the pixel-width of an interface item.
+
+    Parameters:
+
+        *item_path* (str) – Interface item path
+
+    Example:
+
+        Returns the width of the ‘Tool:SimpleBrush’ interface item:
+
+        get_width("Tool:SimpleBrush")
+
+        Copy to clipboard
+
+zbrush.commands.is_disabled(/item_path:str/) → bool¶
+<#zbrush.commands.is_disabled>
+
+    Returns 1 if the specified ZBrush or ZScript interface item is
+    currently disabled, returns 0 otherwise
+
+    Parameters:
+
+        *item_path* (str) – Interface item path
+
+    Example:
+
+        Returns 1 if the ‘Transform:Move’ interface item is currently
+        disabled, returns 0 otherwise:
+
+        is_disabled("Transform:Move")
+
+        Copy to clipboard
+
+zbrush.commands.is_enabled(/item_path:str/) → bool¶
+<#zbrush.commands.is_enabled>
+
+    Returns 1 if the specified ZBrush or ZScript interface item is
+    currently enabled, returns 0 otherwise
+
+    Parameters:
+
+        *item_path* (str) – Interface item path
+
+    Example:
+
+        Returns 1 if the ‘Transform:Move’ interface item is currently
+        enabled, returns 0 otherwise:
+
+        is_enabled("Transform:Move")
+
+        Copy to clipboard
+
+zbrush.commands.is_locked(/item_path:str/) → bool¶
+<#zbrush.commands.is_locked>
+
+    Returns 1 if the specified ZBrush or ZScript interface item is
+    currently locked, returns 0 otherwise
+
+    Parameters:
+
+        *item_path* (str) – Interface item path
+
+    Example:
+
+        Returns 1 if the ‘Transform:Move’ interface item is currently
+        locked, returns 0 otherwise:
+
+        is_locked("Transform:Move")
+
+        Copy to clipboard
+
+zbrush.commands.is_unlocked(/item_path:str/) → bool¶
+<#zbrush.commands.is_unlocked>
+
+    Returns 1 if the specified ZBrush or ZScript interface item is
+    currently unlocked, returns 0 otherwise
+
+    Parameters:
+
+        *item_path* (str) – Interface item path
+
+    Example:
+
+        Returns 1 if the ‘Transform:Move’ interface item is currently
+        unlocked, returns 0 otherwise:
+
+        is_unlocked("Transform:Move")
+
+        Copy to clipboard
+
+
+      Setters¶ <#id4>
+
+zbrush.commands.modify(/item_path:str/, /width:int=0/, /height:int=0/, /
+icon_path:str=''/) → None¶ <#zbrush.commands.modify>
+
+    Modify a ZBrush interface item
+
+    Parameters:
+
+          *
+
+            *item_path* (str) – Interface item path
+
+          *
+
+            *width* (int, optional) – Button width in pixels (0=Unchanged)
+
+          *
+
+            *height* (int, optional) – Button height in pixels (0=Unchanged)
+
+          *
+
+            *icon_path* (str, optional) – Optional button icon
+            (Grayscale.psd) (“DeleteIcon”=Deletes existing icon if any)
+
+    Example:
+
+        Modify the Brush:Load Brush in size and adds an icon to it:
+
+        ACmd_modify("Brush:Load Brush",.5,.5,"LoadBrushIcon.psd")
+
+        Copy to clipboard
+
+zbrush.commands.set(/item_path:str/, /h_value:float|None=None/, /
+v_value:float|None=None/) → None¶ <#zbrush.commands.set>
+
+    Sets a new value to a ZBrush or ZScript interface item
+
+    Parameters:
+
+          *
+
+            *item_path* (str) – Interface item path
+
+          *
+
+            *h_value* (float, optional) – value
+
+          *
+
+            *v_value* (float, optional) – Secondary value
+
+    Example:
+
+        Sets the Width slider in the Draw menu to 50:
+
+        set("Draw:Width", 50)
+
+        Copy to clipboard
+
+zbrush.commands.set_canvas_pan(/h:float/, /v:float/) → None¶
+<#zbrush.commands.set_canvas_pan>
+
+    Pans (Scrolls) the active document view
+
+    Parameters:
+
+          *
+
+            *h* (float) – H value (0=left of document)
+
+          *
+
+            *v* (float) – V value (0=top of document)
+
+    Example:
+
+        Scrolls the center of a 640x480 canvas to be at the center of
+        the document view:
+
+        set_canvas_pan(320, 240)
+
+        Copy to clipboard
+
+        Scrolls the top left corner of the canvas to be at the center of
+        the document view:
+
+        set_canvas_pan(0, 0)
+
+        Copy to clipboard
+
+zbrush.commands.set_canvas_zoom(/zoom_factor:float/) → None¶
+<#zbrush.commands.set_canvas_zoom>
+
+    Sets the zoom factor of the active document view
+
+    Parameters:
+
+        *zoom_factor* (float) – Zoom factor
+
+    Example:
+
+        Sets the zoom value to 2 (each Pixol is shown twice as large):
+
+        set_canvas_zoom(2)
+
+        Copy to clipboard
+
+        Sets the zoom value to .5 (half-antialiased zoom mode):
+
+        set_canvas_zoom(0.5)
+
+        Copy to clipboard
+
+zbrush.commands.set_color(/r:int/, /g:int/, /b:int/) → None¶
+<#zbrush.commands.set_color>
+
+    Sets the active color to a new value
+
+    Parameters:
+
+          *
+
+            *r* (int) – Red (0-255)
+
+          *
+
+            *g* (int) – Green (0-255)
+
+          *
+
+            *b* (int) – Blue (0-255)
+
+    Example:
+
+        Sets the main interface front color to red:
+
+        set_color(255, 0, 0)
+
+        Copy to clipboard
+
+zbrush.commands.set_hotkey(/item_path:str/, /hotkey:str/) → None¶
+<#zbrush.commands.set_hotkey>
+
+    Sets the hotkey of the specified interface item
+
+    Parameters:
+
+          *
+
+            *item_path* (str) – Interface item path
+
+          *
+
+            *hotkey* (str) – Hotkey (0=no Hotkey)
+
+    Example:
+
+        Sets ‘a’ as the hotkey for the specified windowID interface item:
+
+        set_hotkey(windowID, "a")
+
+        Copy to clipboard
+
+zbrush.commands.set_max(/item_path:str/, /value:float/) → None¶
+<#zbrush.commands.set_max>
+
+    Sets the maximum value for an ISlider interface item (can only be
+    used for script-generated interface items)
+
+    Parameters:
+
+          *
+
+            *item_path* (str) – Interface item path
+
+          *
+
+            *value* (float) – New max value
+
+    Example:
+
+        Sets the maximum value of ‘ZScript:Counter’ interface item to 10:
+
+        set_max("ZScript:Counter", 10)
+
+        Copy to clipboard
+
+zbrush.commands.set_min(/item_path:str/, /value:float/) → None¶
+<#zbrush.commands.set_min>
+
+    Sets the minimum value for an ISlider interface item (can only be
+    used for script-generated interface items)
+
+    Parameters:
+
+          *
+
+            *item_path* (str) – Interface item path
+
+          *
+
+            *value* (float) – New min value
+
+    Example:
+
+        Sets the minimum value of ‘ZScript:Counter’ interface item to 10:
+
+        set_min("ZScript:Counter", 10)
+
+        Copy to clipboard
+
+zbrush.commands.set_mod(/item_path:str/, /value:float/) → None¶
+<#zbrush.commands.set_mod>
+
+    Sets the modifiers binary value of a ZBrush or a ZScript interface item
+
+    Parameters:
+
+          *
+
+            *item_path* (str) – Interface item path
+
+          *
+
+            *value* (float) – value
+
+    Example:
+
+        Sets the modifiers of the Rotate slider in the Tool menu to 2.
+        Each modifier is identified by its binary value such as 1st=1,
+        2nd=2, 3rd=4, 4th=8:
+
+        set_mod("Tool:Modifiers:deformation:Rotate", 2)
+
+        Copy to clipboard
+
+zbrush.commands.set_notebar_text(/text:str/, /progress:float=0.0/) →
+None¶ <#zbrush.commands.set_notebar_text>
+
+    Displays a message and optionally a progress bar in the notebar.
+
+    This is the equivalent of a progressbar in other applications.
+
+    Parameters:
+
+          *
+
+            *text* (str) – The message that will be shown.
+
+          *
+
+            *progress* (float, optional) – The progress bar value
+            between 0.0 (off) and 1.0 (100%). Defaults to 0.0.
+
+    Example:
+
+        from zbrush import commands as zbc
+        import time
+
+        # A long-running task simulation, where we update the notebar text periodically.
+        for i in range(1000):
+            p: float = i / 1000.0
+            zbc.set_notebar_text(f"Script is calculating : {round(100 * p, 2)}%", p)
+            time.sleep(0.0025)  # Simulate some work being done
+
+        zbc.set_notebar_text("", 0) # Clear the bar once we are done.
+
+        Copy to clipboard
+
+zbrush.commands.toggle(/item_path:str/) → None¶ <#zbrush.commands.toggle>
+
+    Toggles the state of an interface item.
+
+    Parameters:
+
+        *item_path* (str) – Interface item path
+
+    Example:
+
+        Toggles the ZADD button in the DRAW menu turning ZADD mode on
+        and off:
+
+        toggle("Draw:ZADD")
+
+        Copy to clipboard
+
+
+      Interaction¶ <#id5>
+
+zbrush.commands.canvas_click(/X1:float/, /Y1:float/, /X2:float|
+None=None/, /Y2:float|None=None/, /X3:float|None=None/, /Y3:float|
+None=None/, /X4:float|None=None/, /Y4:float|None=None/, /X5:float|
+None=None/, /Y5:float|None=None/, /X6:float|None=None/, /Y6:float|
+None=None/, /X7:float|None=None/, /Y7:float|None=None/, /X8:float|
+None=None/, /Y8:float|None=None/) → None¶ <#zbrush.commands.canvas_click>
+
+    Emulates a click within the current canvas area,
+
+    Parameters:
+
+          *
+
+            *X1* (float) – The X coordinate of the click position.
+
+          *
+
+            *Y1* (float) – The Y coordinate of the click position.
+
+          *
+
+            *X2* (float, optional) – The X coordinate of the first drag
+            position.
+
+          *
+
+            *Y2* (float, optional) – The Y coordinate of the first drag
+            position.
+
+          *
+
+            *X3* (float, optional) – The X coordinate of the second drag
+            position.
+
+          *
+
+            *Y3* (float, optional) – The Y coordinate of the second drag
+            position.
+
+          *
+
+            *X4* (float, optional) – The X coordinate of the third drag
+            position.
+
+          *
+
+            *Y4* (float, optional) – The Y coordinate of the third drag
+            position.
+
+          *
+
+            *X5* (float, optional) – The X coordinate of the fourth drag
+            position.
+
+          *
+
+            *Y5* (float, optional) – The Y coordinate of the fourth drag
+            position.
+
+          *
+
+            *X6* (float, optional) – The X coordinate of the fifth drag
+            position.
+
+          *
+
+            *Y6* (float, optional) – The Y coordinate of the fifth drag
+            position.
+
+          *
+
+            *X7* (float, optional) – The X coordinate of the sixth drag
+            position.
+
+          *
+
+            *Y7* (float, optional) – The Y coordinate of the sixth drag
+            position.
+
+          *
+
+            *X8* (float, optional) – The X coordinate of the seventh
+            drag position.
+
+          *
+
+            *Y8* (float, optional) – The Y coordinate of the seventh
+            drag position.
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Clicks at position (10, 10) in the canvas area.
+        zbc.canvas_click(10, 10)
+
+        # Clicks at position (10, 10) in the canvas area and then drags to (100, 100) and (200, 200).
+        zbc.canvas_click(10, 10, 100, 100, 200, 200)
+
+        Copy to clipboard
+
+zbrush.commands.click(/item_path:str/, /X1:float|None=None/, /Y1:float|
+None=None/, /X2:float|None=None/, /Y2:float|None=None/, /X3:float|
+None=None/, /Y3:float|None=None/, /X4:float|None=None/, /Y4:float|
+None=None/, /X5:float|None=None/, /Y5:float|None=None/, /X6:float|
+None=None/, /Y6:float|None=None/, /X7:float|None=None/, /Y7:float|
+None=None/) → None¶ <#zbrush.commands.click>
+
+    Clicks specified ZBrush interface item.
+
+    Parameters:
+
+          *
+
+            *item_path* (str) – The interface path of the item to click.
+
+          *
+
+            *X1* (float, optional) – The X coordinate of the click position.
+
+          *
+
+            *Y1* (float, optional) – The Y coordinate of the click position.
+
+          *
+
+            *X2* (float, optional) – The X coordinate of the first drag
+            position.
+
+          *
+
+            *Y2* (float, optional) – The Y coordinate of the first drag
+            position.
+
+          *
+
+            *X3* (float, optional) – The X coordinate of the second drag
+            position.
+
+          *
+
+            *Y3* (float, optional) – The Y coordinate of the second drag
+            position.
+
+          *
+
+            *X4* (float, optional) – The X coordinate of the third drag
+            position.
+
+          *
+
+            *Y4* (float, optional) – The Y coordinate of the third drag
+            position.
+
+          *
+
+            *X5* (float, optional) – The X coordinate of the fourth drag
+            position.
+
+          *
+
+            *Y5* (float, optional) – The Y coordinate of the fourth drag
+            position.
+
+          *
+
+            *X6* (float, optional) – The X coordinate of the fifth drag
+            position.
+
+          *
+
+            *Y6* (float, optional) – The Y coordinate of the fifth drag
+            position.
+
+          *
+
+            *X7* (float, optional) – The X coordinate of the sixth drag
+            position.
+
+          *
+
+            *Y7* (float, optional) – The Y coordinate of the sixth drag
+            position.
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Emulates a click on the intentisty slider of the Light palette at position (50, 10).
+        zbc.click("Light:Intensity", 50, 10)
+
+        Copy to clipboard
+
+zbrush.commands.close(/item_path:str/, /show_zoom_rects:bool=False/, /
+parent_window:bool=False/) → None¶ <#id0>
+
+    Closes a subpalette.
+
+    Parameters:
+
+          *
+
+            *item_path* (str) – The interface path of the item to close.
+
+          *
+
+            *show_zoom_rects* (bool, optional) – If to show the zoom
+            rectangle. Defaults to False.
+
+          *
+
+            *parent_window* (bool, optional) – If to target the parent
+            of the specified item instead. Defaults to False.
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Close ZScript:Python Scripting palette.
+        zbc.close("ZScript:Python Scripting")
+
+        # Close ZScript:Python Scripting palette by passing the button 'Load' as the item path.
+        zbc.close("ZScript:Python Scripting:Load", False, True)
+
+        Copy to clipboard
+
+zbrush.commands.disable(/item_path:str/) → None¶ <#zbrush.commands.disable>
+
+    Disables an interface item that has been added by a script.
+
+    A disabled item will be greyed out, and user interactions will not
+    invoke the delegate function of the gadget (click events, drag
+    events, etc). Can only be used on script-generated interface items,
+    and palettes and sub-palettes cannot be disabled. The enabling
+    counter part to this function is |enable|.
+
+    Note
+
+    Use |get_status| to get the state of a toggle button and |toggle| to
+    change it.
+
+    Parameters:
+
+        *item_path* (str) – The path of the item to disable.
+
+    Example:
+
+        # Disables the "Button" gadget in the "ZScript:Bar" sub-palette.
+        zbc.disable("ZScript:Bar:Button")
+
+        Copy to clipboard
+
+zbrush.commands.enable(/item_path:str/) → None¶ <#zbrush.commands.enable>
+
+    Enables an interface item that has been added by a script.
+
+    Enabling and formerly disabeled item means that it not longer will
+    be greyed out and user interactions will invoke delegates again
+    (click events, drag events, etc). Can only be used on script-
+    generated interface items, and palettes and sub-palettes cannot be
+    disabled. The enabling counter part to this function is |enable|.
+
+    Note
+
+    Use |get_status| to get the state of a toggle button and |toggle| to
+    change it.
+
+    Parameters:
+
+        *item_path* (str) – The path of the item to enable.
+
+    Example:
+
+        # Enables the button 'Button' in the 'ZScript:Foo' sub-palette.
+        zbc.enable("ZScript:Foo:Button")
+
+        Copy to clipboard
+
+zbrush.commands.freeze(/fn:Callable/, /fade_time:float=0.0/) → None¶
+<#zbrush.commands.freeze>
+
+    Disables interface updates to avoid slowdowns while heavy operations
+    are performed.
+
+    Note
+
+    Frozen will be most of the UI, but things like progress bars will
+    still work. So, this is not entierly blocking, only in a sensible
+    manner.
+
+    Parameters:
+
+          *
+
+            *fn* (Callable) – The callable to execute which carries out
+            the heavy operations which should not be slowed down.
+
+          *
+
+            *fade_time* (float, optional) – Fade in/out time in secs.
+            Defaults to 0 secs.
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # The payload function.
+        def payload() -> None:
+            '''Subdivides the active tool three times, unwraps it, and then creates a displacement map.
+            '''
+            for _ in range(3):
+                zbc.press("Tool:Geometry:Divide")
+
+            auto_seams: str = "Tool:UV Map:Create (Unwrap):Auto Seams"
+            print(f"{zbc.get_status(auto_seams) = }")
+            if not zbc.get_status(auto_seams):
+                zbc.toggle(auto_seams)
+
+            zbc.press("Tool:UV Map:Create (Unwrap):Unwrap")
+            for _ in range(10):
+                zbc.press("Tool:Geometry:Lower Res")
+
+            zbc.press("Tool:Displacement Map:Create DispMap")
+
+        # Carry out our #payload function while halting UI updates while it is running.
+        zbc.freeze(payload)
+
+        Copy to clipboard
+
+zbrush.commands.hide(/item_path:str/, /show_zoom_rects:bool=False/, /
+parent_window:bool=False/) → None¶ <#zbrush.commands.hide>
+
+    Hides an interface item.
+
+    Parameters:
+
+          *
+
+            *item_path* (str) – Interface item path
+
+          *
+
+            *show_zoom_rects* (bool, optional) – Show Zoom Rectangles?
+
+          *
+
+            *parent_window* (bool, optional) – Target parent window?
+
+    Example:
+
+        Hides the ‘Draw:Width’ window:
+
+        hide("Draw:Width")
+
+        Copy to clipboard
+
+zbrush.commands.lock(/item_path:str/) → None¶ <#zbrush.commands.lock>
+
+    Locks an interface item
+
+    Parameters:
+
+        *item_path* (str) – Window path,Window ID or relative
+        windowID(-100<->100)
+
+    Example:
+
+        locks the ‘DoIt’ ZScript interface item:
+
+        lock("ZScript:DoIt")
+
+        Copy to clipboard
+
+        locks the next interface item:
+
+        lock("1")
+
+        Copy to clipboard
+
+zbrush.commands.maximize(/item_path:str/, /maximize_all:bool=False/) →
+None¶ <#zbrush.commands.maximize>
+
+    Locates an interface item and (if possible) maximize its size.
+
+    Parameters:
+
+          *
+
+            *item_path* (str) – Interface item path
+
+          *
+
+            *maximize_all* (bool, optional) – Maximizeall sub palettes?
+
+    Example:
+
+        Expand the TOOL palette and all of its sub palettes:
+
+        maximize("Tool:", True)
+
+        Copy to clipboard
+
+zbrush.commands.minimize(/item_path:str/, /minimize_all:bool=False/) →
+None¶ <#zbrush.commands.minimize>
+
+    Locates an interface item and (if possible) minimize its size.
+
+    Parameters:
+
+          *
+
+            *item_path* (str) – Interface item path
+
+          *
+
+            *minimize_all* (bool, optional) – Minimize all sub palettes?
+
+    Example:
+
+        Closes the TOOL palette and all of its sub palettes:
+
+        minimize("Tool:", True)
+
+        Copy to clipboard
+
+zbrush.commands.press(/item_path:str/) → None¶ <#zbrush.commands.press>
+
+    Presses a ZBrush or ZScript interface item
+
+    Parameters:
+
+        *item_path* (str) – Interface item path
+
+    Example:
+
+        Presses the Cube3D button in the Tool menu making the Cube3D the
+        active tool:
+
+        press("Tool:Cube3D")
+
+        Copy to clipboard
+
+zbrush.commands.press_key(/shortcut:str/, /fn:Callable=None/, /
+h_position:float=-1.0/, /v_position:float=-1.0/) → None¶
+<#zbrush.commands.press_key>
+
+    Simulates a key press
+
+    Parameters:
+
+          *
+
+            *shortcut* (str) – The key to press with an optional CTRL/
+            CMD, ALT/OPT, SHIFT or TAB combination, it can only use a /
+            single/ modifier.
+
+          *
+
+            *fn* (Callable, optional) – Commands group to execute while
+            the key is pressed
+
+          *
+
+            *h_position* (float, optional) – Optional H cursor position
+            prior to key press
+
+          *
+
+            *v_position* (float, optional) – Optional V cursor position
+            prior to key press
+
+    Example:
+
+        Simulates ‘x’ key press:
+
+        press_key("x")
+
+        Copy to clipboard
+
+        Simulates ‘Ctrl-z’ key press:
+
+        press_key("CTRL+z")
+
+        Copy to clipboard
+
+        Simulates ‘N’ key press while creating a new document:
+
+        press_key("N", lambda: press("Document:New Document"))
+
+        Copy to clipboard
+
+zbrush.commands.reset(/item:int=0/, /version:float=1.5/) → int¶
+<#zbrush.commands.reset>
+
+    Interface Reset
+
+    Parameters:
+
+          *
+
+            *item* (int, optional) – Optional item to reset
+            (default=All).
+            0=All,1=Interface,2=Document,3=Tools,4=Lights,5=Materials,6=Stencil
+
+          *
+
+            *version* (float, optional) – Optional ZBrush version-
+            configuration (default=1.5. if omitted, configuration will
+            default to version 1.23b )
+
+    Example:
+
+        Resets the interface to a default state:
+
+        reset()
+
+        Copy to clipboard
+
+zbrush.commands.show(/item_path:str/, /show_zoom_rects:bool=False/, /
+parent_window:bool=False/) → None¶ <#zbrush.commands.show>
+
+    Scrolls to or shows the given palette.
+
+    When the palette is docked in one of the docks, the view will scroll
+    to it. When not, the palette will be opened as a floating palette
+    under the cursor.
+
+    Warning
+
+    This is limited to palettes and does not work for subpalettes,
+    buttons, toggles, or sliders at the moment, despite the arguments
+    suggesting otherwise.
+
+    Parameters:
+
+          *
+
+            *item_path* (str) – The palette to show.
+
+          *
+
+            *show_zoom_rects* (bool, optional) – Non-functional at the
+            moment.
+
+          *
+
+            *parent_window* (bool, optional) – Non-functional at the moment.
+
+    Example:
+
+        from zbrush import commands as zbc
+
+        # Shows the 'Draw' palette.
+        zbc.show("Draw")
+
+        # This won't work, because 'Draw:Width' is not a palette.
+        zbc.show("Draw:Width", False, True)
+
+        Copy to clipboard
+
+zbrush.commands.show_actions(/value:int/) → None¶
+<#zbrush.commands.show_actions>
+
+    Temorarily sets the status of ShowActions
+
+    Parameters:
+
+        *value* (int) – The ShowActions status. 0=Disable ShowActions,
+        Positive value=enable show actions, Negative value=Reset ShowActions
+
+    Example:
+
+        Temorarily disable ShowActions:
+
+        show_actions(0)
+
+        Copy to clipboard
+
+zbrush.commands.stroke(/item_path:str/, /stroke:Stroke <https://
+developers.maxon.net/docs/zbrush/py/2026_0_0/api/
+mod_zbr_cmds_modeling.html#zbrush.commands.Stroke>/) → None¶
+<#zbrush.commands.stroke>
+
+    Emulates a brush stroke within an interface item
+
+    Parameters:
+
+          *
+
+            *item_path* (str) – Interface item path
+
+          *
+
+            *stroke* (zbrush.Stroke) – StrokeData
+
+    Example:
+
+        Loads the ‘CurvePoints.txt’ file, creates a BrushStroke and
+        applies it to the interface item:
+
+        stroke(load_stroke("CurvePoints.txt"))
+
+        Copy to clipboard
+
+zbrush.commands.un_press(/item_path:str/) → None¶
+<#zbrush.commands.un_press>
+
+    Unpresses a ZBrush or ZScript interface item
+
+    Parameters:
+
+        *item_path* (str) – Interface item path
+
+    Example:
+
+        Unpresses the W button in the Modifiers submenu of the Layer menu:
+
+        un_press("Layer:Modifiers:w")
+
+        Copy to clipboard
+
+zbrush.commands.unlock(/item_path:str/) → None¶ <#zbrush.commands.unlock>
+
+    Unlocks an interface item
+
+    Parameters:
+
+        *item_path* (str) – Window path,Window ID or relative
+        windowID(-100<->100)
+
+    Example:
+
+        Unlocks the ‘DoIt’ ZScript interface item:
+
+        unlock("ZScript:DoIt")
+
+        Copy to clipboard
+
+        Unlocks the next interface item:
+
+        unlock("1")
+
+        Copy to clipboard
+
+zbrush.commands.update(/repeat_count:int=1/, /redraw_ui:bool=False/) →
+None¶ <#zbrush.commands.update>
+
+    Updates the ZBrush interface.
+
+    Parameters:
+
+          *
+
+            *repeat_count* (int, optional) – Repeat count (default=1)
+
+          *
+
+            *redraw_ui* (bool, optional) – Redraw UI?
+
+    Example:
+
+        Execute 5 interface-update cycles:
+
+        update(5)
+
+        Copy to clipboard
+
+  * GUI Functions <#>
+      o Signatures <#signatures>
+          + Create <#create>
+          + Dialogs <#dialogs>
+          + Getters <#getters>
+          + Setters <#setters>
+          + Interaction <#interaction>
+      o Descriptions <#descriptions>
+          + Create <#id1>
+              # |add_button()| <#zbrush.commands.add_button>
+              # |add_note_button()| <#zbrush.commands.add_note_button>
+              # |add_note_switch()| <#zbrush.commands.add_note_switch>
+              # |add_palette()| <#zbrush.commands.add_palette>
+              # |add_slider()| <#zbrush.commands.add_slider>
+              # |add_subpalette()| <#zbrush.commands.add_subpalette>
+              # |add_switch()| <#zbrush.commands.add_switch>
+              # |close()| <#zbrush.commands.close>
+              # |delete_interface_item()|
+                <#zbrush.commands.delete_interface_item>
+              # |show_note()| <#zbrush.commands.show_note>
+          + Dialogs <#id2>
+              # |ask_filename()| <#zbrush.commands.ask_filename>
+              # |ask_string()| <#zbrush.commands.ask_string>
+              # |message_ok()| <#zbrush.commands.message_ok>
+              # |message_ok_cancel()| <#zbrush.commands.message_ok_cancel>
+              # |message_yes_no()| <#zbrush.commands.message_yes_no>
+              # |message_yes_no_cancel()|
+                <#zbrush.commands.message_yes_no_cancel>
+          + Getters <#id3>
+              # |exists()| <#zbrush.commands.exists>
+              # |get()| <#zbrush.commands.get>
+              # |get_canvas_pan()| <#zbrush.commands.get_canvas_pan>
+              # |get_canvas_zoom()| <#zbrush.commands.get_canvas_zoom>
+              # |get_flags()| <#zbrush.commands.get_flags>
+              # |get_from_note()| <#zbrush.commands.get_from_note>
+              # |get_height()| <#zbrush.commands.get_height>
+              # |get_hotkey()| <#zbrush.commands.get_hotkey>
+              # |get_id()| <#zbrush.commands.get_id>
+              # |get_info()| <#zbrush.commands.get_info>
+              # |get_left_mouse_button_state()|
+                <#zbrush.commands.get_left_mouse_button_state>
+              # |get_max()| <#zbrush.commands.get_max>
+              # |get_min()| <#zbrush.commands.get_min>
+              # |get_mod()| <#zbrush.commands.get_mod>
+              # |get_mouse_pos()| <#zbrush.commands.get_mouse_pos>
+              # |get_pos()| <#zbrush.commands.get_pos>
+              # |get_secondary()| <#zbrush.commands.get_secondary>
+              # |get_status()| <#zbrush.commands.get_status>
+              # |get_title()| <#zbrush.commands.get_title>
+              # |get_width()| <#zbrush.commands.get_width>
+              # |is_disabled()| <#zbrush.commands.is_disabled>
+              # |is_enabled()| <#zbrush.commands.is_enabled>
+              # |is_locked()| <#zbrush.commands.is_locked>
+              # |is_unlocked()| <#zbrush.commands.is_unlocked>
+          + Setters <#id4>
+              # |modify()| <#zbrush.commands.modify>
+              # |set()| <#zbrush.commands.set>
+              # |set_canvas_pan()| <#zbrush.commands.set_canvas_pan>
+              # |set_canvas_zoom()| <#zbrush.commands.set_canvas_zoom>
+              # |set_color()| <#zbrush.commands.set_color>
+              # |set_hotkey()| <#zbrush.commands.set_hotkey>
+              # |set_max()| <#zbrush.commands.set_max>
+              # |set_min()| <#zbrush.commands.set_min>
+              # |set_mod()| <#zbrush.commands.set_mod>
+              # |set_notebar_text()| <#zbrush.commands.set_notebar_text>
+              # |toggle()| <#zbrush.commands.toggle>
+          + Interaction <#id5>
+              # |canvas_click()| <#zbrush.commands.canvas_click>
+              # |click()| <#zbrush.commands.click>
+              # |close()| <#id0>
+              # |disable()| <#zbrush.commands.disable>
+              # |enable()| <#zbrush.commands.enable>
+              # |freeze()| <#zbrush.commands.freeze>
+              # |hide()| <#zbrush.commands.hide>
+              # |lock()| <#zbrush.commands.lock>
+              # |maximize()| <#zbrush.commands.maximize>
+              # |minimize()| <#zbrush.commands.minimize>
+              # |press()| <#zbrush.commands.press>
+              # |press_key()| <#zbrush.commands.press_key>
+              # |reset()| <#zbrush.commands.reset>
+              # |show()| <#zbrush.commands.show>
+              # |show_actions()| <#zbrush.commands.show_actions>
+              # |stroke()| <#zbrush.commands.stroke>
+              # |un_press()| <#zbrush.commands.un_press>
+              # |unlock()| <#zbrush.commands.unlock>
+              # |update()| <#zbrush.commands.update>
+
+© 2025 Maxon Computer GmbH <https://www.maxon.net/>
+- End User License Agreement <https://www.maxon.net/en/legal/eula>
